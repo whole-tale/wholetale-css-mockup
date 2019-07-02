@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Standard Meta -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <!-- Site Properties -->
+  <title>WholeTale - Dashboard</title>
+
+  <link rel="stylesheet" type="text/css" href="dist/semantic.min.css">
+
+  <link rel="stylesheet" type="text/css" href="dist/components/reset.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/site.css">
+
+  <link rel="stylesheet" type="text/css" href="dist/components/container.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/grid.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/header.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/image.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/menu.css">
+
+  <link rel="stylesheet" type="text/css" href="dist/components/dimmer.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/divider.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/dropdown.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/segment.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/button.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/list.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/icon.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/sidebar.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/transition.css">
+
+  <link rel="stylesheet" type="text/css" href="css/wholetale-dashboard.css">
+
+    <!-- Font Awesome -->
+    <link href="css/fontawesome-all.min.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-slim.min.js"><\/script>')</script>
+
+  <script src="dist/components/dimmer.js"></script>
+  <script src="dist/components/visibility.js"></script>
+  <script src="dist/components/sidebar.js"></script>
+  <script src="dist/components/transition.js"></script>
+  <script src="dist/components/detect.min.js"></script>
+  <script src="dist/components/clipboard.min.js"></script>
+  <script src="dist/components/cookie.min.js"></script>
+  <script src="dist/components/easing.min.js"></script>
+  <script src="dist/components/highlight.min.js"></script>
+  <script src="dist/components/history.min.js"></script>
+  <script src="dist/components/state.js"></script>
+  <script src="dist/components/tablesort.min.js"></script>
+  <script src="dist/components/underscore.min.js"></script>
+
+  <script src="dist/semantic.min.js"></script>
+
+
+</head>
+<body>
+
+<!-- Top Menu -->
+
+  <div class="ui inverted menu wt-top">
+    <a href="pseudo-home.html" class="header item wt-brand"><img src="images/wholetale_logo_sm.png" />Whole<span>Tale</span></a>
+    <div class="active item">Dashboard</div>
+    <a class="item">About</a>
+    <a class="item">Team</a>
+    <a class="item">Participate</a>
+    <a class="item">Working Groups</a>
+    <div class="right menu">
+      <a class="item">Kristina Davis</a>
+      <a class="item"><i class="fas fa-sign-out-alt"></i></a>
+    </div>
+  </div>
+
+
+<!-- Page Contents -->
+
+  <div class="wt-dash">
+
+      <div class="ui dropdown button primary" style="float:right">
+        Create New...
+        <div class="menu">
+            <a class="item">Create New Tale</a>
+            <a class="item">Add Dataset</a>
+            <a class="item">Create New Environment</a>
+        </div>
+      </div>
+
+    <div class="header item wt-brand">WHOLE<span>TALE</span> <span> Dashboard</span></div>
+    <div id="id-short">
+      <a class="show_all" data-long-id="id-long">
+        New to WholeTale? Learn more about using the Dashboard...
+      </a>
+    </div>
+  </div>
+
+  <div class="ui stretched stackable grid">
+    <div class="row panel-container">
+      <div class="sixteen wide column">
+        <div class="dash-intro">
+
+          <div id="id-long" style="display:none">
+            <p class="first-para">Welcome to the WholeTale Dashboard! Here you can browse Tales published by other WholeTale users, as well as publically available datasets and environments (the buidling blocks of Tales). <i>Click on</i> a Tale to learn more about it. <i>Run</i> the Tale to interact with it. You will be running a private copy, so feel free to modify and remix the Tale (use your own data, edit the code, or change the compute environment).</p>
+            <p>On each tab, you can view public tales, data, or environments, or filter to just see your own. Click <i>My Tales</i> to just see Public Tales you've copied, as well as any new Tales you create or that are shared with you by collaborators. Click the button at the top right of each tab to create a Tale, contribute a dataset or configure a custom environment. You may choose to keep these private, or publish them to make them available to other WholeTale users.</p>
+            <p>For more information, visit the <a href="https://wholetale.readthedocs.io/users_guide/browse.html"><i class="fas fa-info-circle"></i> WholeTale User Guide</a>. You can quickly access relevant sections of the User Guide throughout WholeTale wherever you see this icon <i class="fas fa-info-circle"></i>.</p>
+              <a class="show_less" data-short-id="id-short">
+                Hide introduction
+              </a>
+          </div>
+        </div>
+
+          <div class="wt-panel-header tabs2">
+<div class="ui three item tabular menu">
+  <a href="browse.html" class="item">
+    <img src="images/wholetale_logo_sm.png" style="height:1.4rem;width:auto;padding: 0 .3em" /> Tales
+  </a>
+  <a href="browse-catalog.html" class="item">
+    <i class="server icon"></i> Data Catalog
+  </a>
+  <a href="browse-env.html" class="active item">
+    <i class="desktop icon"></i> Compute Environments
+  </a>
+</div>
+          </div>
+        <div class="wt-panel bg-grey special">
+          <div class="wt-panel-body">
+<div class="ui secondary  menu public-private">
+  <a class="active item">
+    All Environments
+  </a>
+  <a class="item">
+    My Environments
+  </a>
+  <div class="right menu">
+    <div class="item">
+      <div class="ui icon input">
+        <input type="text" placeholder="Search Environments...">
+        <i class="search link icon"></i>
+      </div>
+    </div>
+    <div class="item">
+      <div class="ui primary left labeled icon button" id="test">
+        Create New Environment
+        <i class="plus icon"></i>
+      </div>
+    </div>
+  </div>
+</div>
+          <h3>Official Environments</h3>
+          <div class="ui vertical menu fluid envs">
+            <a class="item">
+              <img src="images/logo-r.png" />
+              <i class="fas fa-info"></i>
+              <p>Rstudio</p>
+            </a>
+            <a class="item">
+              <i class="fas fa-info"></i>
+              <img src="images/logo-jupyter.png" />
+              <p>Jupyter Notebook</p>
+            </a>
+            <a class="item">
+              <i class="fas fa-info"></i>
+              <img src="images/spark_logo.png" />
+              <p>Jupyter with Spark</p>
+            </a>
+          </div>
+          <div class="more-button">
+            <button class="ui icon button blue">More Environments...</button>
+          </div>
+        </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+                  <div class="ui modal test">
+                    <i class="close icon"></i>
+                    <div class="header">
+                      Create New Environment
+                    </div>
+          <div class="content-row">
+            <div class="ui grid">
+              <div class="sixteen wide column">
+                <div style="min-height: 300px; padding: 20px 20px 40px">
+            <p>A WholeTale Enviroment is a virtual computer you pair with data to compose a Tale. Environments you and others have created can be selected from the list of Environments when composing a Tale. To create a new Environment, you must provide setup instructions in the form of a <a href="https://docs.docker.com" target="_blank">Dockerfile</a> that is checked into a <a href="https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository" target="_blank">Git repository</a> that is web accessible.</p>
+
+          <div id="id-short">
+            <a class="ui button">
+              Learn more about creating new Environments
+            </a>
+          </div>
+
+            <hr class="env-separator" />
+
+            <p class="symbol-key">*Required field</p>
+            <form class="ui form" style="margin-bottom:30px">
+              <div class="field">
+                <label>Access Control <span>Keep your new Environment Private (only you can see it, default), or make it Public to share with other users. You can edit a Private Environment at any time to make it Public.</span></label>
+              </div>
+              <div class="two fields">
+                <div class="field">
+                  <p class="status">Current access: <span>Private</span></p>
+                </div>
+                <div class="field">
+                  <div class="ui toggle checkbox">
+                    <label>Make Environment Public</label>
+                    <input type="checkbox" name="public" tabindex="0" class="hidden">
+                  </div>
+                </div>
+              </div>
+              <div class="field">
+                <label>Environment Name* <span>Name to be used within WholeTale</span></label>
+                <input type="text" name="first-name" placeholder="e.g. Rstudio, Jupyter Notebook, etc.">
+              </div>
+              <div class="field">
+                <label>Git Repository URL* <span>Web address of Git repository that contains at least a Dockerfile and any support files the Dockerfile references and requires to be built</span></label>
+                <input type="text" name="last-name" placeholder="e.g. https://github.com/apache/hadoop">
+              </div>
+              <div class="field">
+                <label>Git Tag or Commit SHA-1* <span>Tag name or SHA-1 checksum that uniquely represents the state of the repository at a given commit</span></label>
+                <input type="text" name="last-name" placeholder="e.g. v1.0 or 521747298a3790fde1710f3aa2d03b55020575aa">
+              </div>
+              <div class="field">
+                <label>Description <span>Description of Environment</span></label>
+                <div class="ui top attached tabular menu">
+                  <a class="item active">
+                    <i class="fas fa-code"></i> Edit
+                  </a>
+                  <a class="item">
+                    <i class="fas fa-eye"></i> Preview
+                  </a>
+                </div>
+                <div class="ui bottom attached segment" style="min-height: 12em;">
+                  <p>Use Markdown syntax to format your description (<a href="https://en.wikipedia.org/wiki/Markdown">examples</a>), or just type for plain text.</p>
+                </div>
+              </div>
+              <div class="field">
+                <label>Environment Icon <span>Icon representing Environment, displayed on all Tales that use it</span></label>
+                <input type="text" name="icon" placeholder="Icon URL">
+                <p style="margin:10px 0 0 10px;">or</p>
+              </div>
+              <div class="ui fluid action input">
+                <input type="text" placeholder="Upload icon file (*.png, *.jpg)">
+                <div class="ui primary button">Browse...</div>
+              </div>
+            </form>
+            <a class="ui primary button" href="manage.html">
+              Save
+            </a>
+            <a class="ui button" href="manage.html">
+              Discard
+            </a>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <div class="actions">
+                      <div class="ui button">
+                        Cancel
+                      </div>
+                      <div class="ui primary right labeled icon button">
+                        Select
+                        <i class="checkmark icon"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+</div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="dist/components/dropdown.js"></script>
+    <script>
+      $('.ui.dropdown')
+        .dropdown()
+      ;
+    </script>
+    <script>
+      $(function(){
+            $("#test").click(function(){
+      		$(".test").modal('show');
+      	});
+      	$(".test").modal({
+      		closable: true
+      	});
+      });
+    </script>
+    <script src="dist/semantic.min.js"></script>
+    <script src="js/moreless.js"></script>
+
+</body>
+
+</html>
+
+

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Standard Meta -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <!-- Site Properties -->
+  <title>WholeTale - Dashboard</title>
+
+  <link rel="stylesheet" type="text/css" href="dist/semantic.min.css">
+
+  <link rel="stylesheet" type="text/css" href="dist/components/reset.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/site.css">
+
+  <link rel="stylesheet" type="text/css" href="dist/components/container.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/grid.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/header.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/image.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/menu.css">
+
+  <link rel="stylesheet" type="text/css" href="dist/components/dimmer.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/divider.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/dropdown.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/segment.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/button.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/list.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/icon.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/sidebar.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/transition.css">
+
+  <link rel="stylesheet" type="text/css" href="css/wholetale-dashboard.css">
+
+    <!-- Font Awesome -->
+    <link href="css/fontawesome-all.min.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="http://www.crc.nd.edu/~kfurse/wholetale-css-mock-up-sui_f2018/js/vendor/jquery-slim.min.js"><\/script>')</script>
+
+  <script src="dist/components/dimmer.js"></script>
+  <script src="dist/components/visibility.js"></script>
+  <script src="dist/components/sidebar.js"></script>
+  <script src="dist/components/transition.js"></script>
+  <script src="http://www.crc.nd.edu/~kfurse/wholetale-css-mock-up-sui_f2018/dist/components/detect.min.js"></script>
+  <script src="http://www.crc.nd.edu/~kfurse/wholetale-css-mock-up-sui_f2018/dist/components/clipboard.min.js"></script>
+  <script src="http://www.crc.nd.edu/~kfurse/wholetale-css-mock-up-sui_f2018/dist/components/cookie.min.js"></script>
+  <script src="http://www.crc.nd.edu/~kfurse/wholetale-css-mock-up-sui_f2018/dist/components/easing.min.js"></script>
+  <script src="http://www.crc.nd.edu/~kfurse/wholetale-css-mock-up-sui_f2018/dist/components/highlight.min.js"></script>
+  <script src="http://www.crc.nd.edu/~kfurse/wholetale-css-mock-up-sui_f2018/dist/components/history.min.js"></script>
+  <script src="dist/components/state.js"></script>
+  <script src="http://www.crc.nd.edu/~kfurse/wholetale-css-mock-up-sui_f2018/dist/components/tablesort.min.js"></script>
+  <script src="http://www.crc.nd.edu/~kfurse/wholetale-css-mock-up-sui_f2018/dist/components/underscore.min.js"></script>
+
+  <script src="dist/semantic.min.js"></script>
+
+
+</head>
+<body>
+
+<!-- Top Menu -->
+
+  <div class="ui inverted menu wt-top">
+    <a href="pseudo-home.html" class="header item wt-brand"><img src="images/wholetale_logo_sm.png" />Whole<span>Tale</span></a>
+    <div class="active item">Dashboard</div>
+    <a class="item">About</a>
+    <a class="item">Team</a>
+    <a class="item">Participate</a>
+    <a class="item">Working Groups</a>
+    <div class="right menu">
+      <a class="item">Kristina Davis</a>
+      <a class="item"><i class="fas fa-sign-out-alt"></i></a>
+    </div>
+  </div>
+
+
+<!-- Page Contents -->
+
+  <div class="wt-dash">
+
+      <div class="ui dropdown button primary" style="float:right">
+        Create New...
+        <div class="menu">
+            <a class="item">Create New Tale</a>
+            <a class="item">Add Dataset</a>
+            <a class="item">Create New Environment</a>
+        </div>
+      </div>
+
+    <div class="header item wt-brand">WHOLE<span>TALE</span> <span> Dashboard</span></div>
+    <div id="id-short">
+      <a class="show_all" data-long-id="id-long">
+        New to WholeTale? Learn more about using the Dashboard...
+      </a>
+    </div>
+  </div>
+
+  <div class="ui stretched stackable grid">
+    <div class="row panel-container">
+      <div class="sixteen wide column">
+        <div class="dash-intro">
+
+          <div id="id-long" style="display:none">
+            <p class="first-para">Welcome to the WholeTale Dashboard! Here you can browse Tales published by other WholeTale users, as well as publically available datasets and environments (the buidling blocks of Tales). <i>Click on</i> a Tale to learn more about it. <i>Run</i> the Tale to interact with it. You will be running a private copy, so feel free to modify and remix the Tale (use your own data, edit the code, or change the compute environment).</p>
+            <p>On each tab, you can view public tales, data, or environments, or filter to just see your own. Click <i>My Tales</i> to just see Public Tales you've copied, as well as any new Tales you create or that are shared with you by collaborators. Click the button at the top right of each tab to create a Tale, contribute a dataset or configure a custom environment. You may choose to keep these private, or publish them to make them available to other WholeTale users.</p>
+            <p>For more information, visit the <a href="https://wholetale.readthedocs.io/users_guide/browse.html"><i class="fas fa-info-circle"></i> WholeTale User Guide</a>. You can quickly access relevant sections of the User Guide throughout WholeTale wherever you see this icon <i class="fas fa-info-circle"></i>.</p>
+              <a class="show_less" data-short-id="id-short">
+                Hide introduction
+              </a>
+          </div>
+        </div>
+
+          <div class="wt-panel-header tabs2">
+<div class="ui three item tabular menu">
+  <a href="browse.html" class="item">
+    <img src="images/wholetale_logo_sm.png" style="height:1.4rem;width:auto;padding: 0 .3em" /> Tales
+  </a>
+  <a href="browse-catalog.html" class="active item">
+    <i class="server icon"></i> Data Catalog
+  </a>
+  <a href="browse-env.html" class="item">
+    <i class="desktop icon"></i> Compute Environments
+  </a>
+</div>
+          </div>
+        <div class="wt-panel bg-grey special">
+          <div class="wt-panel-body">
+<div class="ui secondary  menu public-private">
+  <a class="active item">
+    All External Data
+  </a>
+  <a class="item">
+    My External Data
+  </a>
+  <div class="right menu">
+    <div class="item">
+      <div class="ui icon input">
+        <input type="text" placeholder="Search Data...">
+        <i class="search link icon"></i>
+      </div>
+    </div>
+    <div class="item">
+      <div class="ui primary left labeled icon button" id="test">
+        Add Data
+        <i class="plus icon"></i>
+      </div>
+    </div>
+  </div>
+</div>
+            <a href="browse-catalog-meta.html">
+              <img class="ui fluid image" src="images/catalog-placeholder.png" >
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+                  <div class="ui modal test">
+                    <i class="close icon"></i>
+                    <div class="header">
+                      Add Data to WholeTale Catalog
+                    </div>
+          <div class="content-row">
+            <div class="ui grid">
+              <div class="sixteen wide column">
+                <div style="min-height: 300px; padding: 20px 20px 40px">
+                  <form class="ui form">
+                    <div class="inline field">
+                      <label>
+                        Reference URI
+                        <i class="info circle grey icon"></i>
+                      </label>
+                      <input id="searchbox" type="text">
+                      <div class="ui inline button">Search</div>
+                    </div>
+                    <div class="info-block">
+                      <p style="padding: 8px; font-style:italic">
+                        The URL or DOI of the data object. Data packages can be imported into WholeTale from <a>DataONE</a> and select <a>Globus</a> repositories. For a full list of DataONE member nodes and supported Globus repositories, visit the <a>data registration guide</a>.
+                      </p>
+                    </div>
+                    <div class="ui tertiary segment" style="background-color: white">
+                      <p style="padding: 8px; font-style:italic"></p>
+                      <div class="inline field">
+                        <label>Folder Name</label>
+                        <input type="text">
+                      </div>
+                      <p>DOI:</p>
+                      <p>DataID:</p>
+                      <p>Repository:</p>
+                      <p>Size:</p>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <div class="actions">
+                      <div class="ui button">
+                        Cancel
+                      </div>
+                      <div class="ui primary right labeled icon button">
+                        Select
+                        <i class="checkmark icon"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+</div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="dist/components/dropdown.js"></script>
+    <script>
+      $('.ui.dropdown')
+        .dropdown()
+      ;
+    </script>
+    <script>
+      $(function(){
+            $("#test").click(function(){
+      		$(".test").modal('show');
+      	});
+      	$(".test").modal({
+      		closable: true
+      	});
+      });
+    </script>
+    <script src="dist/semantic.min.js"></script>
+    <script src="js/moreless.js"></script>
+
+</body>
+
+</html>
+
+
