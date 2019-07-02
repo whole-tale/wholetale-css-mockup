@@ -36,7 +36,7 @@
 
   <script src="js/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="http://www.crc.nd.edu/~kfurse/wholetale-css-mock-up-sui_s2019_alt/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script>window.jQuery || document.write('<script src="http://www.crc.nd.edu/~kfurse/wholetale-css-mock-up-sui_s2019/js/vendor/jquery-slim.min.js"><\/script>')</script>
   <script src="dist/components/dropdown.js"></script>
   <script src="dist/components/visibility.js"></script>
   <script src="dist/components/sidebar.js"></script>
@@ -47,7 +47,7 @@
 <!-- Top Menu -->
 
   <div class="ui inverted menu wt-top">
-    <a href="http://www.crc.nd.edu/~kfurse/wholetale-css-mock-up-sui_s2019_alt/pseudo-home.html" class="header item wt-brand"><img src="images/wholetale_logo_sm.png" />Whole<span>Tale</span></a>
+    <a href="pseudo-home.html" class="header item wt-brand"><img src="images/wholetale_logo_sm.png" />Whole<span>Tale</span></a>
     <div class="active item" href="browse.html">Tale Dashboard</div>
     <a class="item" href="browse-catalog.html">Data Catalog</a>
     <a class="item" href="browse-env.html">Compute Environments</a>
@@ -90,19 +90,12 @@
                   </div>
               </div>
               <div class="six wide column" style="text-align: right">
-                <a href="run.html" class="ui button primary">
+                <a id="test" class="ui button primary">
                   <i class="play icon"></i> Run
                 </a>
                 <a href="browse.html" class="ui button" style="margin-right: 10px">
                   Close
                 </a>
-                <div class="ui floating dropdown theme">
-                  <i class="fas fa-ellipsis-v"></i>
-                  <div class="menu transition hidden">
-                      <div class="item">Duplicate Tale</div>
-                      <div class="item">View Fullscreen</div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -111,10 +104,10 @@
             <a class="item disabled" href="run-meta-pre-run.html">
               Interact
             </a>
-            <a class="item disabled" href="run-meta-pre-run.html">
+            <a class="item" href="run-files-pre-run.html">
               Files
             </a>
-            <a class="active item" href="run-meta.html">
+            <a class="active item" href="run-meta-pre-run.html">
               Metadata
             </a>
             <div class="right menu">
@@ -193,6 +186,25 @@
     </div>
   </div>
 
+                  <div class="ui modal test">
+                    <i class="close icon"></i>
+                    <div class="header">
+                      Run Tale
+                    </div>
+              <div class="content">
+                <p>Running a Tale creates a copy in MyTales, and launches the environment so you can interact with it. You can have up to three Tales running at the same time. Continue?</p>
+              </div>
+                    <div class="actions">
+                      <a href="run-meta-pre-run.html" class="ui button">
+                        Cancel
+                      </a>
+                      <a href="run.html" class="ui primary left labeled icon button">
+                        Run
+                        <i class="play icon"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
 
 </div>
 
@@ -202,6 +214,16 @@
       $('.ui.dropdown')
         .dropdown()
       ;
+    </script>
+    <script>
+      $(function(){
+            $("#test").click(function(){
+      		$(".test").modal('show');
+      	});
+      	$(".test").modal({
+      		closable: true
+      	});
+      });
     </script>
     <script src="dist/semantic.min.js"></script>
     <script src="js/moreless.js"></script>

@@ -107,15 +107,21 @@
   </div>
 
   <div class="ui stackable grid container">
-    <div class="row panel-container">
+    <div class="row">
       <div class="sixteen wide column">
 
-            <div class="ui message" style="margin: 1em 0 2em;">
+            <div class="ui message" style="margin: 0 0 2em;">
 
              <p style="margin:0 0 15px;"><b>Currently running:</b> <i>3 Tales (out of 3 maximum)</i></p> 
 
               <div class="ui three stackable doubling selectable special cards">
                 <div class="ui card">
+                  <div class="extra content">
+                    <div class="right floated meta"><i class="close icon"></i></div>
+                    <span style="text-transform:uppercase">
+                      copy
+                    </span>
+                  </div>
                   <div class="blurring dimmable fluid image">
                     <div class="ui dimmer transition hidden">
                       <div class="content">
@@ -150,6 +156,12 @@
                   </div>
                 </div>
                 <div class="ui card">
+                  <div class="extra content">
+                    <div class="right floated meta"><i class="close icon"></i></div>
+                    <span style="text-transform:uppercase">
+                      original
+                    </span>
+                  </div>
                   <div class="blurring dimmable fluid image">
                     <div class="ui dimmer transition hidden">
                       <div class="content">
@@ -184,6 +196,12 @@
                   </div>
                 </div>
                 <div class="ui card">
+                  <div class="extra content">
+                    <div class="right floated meta"><i class="close icon"></i></div>
+                    <span style="text-transform:uppercase">
+                      original
+                    </span>
+                  </div>
                   <div class="blurring dimmable fluid image">
                     <div class="ui dimmer transition hidden">
                       <div class="content">
@@ -223,6 +241,12 @@
 
               <div class="ui four stackable doubling selectable special cards">
                 <div class="ui card">
+                  <div class="extra content">
+                    <div class="right floated meta"><i class="close icon"></i></div>
+                    <span style="text-transform:uppercase">
+                      copy
+                    </span>
+                  </div>
                   <div class="blurring dimmable fluid image">
                     <div class="ui dimmer transition hidden">
                       <div class="content">
@@ -257,6 +281,12 @@
                   </div>
                 </div>
                 <div class="ui card">
+                  <div class="extra content">
+                    <div class="right floated meta"><i class="close icon"></i></div>
+                    <span style="text-transform:uppercase">
+                      copy
+                    </span>
+                  </div>
                   <div class="blurring dimmable fluid image">
                     <div class="ui dimmer transition hidden">
                       <div class="content">

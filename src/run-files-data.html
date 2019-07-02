@@ -36,7 +36,7 @@
 
   <script src="js/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="http://www.crc.nd.edu/~kfurse/wholetale-css-mock-up-sui_s2019_alt/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script>window.jQuery || document.write('<script src="http://www.crc.nd.edu/~kfurse/wholetale-css-mock-up-sui_s2019/js/vendor/jquery-slim.min.js"><\/script>')</script>
   <script src="dist/components/dropdown.js"></script>
   <script src="dist/components/visibility.js"></script>
   <script src="dist/components/sidebar.js"></script>
@@ -47,7 +47,7 @@
 <!-- Top Menu -->
 
   <div class="ui inverted menu wt-top">
-    <a href="http://www.crc.nd.edu/~kfurse/wholetale-css-mock-up-sui_s2019_alt/pseudo-home.html" class="header item wt-brand"><img src="images/wholetale_logo_sm.png" />Whole<span>Tale</span></a>
+    <a href="pseudo-home.html" class="header item wt-brand"><img src="images/wholetale_logo_sm.png" />Whole<span>Tale</span></a>
     <div class="active item">Tale Dashboard</div>
     <a class="item" href="browse-catalog.html">Data Catalog</a>
     <a class="item" href="browse-env.html">Compute Environments</a>
@@ -132,27 +132,97 @@
             <div class="ui grid">
               <div class="four wide column"></div>
               <div class="twelve wide column">
-                <div style="float:right; margin-top:2px;">
-                  <i class="fas fa-plus-circle" id="test" style="font-size: 1.5rem;color:#2185d0"></i>
+                <div class="ui dropdown" style="float:right; margin-top:2px;">
+                  <i class="fas fa-plus-circle" style="font-size: 1.5rem; color:#2185d0"></i>
+                  <div class="menu transition hidden">
+                      <div class="header">
+                        external data options
+                      </div>
+                      <div class="item" id="test">WT Data Catalog</div>
+                      <div class="item" id="test2">Web (DOI or URL)</div>
+                  </div>
+                </div>
+                <div class="ui large breadcrumb directory-label">
+                  <span>External Data</span> <span>Linked, external data for use as Tale input (read-only)</span>  
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="fake-row" style="background:#ddd; height:1px"></div>
+          <div class="content-row">
+            <div class="ui grid">
+              <div class="four wide column">
+                <div class="ui vertical menu fluid dta">
+                  <a href="run-files-home.html" class="item">
+                    home
+                  </a>
+                  <a href="run-files-data.html"  class="active item">
+                    external_data
+                  </a>
+                  <a href="run-files.html" class="item">
+                    tale_workspace
+                  </a>
+                </div>
+              </div>
+              <div class="twelve wide column">
+                <div style="min-height: 700px; padding: 20px 20px 40px 0">
+                  <p class="notice">There is no external data associated with this Tale.</p>
+                  <p class="notice">Click the <i class="plus circle icon"></i> to select data from the WholeTale Registered Data Catalog or to select and register data from an online repository using a DOI or URL. Note that registering data can take some time. You can monitor the progress using the notifications panel <i class="tasks icon"></i>.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
                   <div class="ui modal test">
                     <i class="close icon"></i>
                     <div class="header">
-                      Select Data
+                      Select from WT External Data Catalog
                     </div>
           <div class="content-row">
             <div class="ui grid">
               <div class="four wide column">
                 <div class="ui vertical menu fluid dta">
-                  <a class="active item">
-                    Web<br/><span>DOI or URL</span>
+                  <a class="item active">
+                    WT Catalog
                   </a>
                   <a class="item">
-                    WT Catalog<br/><span>Already registered in WT</span>
+                    My External Data
                   </a>
                 </div>
               </div>
               <div class="twelve wide column">
                 <div style="min-height: 300px; padding: 20px 20px 40px 0">
+                  <img class="ui fluid image" src="images/select-data-wt-catalog.png" />                  
+                </div>
+              </div>
+            </div>
+          </div>
+                    <div class="actions">
+                      <div class="ui button">
+                        Cancel
+                      </div>
+                      <div class="ui primary right labeled icon button">
+                        Select
+                        <i class="checkmark icon"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                  <div class="ui modal test2">
+                    <i class="close icon"></i>
+                    <div class="header">
+                      Select and Register Data from Web
+                    </div>
+          <div class="content-row">
+            <div class="ui grid">
+              <div class="sixteen wide column">
+                <div style="min-height: 300px; padding: 20px 20px 40px">
                   <form class="ui form">
                     <div class="inline field">
                       <label>
@@ -184,50 +254,16 @@
             </div>
           </div>
                     <div class="actions">
-                      <div class="ui button">
+                      <a href="run-files-data.html" class="ui button">
                         Cancel
-                      </div>
-                      <div class="ui primary right labeled icon button">
-                        Select
+                      </a>
+                      <a href="run-files-data.html" class="ui primary right labeled icon button">
+                        Select and Register
                         <i class="checkmark icon"></i>
-                      </div>
+                      </a>
                     </div>
                   </div>
                 </div>
-                <div class="ui large breadcrumb directory-label">
-                  <span>External Data</span> <span>Linked, external data for use as Tale input (read-only)</span>  
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="fake-row" style="background:#ddd; height:1px"></div>
-          <div class="content-row">
-            <div class="ui grid">
-              <div class="four wide column">
-                <div class="ui vertical menu fluid dta">
-                  <a href="run-files-home.html" class="item">
-                    home
-                  </a>
-                  <a href="run-files-data.html"  class="active item">
-                    external_data
-                  </a>
-                  <a href="run-files.html" class="item">
-                    tale_workspace
-                  </a>
-                </div>
-              </div>
-              <div class="twelve wide column">
-                <div style="min-height: 700px; padding: 20px 20px 40px 0">
-                  <p class="notice">There is currently no external data associated with this Tale. To select data from an online repository or from another Tale workspace, click the <i class="fas fa-plus-circle"></i> to access the Select Data dialog.
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
 
 
 </div>
@@ -246,6 +282,16 @@
       		$(".test").modal('show');
       	});
       	$(".test").modal({
+      		closable: true
+      	});
+      });
+    </script>
+    <script>
+      $(function(){
+            $("#test2").click(function(){
+      		$(".test2").modal('show');
+      	});
+      	$(".test2").modal({
       		closable: true
       	});
       });

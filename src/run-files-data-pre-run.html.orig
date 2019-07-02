@@ -74,7 +74,7 @@
       <div class="sixteen wide column">
 
 <div class="ui breadcrumb">
-  <a href="browse-mytales.html" class="section"><i class="left angle icon"></i> Return to Dashboard</a>
+  <a href="browse.html" class="section"><i class="left angle icon"></i> Return to Dashboard</a>
 </div>
 
         <div class="wt-panel">
@@ -92,34 +92,24 @@
                   </div>
               </div>
               <div class="six wide column" style="text-align: right">
-                <a href="run-meta-pre-run.html" class="ui button primary">
-                  <i class="stop icon"></i> Stop
+                <a  id="test" class="ui button primary">
+                  <i class="play icon"></i> Run
                 </a>
-                <a href="browse-mytales.html" class="ui button" style="margin-right: 10px">
+                <a href="browse.html" class="ui button" style="margin-right: 10px">
                   Close
                 </a>
-                <div class="ui dropdown">
-                  <i class="fas fa-ellipsis-v"></i>
-                  <div class="menu transition hidden">
-                      <div class="item">Duplicate Tale</div>
-                      <div class="item">Delete Tale</div>
-                      <div class="item">Rebuild Tale</div>
-                      <div class="item">Publish Tale...</div>
-                      <div class="item">View Fullscreen</div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
           </div>
           <div class="ui secondary pointing menu" style="margin: 0">
-            <a class="item" href="run.html">
+            <a class="item disabled" href="">
               Interact
             </a>
-            <a class="active item" href="run-files.html">
+            <a class="active item" href="run-files-pre-run.html">
               Files
             </a>
-            <a class="item" href="run-meta.html">
+            <a class="item" href="run-meta-pre-run.html">
               Metadata
             </a>
             <div class="right menu">
@@ -132,14 +122,14 @@
             <div class="ui grid">
               <div class="four wide column"></div>
               <div class="twelve wide column">
-                <div class="ui dropdown" style="float:right; margin-top:2px;">
+                <div class="ui dropdown disabled" style="float:right; margin-top:2px;">
                   <i class="fas fa-plus-circle" style="font-size: 1.5rem; color:#2185d0"></i>
                   <div class="menu transition hidden">
                       <div class="header">
-                        external data options
+                        select data options
                       </div>
-                      <div class="item" id="test">WT Data Catalog</div>
-                      <div class="item" id="test2">Web (DOI or URL)</div>
+                      <div class="item">WT Catalog</div>
+                      <a class="item">Web (DOI or URL)</a>
                   </div>
                 </div>
                 <div class="ui large breadcrumb directory-label">
@@ -153,13 +143,10 @@
             <div class="ui grid">
               <div class="four wide column">
                 <div class="ui vertical menu fluid dta">
-                  <a href="run-files-home.html" class="item">
-                    home
-                  </a>
-                  <a href="run-files-data.html"  class="active item">
+                  <a href="run-files-data-pre-run.html"  class="active item">
                     external_data
                   </a>
-                  <a href="run-files.html" class="item">
+                  <a href="run-files-pre-run.html" class="item">
                     tale_workspace
                   </a>
                 </div>
@@ -167,7 +154,6 @@
               <div class="twelve wide column">
                 <div style="min-height: 700px; padding: 20px 20px 40px 0">
                   <p class="notice">There is no external data associated with this Tale.</p>
-                  <p class="notice">Click the <i class="plus circle icon"></i> to select data from the WholeTale Registered Data Catalog or to select and register data from an online repository using a DOI or URL. Note that registering data can take some time. You can monitor the progress using the notifications panel <i class="tasks icon"></i>.</p>
                 </div>
               </div>
             </div>
@@ -181,85 +167,18 @@
                   <div class="ui modal test">
                     <i class="close icon"></i>
                     <div class="header">
-                      Select from WT External Data Catalog
+                      Run Tale
                     </div>
-          <div class="content-row">
-            <div class="ui grid">
-              <div class="four wide column">
-                <div class="ui vertical menu fluid dta">
-                  <a class="item active">
-                    WT Catalog
-                  </a>
-                  <a class="item">
-                    My External Data
-                  </a>
-                </div>
+              <div class="content">
+                <p>Running a Tale creates a copy in MyTales, and launches the environment so you can interact with it. You can have up to three Tales running at the same time. Continue?</p>
               </div>
-              <div class="twelve wide column">
-                <div style="min-height: 300px; padding: 20px 20px 40px 0">
-                  <img class="ui fluid image" src="images/select-data-wt-catalog.png" />                  
-                </div>
-              </div>
-            </div>
-          </div>
                     <div class="actions">
-                      <div class="ui button">
-                        Cancel
-                      </div>
-                      <div class="ui primary right labeled icon button">
-                        Select
-                        <i class="checkmark icon"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                  <div class="ui modal test2">
-                    <i class="close icon"></i>
-                    <div class="header">
-                      Select and Register Data from Web
-                    </div>
-          <div class="content-row">
-            <div class="ui grid">
-              <div class="sixteen wide column">
-                <div style="min-height: 300px; padding: 20px 20px 40px">
-                  <form class="ui form">
-                    <div class="inline field">
-                      <label>
-                        Reference URI
-                        <i class="info circle grey icon"></i>
-                      </label>
-                      <input id="searchbox" type="text">
-                      <div class="ui inline button">Search</div>
-                    </div>
-                    <div class="info-block">
-                      <p style="padding: 8px; font-style:italic">
-                        The URL or DOI of the data object. Data packages can be imported into WholeTale from <a>DataONE</a> and select <a>Globus</a> repositories. For a full list of DataONE member nodes and supported Globus repositories, visit the <a>data registration guide</a>.
-                      </p>
-                    </div>
-                    <div class="ui tertiary segment" style="background-color: white">
-                      <p style="padding: 8px; font-style:italic"></p>
-                      <div class="inline field">
-                        <label>Folder Name</label>
-                        <input type="text">
-                      </div>
-                      <p>DOI:</p>
-                      <p>DataID:</p>
-                      <p>Repository:</p>
-                      <p>Size:</p>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-                    <div class="actions">
-                      <a href="run-files-data.html" class="ui button">
+                      <a href="run-meta-pre-run.html" class="ui button">
                         Cancel
                       </a>
-                      <a href="run-files-data.html" class="ui primary right labeled icon button">
-                        Select and Register
-                        <i class="checkmark icon"></i>
+                      <a href="run.html" class="ui primary left labeled icon button">
+                        Run
+                        <i class="play icon"></i>
                       </a>
                     </div>
                   </div>
@@ -282,16 +201,6 @@
       		$(".test").modal('show');
       	});
       	$(".test").modal({
-      		closable: true
-      	});
-      });
-    </script>
-    <script>
-      $(function(){
-            $("#test2").click(function(){
-      		$(".test2").modal('show');
-      	});
-      	$(".test2").modal({
       		closable: true
       	});
       });

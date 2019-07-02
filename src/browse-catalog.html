@@ -37,21 +37,21 @@
     <link href="css/fontawesome-all.min.css" rel="stylesheet">
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="http://www.crc.nd.edu/~kfurse/wholetale-css-mock-up-sui_s2019_alt/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script>window.jQuery || document.write('<script src="http://www.crc.nd.edu/~kfurse/wholetale-css-mock-up-sui_s2019/js/vendor/jquery-slim.min.js"><\/script>')</script>
 
   <script src="dist/components/dimmer.js"></script>
   <script src="dist/components/visibility.js"></script>
   <script src="dist/components/sidebar.js"></script>
   <script src="dist/components/transition.js"></script>
-  <script src="http://www.crc.nd.edu/~kfurse/wholetale-css-mock-up-sui_s2019_alt/dist/components/detect.min.js"></script>
-  <script src="http://www.crc.nd.edu/~kfurse/wholetale-css-mock-up-sui_s2019_alt/dist/components/clipboard.min.js"></script>
-  <script src="http://www.crc.nd.edu/~kfurse/wholetale-css-mock-up-sui_s2019_alt/dist/components/cookie.min.js"></script>
-  <script src="http://www.crc.nd.edu/~kfurse/wholetale-css-mock-up-sui_s2019_alt/dist/components/easing.min.js"></script>
-  <script src="http://www.crc.nd.edu/~kfurse/wholetale-css-mock-up-sui_s2019_alt/dist/components/highlight.min.js"></script>
-  <script src="http://www.crc.nd.edu/~kfurse/wholetale-css-mock-up-sui_s2019_alt/dist/components/history.min.js"></script>
+  <script src="http://www.crc.nd.edu/~kfurse/wholetale-css-mock-up-sui_s2019/dist/components/detect.min.js"></script>
+  <script src="http://www.crc.nd.edu/~kfurse/wholetale-css-mock-up-sui_s2019/dist/components/clipboard.min.js"></script>
+  <script src="http://www.crc.nd.edu/~kfurse/wholetale-css-mock-up-sui_s2019/dist/components/cookie.min.js"></script>
+  <script src="http://www.crc.nd.edu/~kfurse/wholetale-css-mock-up-sui_s2019/dist/components/easing.min.js"></script>
+  <script src="http://www.crc.nd.edu/~kfurse/wholetale-css-mock-up-sui_s2019/dist/components/highlight.min.js"></script>
+  <script src="http://www.crc.nd.edu/~kfurse/wholetale-css-mock-up-sui_s2019/dist/components/history.min.js"></script>
   <script src="dist/components/state.js"></script>
-  <script src="http://www.crc.nd.edu/~kfurse/wholetale-css-mock-up-sui_s2019_alt/dist/components/tablesort.min.js"></script>
-  <script src="http://www.crc.nd.edu/~kfurse/wholetale-css-mock-up-sui_s2019_alt/dist/components/underscore.min.js"></script>
+  <script src="http://www.crc.nd.edu/~kfurse/wholetale-css-mock-up-sui_s2019/dist/components/tablesort.min.js"></script>
+  <script src="http://www.crc.nd.edu/~kfurse/wholetale-css-mock-up-sui_s2019/dist/components/underscore.min.js"></script>
   <script src="dist/components/accordion.js"></script>
 
   <script src="dist/semantic.min.js"></script>
@@ -63,7 +63,7 @@
 <!-- Top Menu -->
 
   <div class="ui inverted menu wt-top">
-    <a href="http://www.crc.nd.edu/~kfurse/wholetale-css-mock-up-sui_s2019_alt/pseudo-home.html" class="header item wt-brand"><img src="images/wholetale_logo_sm.png" />Whole<span>Tale</span></a>
+    <a href="pseudo-home.html" class="header item wt-brand"><img src="images/wholetale_logo_sm.png" />Whole<span>Tale</span></a>
     <a class="item" href="browse.html">Tale Dashboard</a>
     <a class="active item" href="browse-catalog.html">Data Catalog</a>
     <a class="item" href="browse-env.html">Compute Environments</a>
@@ -90,7 +90,7 @@
       <div class="sixteen wide column">
         <div class="ui secondary pointing menu">
           <a href="browse.html" class="active item">
-            WholeTale Data Catalog
+            Data Catalog
           </a>
           <a href="browse-mycatalog.html" class="item">
             My External Data
@@ -111,12 +111,75 @@
 
   <div class="ui stackable grid container">
     <div class="row">
-      <div class="sixteen wide column">
+      <div class="ten wide column">
 
-<div class="ui fluid icon wt-input input" style="margin-bottom:2em">
+<div class="ui fluid icon wt-input input">
   <input type="text" placeholder="Search WholeTale External Data Catalog...">
   <i class="search icon"></i>
 </div>
+
+      </div>
+      <div class="six wide column">
+
+<div class="ui centered grid">
+<div class="ui center aligned column">
+<div
+  aria-label="Pagination Navigation"
+  role="navigation"
+  class="ui pagination pointing secondary menu">
+  <a
+    aria-current="false"
+    aria-disabled="false"
+    tabindex="0"
+    value="1"
+    aria-label="Previous item"
+    type="prevItem"
+    class="item"
+    >⟨</a
+  ><a
+    aria-current="true"
+    aria-disabled="false"
+    tabindex="0"
+    value="1"
+    type="pageItem"
+    class="active item"
+    >1</a
+  ><a
+    aria-current="false"
+    aria-disabled="false"
+    tabindex="0"
+    value="2"
+    type="pageItem"
+    class="item"
+    >2</a
+  ><a
+    aria-current="false"
+    aria-disabled="false"
+    tabindex="0"
+    value="3"
+    type="pageItem"
+    class="item"
+    >3</a
+  ><a
+    aria-current="false"
+    aria-disabled="false"
+    tabindex="0"
+    value="2"
+    aria-label="Next item"
+    type="nextItem"
+    class="item"
+    >⟩</a>
+</div>
+</div>
+</div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="ui stackable grid container">
+    <div class="row">
+      <div class="sixteen wide column">
 
 <div class="ui styled fluid accordion">
   <div class="title">
@@ -129,7 +192,7 @@
     <div class="ui floating dropdown theme">
       <i class="fas fa-ellipsis-v"></i>
       <div class="menu transition hidden">
-        <div class="item">Save to My External Data</div>
+        <div class="item">Save to My Registered Data</div>
         <a class="item">Add to Existing Tale</a>
         <a class="item" id="test">Create New Tale</a>
       </div>
@@ -189,7 +252,7 @@
     <div class="ui floating dropdown theme">
       <i class="fas fa-ellipsis-v"></i>
       <div class="menu transition hidden">
-        <div class="item">Save to My External Data</div>
+        <div class="item">Save to My Registered Data</div>
         <a class="item">Add to Existing Tale</a>
         <a class="item">Create New Tale</a>
       </div>
@@ -246,7 +309,7 @@
     <div class="ui floating dropdown theme">
       <i class="fas fa-ellipsis-v"></i>
       <div class="menu transition hidden">
-        <div class="item">Save to My External Data</div>
+        <div class="item">Save to My Registered Data</div>
         <a class="item">Add to Existing Tale</a>
         <a class="item">Create New Tale</a>
       </div>

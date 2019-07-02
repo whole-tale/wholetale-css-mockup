@@ -74,7 +74,7 @@
       <div class="sixteen wide column">
 
 <div class="ui breadcrumb">
-  <a href="browse-mytales.html" class="section"><i class="left angle icon"></i> Return to Dashboard</a>
+  <a href="browse.html" class="section"><i class="left angle icon"></i> Return to Dashboard</a>
 </div>
 
         <div class="wt-panel">
@@ -92,34 +92,24 @@
                   </div>
               </div>
               <div class="six wide column" style="text-align: right">
-                <a href="run-meta-pre-run.html" class="ui button primary">
-                  <i class="stop icon"></i> Stop
+                <a href="run.html" class="ui button primary">
+                  <i class="play icon"></i> Run
                 </a>
-                <a href="browse-mytales.html" class="ui button" style="margin-right: 10px">
+                <a href="browse.html" class="ui button" style="margin-right: 10px">
                   Close
                 </a>
-                <div class="ui dropdown">
-                  <i class="fas fa-ellipsis-v"></i>
-                  <div class="menu transition hidden">
-                      <div class="item">Duplicate Tale</div>
-                      <div class="item">Delete Tale</div>
-                      <div class="item">Rebuild Tale</div>
-                      <div class="item">Publish Tale...</div>
-                      <div class="item">View Fullscreen</div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
           </div>
           <div class="ui secondary pointing menu" style="margin: 0">
-            <a class="item" href="run.html">
+            <a class="item disabled" href="">
               Interact
             </a>
-            <a class="active item" href="run-files.html">
+            <a class="active item" href="run-files-pre-run.html">
               Files
             </a>
-            <a class="item" href="run-meta.html">
+            <a class="item" href="run-meta-pre-run.html">
               Metadata
             </a>
             <div class="right menu">
@@ -132,18 +122,19 @@
             <div class="ui grid">
               <div class="four wide column"></div>
               <div class="twelve wide column">
-                <div class="ui dropdown" style="float:right; margin-top:2px;">
+                <div class="ui dropdown disabled" style="float:right; margin-top:2px;">
                   <i class="fas fa-plus-circle" style="font-size: 1.5rem; color:#2185d0"></i>
                   <div class="menu transition hidden">
                       <div class="header">
-                        external data options
+                        workspace options
                       </div>
-                      <div class="item" id="test">WT Data Catalog</div>
-                      <div class="item" id="test2">Web (DOI or URL)</div>
+                      <div class="item">New Folder</div>
+                      <div class="item">Upload File</div>
+                      <a class="item" id="test">Select Data...</a>
                   </div>
                 </div>
                 <div class="ui large breadcrumb directory-label">
-                  <span>External Data</span> <span>Linked, external data for use as Tale input (read-only)</span>  
+                  <span>Tale Workspace</span> <span>All files associated with this Tale, except external data and global files in Home</span>  
                 </div>
               </div>
             </div>
@@ -153,21 +144,146 @@
             <div class="ui grid">
               <div class="four wide column">
                 <div class="ui vertical menu fluid dta">
-                  <a href="run-files-home.html" class="item">
-                    home
-                  </a>
-                  <a href="run-files-data.html"  class="active item">
+                  <a href="run-files-data-pre-run.html" class="item">
                     external_data
                   </a>
-                  <a href="run-files.html" class="item">
+                  <a href="run-files-pre-run.html"   class="active item">
                     tale_workspace
                   </a>
                 </div>
               </div>
               <div class="twelve wide column">
-                <div style="min-height: 700px; padding: 20px 20px 40px 0">
-                  <p class="notice">There is no external data associated with this Tale.</p>
-                  <p class="notice">Click the <i class="plus circle icon"></i> to select data from the WholeTale Registered Data Catalog or to select and register data from an online repository using a DOI or URL. Note that registering data can take some time. You can monitor the progress using the notifications panel <i class="tasks icon"></i>.</p>
+                <div style="padding: 20px 20px 40px 0">
+<table class="ui very basic striped table">
+  <tbody>
+    <tr>
+      <td>
+        <i class="folder icon"></i> .circleci
+      </td>
+      <td>circleci</td>
+      <td class="right aligned collapsing">10 hours ago</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="folder icon"></i> .tale
+      </td>
+      <td>dockerfile used to create image</td>
+      <td class="right aligned">10 hours ago</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="folder icon"></i> R
+      </td>
+      <td>Updated readme</td>
+      <td class="right aligned">10 hours ago</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="folder icon"></i> inst
+      </td>
+      <td>updated documentation</td>
+      <td class="right aligned">10 hours ago</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="folder icon"></i> man
+      </td>
+      <td>Updated readme</td>
+      <td class="right aligned">10 hours ago</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="folder icon"></i> vignettes
+      </td>
+      <td>Calculate percent of sites with niche probabilities above 0.75</td>
+      <td class="right aligned">10 hours ago</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="file outline icon"></i> .Rbuildignore
+      </td>
+      <td>Updated readme</td>
+      <td class="right aligned">10 hours ago</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="file outline icon"></i> .dockerignore
+      </td>
+      <td>Updated readme</td>
+      <td class="right aligned">10 hours ago</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="file outline icon"></i> .gitignore
+      </td>
+      <td>circleci</td>
+      <td class="right aligned">10 hours ago</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="file outline icon"></i> DESCRIPTION
+      </td>
+      <td>cleaning up code and adding dependencies</td>
+      <td class="right aligned">10 hours ago</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="file outline icon"></i> Dockerfile
+      </td>
+      <td>binder</td>
+      <td class="right aligned">10 hours ago</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="file outline icon"></i> GuidesBocinsky2018.Rproj
+      </td>
+      <td>Updated readme with more helpful tips</td>
+      <td class="right aligned">10 hours ago</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="file outline icon"></i> LICENSE
+      </td>
+      <td>getting package testing up and running</td>
+      <td class="right aligned">10 hours ago</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="file outline icon"></i> LICENSE.md
+      </td>
+      <td>added functions to package</td>
+      <td class="right aligned">10 hours ago</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="file outline icon"></i> NAMESPACE
+      </td>
+      <td>Nearly final version</td>
+      <td class="right aligned">10 hours ago</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="file outline icon"></i> README.Rmd
+      </td>
+      <td>added mac build to circle</td>
+      <td class="right aligned">10 hours ago</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="file outline icon"></i> README.md
+      </td>
+      <td>updated documentation</td>
+      <td class="right aligned">10 hours ago</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="file outline icon"></i> runtime.txt
+      </td>
+      <td>added a runtime.txt for binder</td>
+      <td class="right aligned">10 hours ago</td>
+    </tr>
+  </tbody>
+</table>
                 </div>
               </div>
             </div>
@@ -178,27 +294,46 @@
     </div>
   </div>
 
+
                   <div class="ui modal test">
                     <i class="close icon"></i>
                     <div class="header">
-                      Select from WT External Data Catalog
+                      Select Data
                     </div>
           <div class="content-row">
             <div class="ui grid">
               <div class="four wide column">
                 <div class="ui vertical menu fluid dta">
-                  <a class="item active">
-                    WT Catalog
-                  </a>
-                  <a class="item">
-                    My External Data
+                  <a class="active item">
+                    Tale Workspaces<br/><span>Other accessible Tales</span>
                   </a>
                 </div>
               </div>
               <div class="twelve wide column">
-                <div style="min-height: 300px; padding: 20px 20px 40px 0">
-                  <img class="ui fluid image" src="images/select-data-wt-catalog.png" />                  
-                </div>
+<table class="ui very basic striped table" style="margin-bottom:40px">
+  <tbody>
+    <tr>
+      <td>
+        <i class="folder icon"></i> Accelerated discovery of metallic glasses...</td>
+      <td>Jupyter</td>
+      <td class="right aligned">Logan Ward</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="folder icon"></i> Alaska Ex-Vessel Prices
+      </td>
+      <td>R</td>
+      <td class="right aligned collapsing">Matthew Jones</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="folder icon"></i> Example Tale with Jupyter
+      </td>
+      <td>Jupyter</td>
+      <td class="right aligned">Kacper Kolalik</td>
+    </tr>
+  </tbody>
+</table>
               </div>
             </div>
           </div>
@@ -214,60 +349,9 @@
                   </div>
                 </div>
 
-                  <div class="ui modal test2">
-                    <i class="close icon"></i>
-                    <div class="header">
-                      Select and Register Data from Web
-                    </div>
-          <div class="content-row">
-            <div class="ui grid">
-              <div class="sixteen wide column">
-                <div style="min-height: 300px; padding: 20px 20px 40px">
-                  <form class="ui form">
-                    <div class="inline field">
-                      <label>
-                        Reference URI
-                        <i class="info circle grey icon"></i>
-                      </label>
-                      <input id="searchbox" type="text">
-                      <div class="ui inline button">Search</div>
-                    </div>
-                    <div class="info-block">
-                      <p style="padding: 8px; font-style:italic">
-                        The URL or DOI of the data object. Data packages can be imported into WholeTale from <a>DataONE</a> and select <a>Globus</a> repositories. For a full list of DataONE member nodes and supported Globus repositories, visit the <a>data registration guide</a>.
-                      </p>
-                    </div>
-                    <div class="ui tertiary segment" style="background-color: white">
-                      <p style="padding: 8px; font-style:italic"></p>
-                      <div class="inline field">
-                        <label>Folder Name</label>
-                        <input type="text">
-                      </div>
-                      <p>DOI:</p>
-                      <p>DataID:</p>
-                      <p>Repository:</p>
-                      <p>Size:</p>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-                    <div class="actions">
-                      <a href="run-files-data.html" class="ui button">
-                        Cancel
-                      </a>
-                      <a href="run-files-data.html" class="ui primary right labeled icon button">
-                        Select and Register
-                        <i class="checkmark icon"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
 
 
 </div>
-
 
     <script src="js/jquery.min.js"></script>
     <script src="dist/components/dropdown.js"></script>
@@ -282,16 +366,6 @@
       		$(".test").modal('show');
       	});
       	$(".test").modal({
-      		closable: true
-      	});
-      });
-    </script>
-    <script>
-      $(function(){
-            $("#test2").click(function(){
-      		$(".test2").modal('show');
-      	});
-      	$(".test2").modal({
       		closable: true
       	});
       });
