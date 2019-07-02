@@ -36,7 +36,7 @@
 
   <script src="js/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="http://www.crc.nd.edu/~kfurse/wholetale-css-mock-up-sui_f2018/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script>window.jQuery || document.write('<script src="http://www.crc.nd.edu/~kfurse/wholetale-css-mock-up-sui_s2019_orig/js/vendor/jquery-slim.min.js"><\/script>')</script>
   <script src="dist/components/dropdown.js"></script>
   <script src="dist/components/visibility.js"></script>
   <script src="dist/components/sidebar.js"></script>
@@ -119,7 +119,112 @@
             </div>
           </div>
           <div class="wt-panel-body" style="padding-bottom:40px">
-            <img class="ui fluid image" src="images/tale-info.png" >
+            <div id="taleMetadataForm" class="ui form">
+
+              <div class="inline fields ui grid">
+                <label class="two wide column right aligned">Title</label>
+                <div class="field thirteen wide column">
+                  <input class="ember-text-field ember-view" placeholder="Enter a title..." type="text">
+                </div>
+              </div>
+              <div class="inline fields ui grid">
+                <label class="two wide column right aligned">Authors</label>
+                <div class="thirteen wide column">
+                  <h4 style="text-align: center">Created by <span style="color:#67c096">Logan Ward</span></h4>
+                  <a href="run-meta.html"><i class="fas fa-plus add-author-icon"></i> Add an author</a>
+                </div>
+              </div>
+              <div class="inline fields ui grid">
+                <label class="two wide column right aligned">Category</label>
+                <div class="field thirteen wide column">
+                  <input class="ember-text-field ember-view" placeholder="Choose a category..." type="text">
+                </div>
+              </div>
+              <div class="inline fields ui grid">
+                <label class="two wide column right aligned">Environment</label>
+                <div class="field thirteen wide column">
+                  <div id="environmentDropdown" class="ui icon selection dropdown" tabindex="0">
+                    <i class="dropdown icon"></i>
+                    <div class="text">
+                      <img class="ui image environment-icon" src="https://raw.githubusercontent.com/whole-tale/jupyter-base/master/squarelogo-greytext-orangebody-greymoons.png">
+                      Jupyter Notebook
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="inline fields ui grid">
+                <label class="two wide column right aligned">Datasets used</label>
+                No citable data
+              </div>
+              <div class="inline fields ui grid">
+                <label class="two wide column right aligned">License</label>
+                <div class="field thirteen wide column">
+                  <div id="licenseDropdown" class="ui icon selection dropdown license" tabindex="0">
+                    <i class="dropdown icon"></i>
+                    <div class="text">
+                      Creative Commons Attribution 4.0 International
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="inline fields ui grid">
+                <label class="two wide column right aligned">Date created</label>
+                <div class="field thirteen wide column">
+                  <span>Tue Nov 01 2016 08:01:01 GMT-0400 (Eastern Daylight Time)</span>
+                </div>
+              </div>
+              <div class="inline fields ui grid">
+                <label class="two wide column right aligned">Last updated</label>
+                <div class="field thirteen wide column">
+                  <span>Thu May 16 2019 12:46:59 GMT-0400 (Eastern Daylight Time)</span>
+                </div>
+              </div>
+              <div class="inline fields ui grid">
+                <label class="two wide column right aligned">Description</label>
+                <div class="thirteen wide column">
+                  <div class="ui top attached tabular menu">
+                    <a class="item active" data-tab="edit">
+                      <i class="icon code"></i>
+                      Edit
+                    </a>
+                    <a class="item" data-tab="preview">
+                      <i class="icon unhide"></i>
+                      Preview
+                    </a>
+                  </div>
+                  <div class="ui bottom attached tab segment active" data-tab="edit">
+                    <textarea id="ember775" class="ember-text-area ember-view"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="inline fields ui grid">
+                <label class="two wide column right aligned">Illustration</label>
+                <div class="ui action field thirteen wide column">
+                  <input class="ember-text-field ember-view" placeholder="http://" type="text">
+                  <div class="or"></div>
+                  <button class="ui blue button">Generate Illustration</button>
+                </div>
+              </div>
+              <div class="inline fields ui grid">
+                <label class="two wide column right aligned">Published location</label>
+                <div class="field thirteen wide column">
+                  <input class="ember-text-field ember-view" placeholder="http://" type="text">
+                </div>
+              </div>
+              <div class="inline fields ui grid">
+                <label class="two wide column right aligned"></label>
+                <div class="field two wide right aligned column">
+                  <button class="ui blue submit button">Save</button>
+                </div>
+                <div class="field toggle ui checkbox four wide column">
+                  <div class="toggle ui checkbox ember-view disabled">
+                    <label>Public?</label>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
           </div>
         </div>
       </div>

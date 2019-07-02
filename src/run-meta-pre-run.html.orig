@@ -101,10 +101,10 @@
           </div>
           </div>
           <div class="ui secondary pointing menu" style="margin-top: 0">
-            <a class="item" href="run.html">
+            <a class="item disabled" href="">
               Interact
             </a>
-            <a class="item" href="run-files.html">
+            <a class="item disabled" href="">
               Files
             </a>
             <a class="active item" href="run-meta.html">

@@ -36,7 +36,7 @@
 
   <script src="js/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="http://www.crc.nd.edu/~kfurse/wholetale-css-mock-up-sui_s2019_orig/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-slim.min.js"><\/script>')</script>
   <script src="dist/components/dropdown.js"></script>
   <script src="dist/components/visibility.js"></script>
   <script src="dist/components/sidebar.js"></script>
@@ -72,61 +72,93 @@
 
         <div class="wt-panel">
           <div class="wt-panel-header">
-          <div class="tale-info">
-            <div class="ui stackable grid">
-              <div class="ten wide column">
-                  <div class="title-info">
-                    <img src="images/tale-img-2.png" />
-                    <img src="images/logo-jupyter.png" class="env" />
-                    <div>
-                      <p>Accelerated discovery of metallic glasses through iteration of machine learning and high-throughput experiments </p>
-                    </div>
-                    <p class="qualifier">Logan Ward</p>
-                  </div>
-              </div>
-              <div class="six wide column" style="text-align: right">
-                <a href="run-meta-pre-run.html" class="ui button primary">
-                  <i class="stop icon"></i> Stop
-                </a>
-                <a href="browse-mytales.html" class="ui button" style="margin-right: 10px">
-                  Close
-                </a>
-                <div class="ui dropdown">
-                  <i class="fas fa-ellipsis-v"></i>
-                  <div class="menu transition hidden">
-                      <div class="item">Duplicate Tale</div>
-                      <div class="item">Delete Tale</div>
-                      <div class="item">Rebuild Tale</div>
-                      <div class="item">Publish Tale...</div>
-                      <div class="item">View Fullscreen</div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <h2>Create New Tale</h2>
           </div>
-          </div>
-          <div class="ui secondary pointing menu" style="margin: 0">
-            <a class="item" href="run.html">
-              Interact
-            </a>
-            <a class="active item" href="run-files.html">
-              Files
-            </a>
-            <a class="item" href="run-meta.html">
-              Metadata
-            </a>
-            <div class="right menu">
-              <a class="ui item">
-              </a>
-            </div>
-          </div>
+          <div class="wt-panel-body" style="padding-bottom:30px">
 
-          <div class="main-row" style="padding:10px 20px 12px;">
-            <div class="ui grid">
-              <div class="four wide column"></div>
-              <div class="twelve wide column">
-                <div style="float:right; margin-top:2px;">
-                  <i class="fas fa-plus-circle" id="test" style="font-size: 1.5rem;color:#2185d0"></i>
+                    <div class="content">
+                      <div class="ui grid form">
+
+                        <div class="row panel container">
+                          <div class="four wide column field">
+                            <label class="input-label">Tale name:</label>
+                          </div>
+                          <div class="twelve wide column field">
+                            <input placeholder="Tale name" type="text">
+                          </div>
+                        </div>
+
+                        <div class="row panel container">
+                          <div class="four wide column field">
+                            <label class="input-label">Compute environment:</label>
+                          </div>
+                          <div class="twelve wide column field">
+                            <div class="ui selection dropdown">
+                              <input type="hidden" name="gender">
+                              <i class="dropdown icon"></i>
+                              <div class="default text">Compute Environment</div>
+                              <div class="menu">
+                                <div class="header">
+                                  Official environments
+                                </div>
+                                <div class="item" data-value="0">Jupyter</div>
+                                <div class="item" data-value="1">RStudio</div>
+                                <div class="item" data-value="2">OpenRefine</div>
+                                <div class="divider"></div>
+                                <div class="header">
+                                  Other environments
+                                </div>
+                                <div class="item" data-value="3">Jupyter with customizations</div>
+                                <div class="item" data-value="4">Jane's RStudio</div>
+                                <div class="item" data-value="4">Something I Made</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row panel container">
+                          <div class="four wide column field">
+                            <label class="input-label">Input data:</label>
+                          </div>
+                          <div class="twelve wide column field">
+
+<div class="ui fluid card">
+  <div class="content">
+    <div class="header">
+      <div style="float:right; margin-top:2px;">
+        <i class="fas fa-plus-circle" id="test" style="font-size: 1.5rem;color:#2185d0"></i>
+      </div>
+      Select Data <span class="qualifier">Optional</span>
+    </div>
+  </div>
+  <div class="content">
+    <p class="notice">You can add data now using the <i class="fas fa-plus-circle"></i> icon, or after Tale creation using your chosen compute environment or the Files tab of your running Tale.</p>
+  </div>
+</div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+
+
+                    <div class="actions" style="margin-top:40px">
+                      <a href="browse-mytales.html" class="ui button">
+                        Cancel
+                      </a>
+                      <a href="run.html" class="ui primary right labeled icon button">
+                        Create New Tale
+                        <i class="play icon"></i>
+                      </a>
+                    </div>
+                  </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
                   <div class="ui modal test">
                     <i class="close icon"></i>
                     <div class="header">
@@ -177,54 +209,20 @@
             </div>
           </div>
                     <div class="actions">
-                      <div class="ui button">
+                      <a href="browse-mytales-create.html" class="ui button">
                         Cancel
-                      </div>
-                      <div class="ui primary right labeled icon button">
+                      </a>
+                      <a href="browse-mytales-create-2.html" class="ui primary right labeled icon button">
                         Select
                         <i class="checkmark icon"></i>
-                      </div>
+                      </a>
                     </div>
                   </div>
                 </div>
-                <div class="ui large breadcrumb directory-label">
-                  <span>External Data</span> <span>Linked, external data for use as Tale input (read-only)</span>  
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="fake-row" style="background:#ddd; height:1px"></div>
-          <div class="content-row">
-            <div class="ui grid">
-              <div class="four wide column">
-                <div class="ui vertical menu fluid dta">
-                  <a href="run-files-home.html" class="item">
-                    home
-                  </a>
-                  <a href="run-files-data.html"  class="active item">
-                    external_data
-                  </a>
-                  <a href="run-files.html" class="item">
-                    tale_workspace
-                  </a>
-                </div>
-              </div>
-              <div class="twelve wide column">
-                <div style="min-height: 700px; padding: 20px 20px 40px 0">
-                  <p class="notice">There is currently no external data associated with this Tale. To select data from an online repository or from another Tale workspace, click the <i class="fas fa-plus-circle"></i> to access the Select Data dialog.
-                </div>
-              </div>
-            </div>
-          </div>
 
-        </div>
-      </div>
-    </div>
-  </div>
 
 
 </div>
-
 
     <script src="js/jquery.min.js"></script>
     <script src="dist/components/dropdown.js"></script>

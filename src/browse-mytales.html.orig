@@ -78,8 +78,9 @@
 
   <div class="wt-dash">
 
-      <div class="ui dropdown button primary" style="float:right">
+      <div class="ui dropdown right labeled icon button primary" style="float:right">
         Create New...
+        <i class="plus icon"></i>
         <div class="menu">
             <a class="item">Create New Tale</a>
             <a class="item">Add Dataset</a>
@@ -129,7 +130,7 @@
 
 <div class="ui secondary menu public-private">
   <a href="browse.html" class="item">
-    All Tales
+    Public Tales
   </a>
   <a href="browse-mytales.html" class="active item">
     My Tales
@@ -142,7 +143,7 @@
       </div>
     </div>
     <div class="item">
-      <div class="ui primary left labeled icon button" id="test">
+      <div class="ui primary right labeled icon button" id="test">
         Create New Tale
         <i class="plus icon"></i>
       </div>
@@ -152,14 +153,6 @@
 
               <div class="ui three doubling selectable cards">
                 <div class="card">
-                  <div class="extra content">
-                    <span class="right floated" style="text-transform:uppercase">
-                      private
-                    </span>
-                    <span>
-                      Copied Tale
-                    </span>
-                  </div>
                   <div class="blurring dimmable fluid image">
                     <div class="ui dimmer transition hidden">
                       <div class="content">
@@ -176,32 +169,24 @@
                     </div>
                     <div class="t-title">
                       <h3>
-                        <a href="run.html">Accelerated discovery of metallic glasses through iteration of machine learning and high-throughput experimentss</a>
+                        <a href="run.html">Accelerated discovery of metallic glasses through iteration of machine learning and high-throughput experiments</a>
                       </h3>
                     </div>
                     <div>
-                      by <span style="color:#67c096">Logan Ward</span>
+                      <p>by <span style="color:#67c096">Logan Ward</span></p>
                     </div>
                   </div>
                   <div class="extra content">
-                    <span class="right floated">
-                      <i class="icon close"></i>
+                    <span style="text-transform:uppercase">
+                      private
                     </span>
-                    <span style="color:#2185d0">
+                    <span class="right floated" style="color:#2185d0">
                       <i class="stop icon"></i>
                       Stop Tale
                     </span>
                   </div>
                 </div>
                 <div class="card">
-                  <div class="extra content">
-                    <span class="right floated" style="text-transform:uppercase">
-                      private
-                    </span>
-                    <span>
-                      Original Tale
-                    </span>
-                  </div>
                   <div class="blurring dimmable fluid image">
                     <div class="ui dimmer transition hidden">
                       <div class="content">
@@ -226,10 +211,10 @@
                     </div>
                   </div>
                   <div class="extra content">
-                    <span class="right floated">
-                      <i class="icon close"></i>
+                    <span style="text-transform:uppercase">
+                      private
                     </span>
-                    <span style="color:#2185d0">
+                    <span class="right floated" style="color:#2185d0">
                       <i class="stop icon"></i>
                       Stop Tale
                     </span>
@@ -242,14 +227,6 @@
 
               <div class="ui three doubling selectable cards">
                 <div class="card">
-                  <div class="extra content">
-                    <span class="right floated" style="text-transform:uppercase">
-                      private
-                    </span>
-                    <span>
-                      Copied Tale
-                    </span>
-                  </div>
                   <div class="blurring dimmable fluid image">
                     <div class="ui dimmer transition hidden">
                       <div class="content">
@@ -274,24 +251,16 @@
                     </div>
                   </div>
                   <div class="extra content">
-                    <span class="right floated">
-                      <i class="icon close"></i>
+                    <span style="text-transform:uppercase">
+                      private
                     </span>
-                    <span style="color:#2185d0">
+                    <span class="right floated" style="color:#2185d0">
                       <i class="play icon"></i>
                       Run Tale
                     </span>
                   </div>
                 </div>
                 <div class="card">
-                  <div class="extra content">
-                    <span class="right floated" style="text-transform:uppercase">
-                      private
-                    </span>
-                    <span>
-                      Copied Tale
-                    </span>
-                  </div>
                   <div class="blurring dimmable fluid image">
                     <div class="ui dimmer transition hidden">
                       <div class="content">
@@ -316,24 +285,16 @@
                     </div>
                   </div>
                   <div class="extra content">
-                    <span class="right floated">
-                      <i class="icon close"></i>
+                    <span style="text-transform:uppercase">
+                      private
                     </span>
-                    <span style="color:#2185d0">
+                    <span class="right floated" style="color:#2185d0">
                       <i class="play icon"></i>
                       Run Tale
                     </span>
                   </div>
                 </div>
                 <div class="card">
-                  <div class="extra content">
-                    <span class="right floated" style="text-transform:uppercase">
-                      public
-                    </span>
-                    <span>
-                      Original Tale
-                    </span>
-                  </div>
                   <div class="blurring dimmable fluid image">
                     <div class="ui dimmer transition hidden">
                       <div class="content">
@@ -358,10 +319,10 @@
                     </div>
                   </div>
                   <div class="extra content">
-                    <span class="right floated">
-                      <i class="icon close"></i>
+                    <span style="text-transform:uppercase">
+                      public
                     </span>
-                    <span style="color:#2185d0">
+                    <span class="right floated" style="color:#2185d0">
                       <i class="play icon"></i>
                       Run Tale
                     </span>
@@ -419,26 +380,22 @@
                         </div>
                         <div class="row panel container">
                           <div class="four wide column field">
-                            <label class="input-label">Input data:*</label>
+                            <label class="input-label">Input data:</label>
                           </div>
                           <div class="twelve wide column field">
-                            <div class="ui action input">
-                              <input type="text" placeholder="Input data">
-                              <button class="ui button">Select data...</button>
-                            </div>
-                            <p style="font-style:italic;margin-top:5px;color:#999">*Input data selection is optional at this stage - you can add data after Tale creation using your chosen compute environment, or the Files tab of your running Tale.</p>
+                            <span class="notice">Add data after Tale creation using your chosen compute environment, or the Files tab of your running Tale.</span>
                           </div>
                         </div>
                       </div>
                     </div>
                     <div class="actions">
-                      <div class="ui button">
+                      <a href="browse.html" class="ui button">
                         Cancel
-                      </div>
-                      <div class="ui primary right labeled icon button">
+                      </a>
+                      <a href="run.html" class="ui primary right labeled icon button">
                         Create New Tale
                         <i class="play icon"></i>
-                      </div>
+                      </a>
                     </div>
                   </div>
                 </div>

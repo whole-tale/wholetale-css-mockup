@@ -29,6 +29,7 @@
   <link rel="stylesheet" type="text/css" href="dist/components/icon.css">
   <link rel="stylesheet" type="text/css" href="dist/components/sidebar.css">
   <link rel="stylesheet" type="text/css" href="dist/components/transition.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/accordion.css">
 
   <link rel="stylesheet" type="text/css" href="css/wholetale-dashboard.css">
 
@@ -51,6 +52,7 @@
   <script src="dist/components/state.js"></script>
   <script src="dist/components/tablesort.min.js"></script>
   <script src="dist/components/underscore.min.js"></script>
+  <script src="dist/components/accordion.js"></script>
 
   <script src="dist/semantic.min.js"></script>
 
@@ -147,9 +149,190 @@
     </div>
   </div>
 </div>
-            <a href="browse-catalog-meta.html">
-              <img class="ui fluid image" src="images/catalog-placeholder.png" >
-            </a>
+
+<div class="ui styled fluid accordion">
+  <div class="title">
+    <div class="label">
+      <img src="images/data-one.png" />
+    </div>
+    <div class="listing">
+      Craig Willis <i> Created 3 months ago</i> [0 MB] <span class="data-title">Watershed 18 daily stream discharge</span>, Coweeta Hydrologic Laboratory, Otto NC, 1936-2017 <span class="doi">https://pasta.Iternet.edu/package/metadata/eml/knb-Iter-cwt/3033/27</span>
+    </div>
+    <div class="ui floating dropdown theme">
+      <i class="fas fa-ellipsis-v"></i>
+      <div class="menu transition hidden">
+        <div class="item">Save to My External Data</div>
+        <a class="item">Add to Existing Tale</a>
+        <a class="item">Create New Tale</a>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="ui list transition hidden">
+      <div class="item">
+        <b>Dataset:</b>
+        Watershed 18 daily stream discharge
+      </div>
+      <div class="item">
+        <b>Source:</b>
+        Coweeta Hydrologic Laboratory, Otto, NC 1936-2017 LTR Network Member Node
+      </div>
+      <div class="item">
+        <b>DOI:</b>
+        10.6073/pasta/2e1f7b33a70e0bf658c40abaf3c64b12
+      </div>
+      <div class="item">
+        <b>DataID:</b>
+        
+      </div>
+      <div class="item">
+        <b>Repository:</b>
+        DataOne
+      </div>
+      <div class="item">
+        <b>Size:</b>
+        33 KB
+      </div>
+      <div class="item">
+        <b>Added by:</b>
+        Craig Willis
+      </div>
+      <div class="item spaced">
+        <b>Used in:</b>
+        8 Tales, 2 are public
+        <div class="list">
+          <a class="item">
+            Someone's Public Tale
+          </a>
+          <a class="item">
+            Someone Else's Public Tale
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="title">
+    <div class="label">
+      <img src="images/data-one.png" />
+    </div>
+    <div class="listing">
+      Matthew Jones <i>Created 6 months ago</i> [10 MB] <span class="data-title">Water samples from rivers and estuaries in the Canadian Arctic Archipelago</span>, 2016 <span class="doi">doi:10.18739/A2J80W</span>
+    </div>
+    <div class="ui floating dropdown theme">
+      <i class="fas fa-ellipsis-v"></i>
+      <div class="menu transition hidden">
+        <div class="item">Save to My External Data</div>
+        <a class="item">Add to Existing Tale</a>
+        <a class="item">Create New Tale</a>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="ui list transition hidden">
+      <div class="item">
+        <b>Dataset:</b>
+        Water samples from rivers and estuaries in the Canadian Arctic Archipelago
+      </div>
+      <div class="item">
+        <b>Source:</b>
+        2016
+      </div>
+      <div class="item">
+        <b>DOI:</b>
+        10.18739/A2J80W
+      </div>
+      <div class="item">
+        <b>DataID:</b>
+        
+      </div>
+      <div class="item">
+        <b>Repository:</b>
+        DataOne
+      </div>
+      <div class="item">
+        <b>Size:</b>
+        10 MB
+      </div>
+      <div class="item">
+        <b>Added by:</b>
+        Matthew Jones
+      </div>
+      <div class="item spaced">
+        <b>Used in:</b>
+        3 Tales, 1 is public
+        <div class="list">
+          <a class="item">
+            Someone's Public Tale
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="title">
+    <div class="label">
+      <img src="images/data-one.png" />
+    </div>
+    <div class="listing">
+      Matthew Harris <i>Created 6 months ago</i> [37 MB] <span class="data-title">Togiak Archaeological and Paleoecological Project</span> <span class="doi">doi:10.18739/A2196V</span>
+    </div>
+    <div class="ui floating dropdown theme">
+      <i class="fas fa-ellipsis-v"></i>
+      <div class="menu transition hidden">
+        <div class="item">Save to My External Data</div>
+        <a class="item">Add to Existing Tale</a>
+        <a class="item">Create New Tale</a>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="ui list transition hidden">
+      <div class="item">
+        <b>Dataset:</b>
+        Togiak Archaeological and Paleoecological Project
+      </div>
+      <div class="item">
+        <b>Source:</b>
+        
+      </div>
+      <div class="item">
+        <b>DOI:</b>
+        10.18739/A2196V
+      </div>
+      <div class="item">
+        <b>DataID:</b>
+        
+      </div>
+      <div class="item">
+        <b>Repository:</b>
+        DataOne
+      </div>
+      <div class="item">
+        <b>Size:</b>
+        37 MB
+      </div>
+      <div class="item">
+        <b>Added by:</b>
+        Matthew Harris
+      </div>
+      <div class="item spaced">
+        <b>Used in:</b>
+        5 Tales, 3 are public
+        <div class="list">
+          <a class="item">
+            Someone's Public Tale
+          </a>
+          <a class="item">
+            Someone Else's Public Tale
+          </a>
+          <a class="item">
+            A Third Public Tale
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
           </div>
         </div>
       </div>
@@ -216,6 +399,11 @@
       $('.ui.dropdown')
         .dropdown()
       ;
+    </script>
+    <script language='javascript'>
+      $(document).ready(function(){
+         $('.ui.accordion').accordion();
+      });
     </script>
     <script>
       $(function(){

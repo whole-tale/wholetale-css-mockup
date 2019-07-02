@@ -27,6 +27,12 @@ hr.env-separator {
   color: #333;
 }
 
+.qualifier {
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: italic;
+}
+
 /* Navigation - Top Nav */
 
 .ui.inverted.menu.wt-top {
@@ -277,7 +283,7 @@ hr.env-separator {
   height: 100%;
 }
 .wt-panel.bg-grey {
-  background: #f3f3f3;
+  background: #f9fafb;
 }
 .wt-panel:nth-child(2) {
   margin-top: 1rem;
@@ -328,8 +334,9 @@ hr.env-separator {
 .wt-panel .wt-panel-body {
   padding: 1.5rem 2rem 3rem;
 }
-.wt-panel .wt-panel-body.bg-grey {
-  background-color: #f3f3f3;
+.wt-panel .wt-panel-body.bg-grey,
+.wt-panel .wt-panel-header.bg-grey {
+  background-color: #f9fafb;
 }
 
 .wt-panel-body .ui.input {
@@ -396,12 +403,21 @@ hr.env-separator {
 .wt-panel .tale-info {
   padding: 1em 0 0;
 }
-.wt-panel .title-info {
+.wt-panel .title-info,
+.wt-panel .action-info {
   position: relative;
   padding-left: 4rem;
 }
 .wt-panel .title-info img {
   width: 3rem;
+  margin-right: .5rem;
+  position: absolute;
+  top: -.25rem;
+  left: 0rem;
+}
+.wt-panel .action-info img {
+  width: 3rem;
+  height: auto;
   margin-right: .5rem;
   position: absolute;
   top: -.25rem;
@@ -422,10 +438,20 @@ hr.env-separator {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.wt-panel .title-info p.qualifier {
+.wt-panel .action-info p {
+  font-size: 1.2rem;
+  line-height: 1.2;
+  font-weight: 600;
+  margin: 0 1.5rem .2rem 0;
+}
+.wt-panel .title-info p.qualifier,
+.wt-panel .action-info p.qualifier {
   font-size: 1rem;
   font-weight: 400;
   font-style: italic;
+}
+
+.wt-panel .actions {
 }
 
 
@@ -484,8 +510,6 @@ p.status span {
   letter-spacing: .5px;
   color: #132f43
 }
-
-
 
 
 /* Navigation - Data */
@@ -548,7 +572,7 @@ p.status span {
 
 .ui.card > .image,
 .ui.cards > .card > .image {
-  height: 160px;
+  height: 180px;
   overflow: hidden;
 }
 
@@ -651,13 +675,13 @@ a.show_less {
   height: 100%;
 }
 .wt-panel.bg-grey {
-  background: #f3f3f3;
+  background: #f9fafb;
 }
 
 .wt-panel-header.tabs2 {
   background: transparent;
   border: none;
-  padding: 10px 0 0 0;
+  padding: 15px 0 0 0;
   letter-spacing: 0;
 }
 .wt-panel-header.tabs2 .ui.tabular.menu  .item {
@@ -667,12 +691,70 @@ a.show_less {
   margin-left: -;
 }
 .wt-panel-header.tabs2 .ui.tabular.menu .item.active {
-  background: #f5f5f5;
+  background: #f9fafb;
 }
 
 
 .ui.secondary.menu.public-private .active.item {
   font-weight: 600;
+}
+
+
+/* Accordion for Data Catalog */
+
+.ui.styled.accordion .title {
+  font-weight: 300;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+}
+.ui.accordion .title span.data-title {
+  font-weight: 600;
+  font-size: 1.1em;
+}
+.ui.accordion .title span.doi {
+  color: #999;
+}
+
+.ui.styled.accordion .title .label {
+  display: block;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 2.5em;
+  height: auto;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  text-align: left;
+}
+.ui.styled.accordion .title .label img {
+  width: 100%;
+  height: auto;
+}
+
+.ui.styled.accordion .title .listing {
+  display: block;
+  -webkit-box-flex: 1;
+  ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+.ui.styled.accordion .title > .label + .listing {
+  margin: 0 0 0 1.15em;
+}
+
+.ui.styled.accordion .content {
+  margin-left: 4.5em;
+}
+
+.ui.styled.accordion .content .ui.list .item.spaced {
+  margin-top: 1em;
 }
 
 
