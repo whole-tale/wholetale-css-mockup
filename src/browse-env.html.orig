@@ -29,6 +29,7 @@
   <link rel="stylesheet" type="text/css" href="dist/components/icon.css">
   <link rel="stylesheet" type="text/css" href="dist/components/sidebar.css">
   <link rel="stylesheet" type="text/css" href="dist/components/transition.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/accordion.css">
 
   <link rel="stylesheet" type="text/css" href="css/wholetale-dashboard.css">
 
@@ -51,6 +52,7 @@
   <script src="dist/components/state.js"></script>
   <script src="dist/components/tablesort.min.js"></script>
   <script src="dist/components/underscore.min.js"></script>
+  <script src="dist/components/accordion.min.js"></script>
 
   <script src="dist/semantic.min.js"></script>
 
@@ -62,115 +64,253 @@
 
   <div class="ui inverted menu wt-top">
     <a href="pseudo-home.html" class="header item wt-brand"><img src="images/wholetale_logo_sm.png" />Whole<span>Tale</span></a>
-    <div class="active item">Dashboard</div>
-    <a class="item">About</a>
-    <a class="item">Team</a>
-    <a class="item">Participate</a>
-    <a class="item">Working Groups</a>
+    <a class="item" href="browse.html">Tale Dashboard</a>
+    <a class="item" href="browse-catalog.html">Data Catalog</a>
+    <a class="active item" href="browse-env.html">Compute Environments</a>
     <div class="right menu">
-      <a class="item">Kristina Davis</a>
-      <a class="item"><i class="fas fa-sign-out-alt"></i></a>
+      <a class="item"><i class="info circle white icon"></i></a>
+      <a class="item"><i class="tasks white icon"></i></a>
+      <a class="ui right dropdown item">
+        <i class="user circle white icon"></i>
+        <div class="menu">
+          <div class="item"><img class="gravatar" src="https://girder.stage.wholetale.org/api/v1/user/5a97190233b3fc0001161cbc/gravatar?size=64">Kristina Davis</div>
+          <div class="divider"></div>
+          <div class="item">Account</div>
+          <div class="item">Logout</div>
+        </div>
+      </a>
     </div>
   </div>
 
 
 <!-- Page Contents -->
 
-  <div class="wt-dash">
 
-      <div class="ui dropdown button primary" style="float:right">
-        Create New...
-        <div class="menu">
-            <a class="item">Create New Tale</a>
-            <a class="item">Add Dataset</a>
-            <a class="item">Create New Environment</a>
-        </div>
-      </div>
-
-    <div class="header item wt-brand">WHOLE<span>TALE</span> <span> Dashboard</span></div>
-    <div id="id-short">
-      <a class="show_all" data-long-id="id-long">
-        New to WholeTale? Learn more about using the Dashboard...
-      </a>
-    </div>
-  </div>
-
-  <div class="ui stretched stackable grid">
-    <div class="row panel-container">
+  <div class="ui grid container">
+    <div class="row">
       <div class="sixteen wide column">
-        <div class="dash-intro">
-
-          <div id="id-long" style="display:none">
-            <p class="first-para">Welcome to the WholeTale Dashboard! Here you can browse Tales published by other WholeTale users, as well as publically available datasets and environments (the buidling blocks of Tales). <i>Click on</i> a Tale to learn more about it. <i>Run</i> the Tale to interact with it. You will be running a private copy, so feel free to modify and remix the Tale (use your own data, edit the code, or change the compute environment).</p>
-            <p>On each tab, you can view public tales, data, or environments, or filter to just see your own. Click <i>My Tales</i> to just see Public Tales you've copied, as well as any new Tales you create or that are shared with you by collaborators. Click the button at the top right of each tab to create a Tale, contribute a dataset or configure a custom environment. You may choose to keep these private, or publish them to make them available to other WholeTale users.</p>
-            <p>For more information, visit the <a href="https://wholetale.readthedocs.io/users_guide/browse.html"><i class="fas fa-info-circle"></i> WholeTale User Guide</a>. You can quickly access relevant sections of the User Guide throughout WholeTale wherever you see this icon <i class="fas fa-info-circle"></i>.</p>
-              <a class="show_less" data-short-id="id-short">
-                Hide introduction
-              </a>
-          </div>
-        </div>
-
-          <div class="wt-panel-header tabs2">
-<div class="ui three item tabular menu">
-  <a href="browse.html" class="item">
-    <img src="images/wholetale_logo_sm.png" style="height:1.4rem;width:auto;padding: 0 .3em" /> Tales
-  </a>
-  <a href="browse-catalog.html" class="item">
-    <i class="server icon"></i> Data Catalog
-  </a>
-  <a href="browse-env.html" class="active item">
-    <i class="desktop icon"></i> Compute Environments
-  </a>
-</div>
-          </div>
-        <div class="wt-panel bg-grey special">
-          <div class="wt-panel-body">
-<div class="ui secondary  menu public-private">
-  <a class="active item">
-    All Environments
-  </a>
-  <a class="item">
-    My Environments
-  </a>
+        <div class="ui secondary pointing menu">
+          <a href="browse-env.html" class="active item">
+            Public Environments
+          </a>
+          <a href="" class="item">
+            My Environments
+          </a>
   <div class="right menu">
     <div class="item">
-      <div class="ui icon input">
-        <input type="text" placeholder="Search Environments...">
-        <i class="search link icon"></i>
-      </div>
-    </div>
-    <div class="item">
-      <div class="ui primary left labeled icon button" id="test">
-        Create New Environment
+      <div class="ui primary right labeled icon button" id="add-env">
+        Add Environment
         <i class="plus icon"></i>
       </div>
     </div>
   </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ui stackable grid container">
+    <div class="row">
+      <div class="sixteen wide column">
+
+<div class="ui fluid icon wt-input input" style="margin-bottom:1em">
+  <input type="text" placeholder="Search WholeTale Environments...">
+  <i class="search icon"></i>
 </div>
-          <h3>Official Environments</h3>
-          <div class="ui vertical menu fluid envs">
-            <a class="item">
-              <img src="images/logo-r.png" />
-              <i class="fas fa-info"></i>
-              <p>Rstudio</p>
-            </a>
-            <a class="item">
-              <i class="fas fa-info"></i>
-              <img src="images/logo-jupyter.png" />
-              <p>Jupyter Notebook</p>
-            </a>
-            <a class="item">
-              <i class="fas fa-info"></i>
-              <img src="images/spark_logo.png" />
-              <p>Jupyter with Spark</p>
-            </a>
-          </div>
-          <div class="more-button">
-            <button class="ui icon button blue">More Environments...</button>
+
+
+<div class="ui styled fluid accordion">
+  <div class="title">
+    <div class="label">
+      <img src="images/logo-r.png" />
+    </div>
+    <div class="listing">
+      <h3>Rstudio</h3>
+      Integrated development environment for the R programming language
+    </div>
+    <div class="ui floating dropdown theme">
+      <i class="fas fa-ellipsis-v"></i>
+      <div class="menu transition hidden">
+        <div class="item">Save to My Environments</div>
+        <a class="item">Use in Existing Tale</a>
+        <a class="item">Create New Tale</a>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="ui list transition hidden">
+          <div class="ui stackable grid">
+            <div class="ui six wide column">
+      <div class="item">
+        <b>Name:</b>
+        Rstudio
+      </div>
+      <div class="item">
+        <b>Description:</b>
+        No description
+      </div>
+      <div class="item">
+        <b>Creator:</b>
+        Kacper Kowalik
+      </div>
+      <div class="item">
+        <b>Is Public:</b>
+        Yes
+      </div>
+            </div>
+            <div class="ui ten wide column">
+      <div class="item">
+        <b>Configuration:</b>
+        <div class="ui message">
+<pre>
+{
+  "buildpack": "RockerBuildPack",
+  "command": "/start.sh",
+  "environment": [
+    "CSP_HOSTS=https://dashboard.wholetale.org",
+    "PASSWORD=password"
+  ],
+  "memLimit": "2048m",
+  "port": 8787,
+  "targetMount": "/WholeTale",
+  "urlPath": "",
+  "user": "rstudio"
+}
+</pre>
+            </div>
           </div>
         </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="title">
+    <div class="label">
+      <img src="images/logo-jupyter.png" />
+    </div>
+    <div class="listing">
+      <h3>Jupyter Notebook</h3>
+      Create documents that contain live code, equations, visualizations, and narrative text
+    </div>
+    <div class="ui floating dropdown theme">
+      <i class="fas fa-ellipsis-v"></i>
+      <div class="menu transition hidden">
+        <div class="item">Save to My Environments</div>
+        <a class="item">Use in Existing Tale</a>
+        <a class="item">Create New Tale</a>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="ui list transition hidden">
+          <div class="ui stackable grid">
+            <div class="ui six wide column">
+      <div class="item">
+        <b>Name:</b>
+        Jupyter Notebook
+      </div>
+      <div class="item">
+        <b>Description:</b>
+        No description
+      </div>
+      <div class="item">
+        <b>Creator:</b>
+        Girder Administrator
+      </div>
+      <div class="item">
+        <b>Is Public:</b>
+        Yes
+      </div>
+            </div>
+            <div class="ui ten wide column">
+      <div class="item">
+        <b>Configuration:</b>
+        <div class="ui message">
+<pre>
+{
+  "buildpack": "PythonBuildPack",
+  "command": "jupyter notebook --no-browser --port {port} --ip=0.0.0.0 --NotebookApp.token={token} --NotebookApp.base_url=/{base_path} --NotebookApp.port_retries=0",
+  "environment": [
+    "CSP_HOSTS=dashboard.wholetale.org"
+  ],
+  "memLimit": "2048m",
+  "port": 8888,
+  "targetMount": "/home/jovyan/work",
+  "urlPath": "?token={token}",
+  "user": "jovyan"
+}
+</pre>
+            </div>
           </div>
         </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="title">
+    <div class="label">
+      <img src="images/spark_logo.png" />
+    </div>
+    <div class="listing">
+      <h3>Jupyter with Spark</h3>
+      Perform massive distributed processing over resilient sets of data
+    </div>
+    <div class="ui floating dropdown theme">
+      <i class="fas fa-ellipsis-v"></i>
+      <div class="menu transition hidden">
+        <div class="item">Save to My Environments</div>
+        <a class="item">Use in Existing Tale</a>
+        <a class="item">Create New Tale</a>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="ui list transition hidden">
+          <div class="ui stackable grid">
+            <div class="ui six wide column">
+      <div class="item">
+        <b>Name:</b>
+        Jupyter with Spark
+      </div>
+      <div class="item">
+        <b>Description:</b>
+        No description
+      </div>
+      <div class="item">
+        <b>Creator:</b>
+        Girder Administrator
+      </div>
+      <div class="item">
+        <b>Is Public:</b>
+        Yes
+      </div>
+            </div>
+            <div class="ui ten wide column">
+      <div class="item">
+        <b>Configuration:</b>
+        <div class="ui message">
+<pre>
+{
+  "buildpack": "SparkBuildPack",
+  "command": "jupyter notebook --no-browser --port {port} --ip=0.0.0.0 --NotebookApp.token={token} --NotebookApp.base_url=/{base_path} --NotebookApp.port_retries=0",
+  "environment": [
+    "CSP_HOSTS=dashboard.wholetale.org"
+  ],
+  "memLimit": "2048m",
+  "port": 8888,
+  "targetMount": "/home/jovyan/work",
+  "urlPath": "?token={token}",
+  "user": "jovyan"
+}
+</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+
+        </div>
+
       </div>
     </div>
   </div>
@@ -277,6 +417,11 @@
       $('.ui.dropdown')
         .dropdown()
       ;
+    </script>
+    <script language='javascript'>
+      $(document).ready(function(){
+         $('.ui.accordion').accordion();
+      });
     </script>
     <script>
       $(function(){

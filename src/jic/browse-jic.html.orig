@@ -33,7 +33,8 @@
   <link rel="stylesheet" type="text/css" href="css/wholetale-dashboard.css">
 
     <!-- Font Awesome -->
-    <link href="css/fontawesome-all.min.css" rel="stylesheet">
+<!--    <link href="css/fontawesome-all.min.css" rel="stylesheet"> -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-slim.min.js"><\/script>')</script>
@@ -62,17 +63,15 @@
 
   <div class="ui inverted menu wt-top">
     <a href="pseudo-home.html" class="header item wt-brand"><img src="images/wholetale_logo_sm.png" />Whole<span>Tale</span></a>
-    <div class="active item">Tale Dashboard</div>
+    <div class="active item">Tales</div>
     <a class="item" href="browse-catalog.html">Data Catalog</a>
-    <a class="item" href="browse-env.html">Compute Environments</a>
+    <a class="item">Compute Environments</a>
     <div class="right menu">
       <a class="item"><i class="info circle white icon"></i></a>
       <a class="item"><i class="tasks white icon"></i></a>
       <a class="ui right dropdown item">
         <i class="user circle white icon"></i>
         <div class="menu">
-          <div class="item"><img class="gravatar" src="https://girder.stage.wholetale.org/api/v1/user/5a97190233b3fc0001161cbc/gravatar?size=64">Kristina Davis</div>
-          <div class="divider"></div>
           <div class="item">Account</div>
           <div class="item">Logout</div>
         </div>
@@ -83,73 +82,51 @@
 
 <!-- Page Contents -->
 
-  <div class="ui grid container">
-    <div class="row">
-      <div class="sixteen wide column">
-        <div class="ui secondary pointing menu">
-          <a href="browse.html" class="item">
-            Public Tales
-          </a>
-          <a href="browse-mytales.html" class="active item">
-            My Tales
-          </a>
+  <div class="wt-dash">
+
+<div class="ui secondary menu">
+  <div class="header item wt-brand"">
+    WHOLE<span>TALE</span> <span> Dashboard</span>
+  </div>
   <div class="right menu">
-    <div class="item no-phone">
+    <div class="item">
       <div class="ui primary right labeled icon button" id="test">
         Create New Tale
         <i class="plus icon"></i>
       </div>
     </div>
   </div>
+</div>
+
+  </div>
+
+  <div class="ui grid">
+    <div class="row">
+      <div class="sixteen wide column">
+        <div class="ui fluid two item secondary pointing menu">
+          <a href="browse.html" class="active item">
+            Public Tales
+          </a>
+          <a href="browse-mytales.html" class="item">
+            My Tales
+          </a>
         </div>
       </div>
     </div>
   </div>
 
+
   <div class="ui stackable grid container">
-    <div class="row panel-container">
+    <div class="row">
       <div class="sixteen wide column">
 
-            <div class="ui message" style="margin: 1em 0 2em;">
-
-             <p style="margin:0 0 15px;"><b>Currently running:</b> <i>3 Tales (out of 3 maximum)</i></p> 
-
-              <div class="ui three stackable doubling selectable special cards">
-                <div class="ui card">
-                  <div class="blurring dimmable fluid image">
-                    <div class="ui dimmer transition hidden">
-                      <div class="content">
-                        <div class="center">
-                          <a href="run.html" class="ui inverted button">View</a>
-                        </div>
-                      </div>
-                    </div>
-                   <img class="pic" src="http://advances.sciencemag.org/content/advances/4/4/eaaq1566/F1.large.jpg?width=800&height=600&carousel=1" alt"Research Image">
-                  </div>
-                  <div class="content">
-                    <div style="text-transform: uppercase; color: #ba975e;font-weight: 700;">
-                      science
-                    </div>
-                    <div class="t-title">
-                      <h3>
-                        <a href="run.html">Accelerated discovery of metallic glasses through iteration of machine learning and high-throughput experiments</a>
-                      </h3>
-                    </div>
-                    <div>
-                      <p>by <span style="color:#67c096">Logan Ward</span></p>
-                    </div>
-                  </div>
-                  <div class="extra content">
-                    <span style="text-transform:uppercase">
-                      private
-                    </span>
-                    <span class="right floated" style="color:#2185d0">
-                      <i class="stop icon"></i>
-                      Stop Tale
-                    </span>
-                  </div>
-                </div>
-                <div class="ui card">
+<div class="ui fluid icon input" style="margin-bottom:2em">
+  <input type="text" placeholder="Search Public Tales...">
+  <i class="search icon"></i>
+</div>
+ 
+              <div class="ui four stackable doubling selectable cards" style="padding-top:20px">
+                <div class="ui raised card">
                   <div class="blurring dimmable fluid image">
                     <div class="ui dimmer transition hidden">
                       <div class="content">
@@ -158,7 +135,7 @@
                         </div>
                       </div>
                     </div>
-                   <img class="pic" src="images/tale-img-3.png" alt"Research Image">
+                   <img class="pic" src="https://use.yt/upload/e922a8ac" alt"Research Image">
                   </div>
                   <div class="content">
                     <div style="text-transform: uppercase; color: #ba975e;font-weight: 700;">
@@ -166,24 +143,112 @@
                     </div>
                     <div class="t-title">
                       <h3>
-                        <a>My First Original Tale</a>
+                        <a href="run-meta-pre-run.html">Accelerated discovery of metallic glasses through iteration of machine learning and high-throughput experiments</a>
                       </h3>
                     </div>
                     <div>
-                      by <span style="color:#67c096">Kristina Davis</span>
+                      by <span style="color:#67c096">Logan Ward</span>
                     </div>
                   </div>
                   <div class="extra content">
                     <span style="text-transform:uppercase">
-                      private
+                      public
+                    </span>
+                    <a class="right floated" href="run.html" style="color:#2185d0">
+                      <i class="play icon"></i>
+                      Run Tale
+                    </a>
+                  </div>
+                </div>
+                <div class="ui raised card">
+                  <div class="blurring dimmable fluid image">
+                    <div class="ui dimmer transition hidden">
+                      <div class="content">
+                        <div class="center">
+                          <a class="ui inverted button">View</a>
+                        </div>
+                      </div>
+                    </div>
+                    <img class="pic" src="https://raw.githubusercontent.com/JFChen3/benchmark_tests/master/dey-2014.png">
+                  </div>
+                  <div class="content">
+                    <div style="text-transform: uppercase; color: #ba975e;font-weight: 700;">
+                      science
+                    </div>
+                    <div class="t-title">
+                      <h3>
+                        Informatics-aided bandgap engineering for solar materials
+                      </h3>
+                    </div>
+                    <div>
+                      by <span style="color:#67c096">Logan Ward</span>
+                    </div>
+                  </div>
+                  <div class="extra content">
+                    <span style="text-transform:uppercase">
+                      public
                     </span>
                     <span class="right floated" style="color:#2185d0">
-                      <i class="stop icon"></i>
-                      Stop Tale
+                      <i class="play icon"></i>
+                      Run Tale
                     </span>
                   </div>
                 </div>
-                <div class="ui card">
+                <div class="ui raised card">
+                  <div class="blurring dimmable fluid image">
+                    <img class="pic" src="http://advances.sciencemag.org/content/advances/4/4/eaaq1566/F1.large.jpg?width=800&height=600&carousel=1" alt"Research Image">
+                  </div>
+                  <div class="content">
+                    <div style="text-transform: uppercase; color: #ba975e;font-weight: 700;">
+                      science
+                    </div>
+                    <div class="t-title">
+                      <h3>
+                        Accelerated discovery of metallic glasses through iteration of machine learning and high-throughput experiments
+                      </h3>
+                    </div>
+                    <div>
+                      by <span style="color:#67c096">Logan Ward</span>
+                    </div>
+                  </div>
+                  <div class="extra content">
+                    <span style="text-transform:uppercase">
+                      public
+                    </span>
+                    <span class="right floated" style="color:#2185d0">
+                      <i class="play icon"></i>
+                      Run Tale
+                    </span>
+                  </div>
+                </div>
+                <div class="ui raised card">
+                  <div class="blurring dimmable fluid image">
+                    <img class="pic" src="http://yt-project.org/img/analysis.jpg" alt"Research Image">
+                  </div>
+                  <div class="content">
+                    <div style="text-transform: uppercase; color: #ba975e;font-weight: 700;">
+                      astrophysics
+                    </div>
+                    <div class="t-title">
+                      <h3>
+                        Example Tale with Jupyter
+                      </h3>
+                    </div>
+                    <div style="color:#67c096">
+                      by <span style="color:#67c096">Kacper Kowalik</span>
+                    </div>
+                  </div>
+                  <div class="extra content">
+                    <span style="text-transform:uppercase">
+                      public
+                    </span>
+                    <span class="right floated" style="color:#2185d0">
+                      <i class="play icon"></i>
+                      Run Tale
+                    </span>
+                  </div>
+                </div>
+                <div class="ui raised card">
                   <div class="blurring dimmable fluid image">
                     <div class="ui dimmer transition hidden">
                       <div class="content">
@@ -212,59 +277,13 @@
                       public
                     </span>
                     <span class="right floated" style="color:#2185d0">
-                      <i class="stop icon"></i>
-                      Stop Tale
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-    </div>
-
-              <div class="ui four stackable doubling selectable special cards">
-                <div class="ui card">
-                  <div class="blurring dimmable fluid image">
-                    <div class="ui dimmer transition hidden">
-                      <div class="content">
-                        <div class="center">
-                          <a class="ui inverted button">View</a>
-                        </div>
-                      </div>
-                    </div>
-                   <img class="pic" src="https://raw.githubusercontent.com/whole-tale/dashboard/master/public/images/demo-graph2.jpg" alt"Research Image">
-                  </div>
-                  <div class="content">
-                    <div style="text-transform: uppercase; color: #ba975e;font-weight: 700;">
-                      science
-                    </div>
-                    <div class="t-title">
-                      <h3>
-                        <a>Alaska Ex-Vessel Prices</a>
-                      </h3>
-                    </div>
-                    <div>
-                      by <span style="color:#67c096">Matthew Jones</span>
-                    </div>
-                  </div>
-                  <div class="extra content">
-                    <span style="text-transform:uppercase">
-                      private
-                    </span>
-                    <span class="right floated" style="color:#2185d0">
                       <i class="play icon"></i>
                       Run Tale
                     </span>
                   </div>
                 </div>
-                <div class="ui card">
+                <div class="ui raised card">
                   <div class="blurring dimmable fluid image">
-                    <div class="ui dimmer transition hidden">
-                      <div class="content">
-                        <div class="center">
-                          <a class="ui inverted button">View</a>
-                        </div>
-                      </div>
-                    </div>
                     <img class="pic" src="https://raw.githubusercontent.com/WardLT/ward-npj-2016-examples/master/modeling-metallic-glasses/figures/alnizr_cover_image.png" alt"Research Image">
                   </div>
                   <div class="content">
@@ -273,7 +292,7 @@
                     </div>
                     <div class="t-title">
                       <h3>
-                        <a>Predicting the Properties of Inorganic Materials with Machine Learning</a>
+                        Predicting the Properties of Inorganic Materials with Machine Learning
                       </h3>
                     </div>
                     <div>
@@ -282,7 +301,7 @@
                   </div>
                   <div class="extra content">
                     <span style="text-transform:uppercase">
-                      private
+                      public
                     </span>
                     <span class="right floated" style="color:#2185d0">
                       <i class="play icon"></i>
@@ -291,6 +310,7 @@
                   </div>
                 </div>
               </div>
+
 
       </div>
     </div>
@@ -349,7 +369,7 @@
                       </div>
                     </div>
                     <div class="actions">
-                      <a href="browse-mytales.html" class="ui button">
+                      <a href="browse.html" class="ui button">
                         Cancel
                       </a>
                       <a href="run.html" class="ui primary right labeled icon button">
@@ -369,13 +389,6 @@
       $('.ui.dropdown')
         .dropdown()
       ;
-    </script>
-    <script>
-      $(function(){
-        $('.special.cards .image').dimmer({
-          on: 'hover'
-        });
-      });
     </script>
     <script>
       $(function(){

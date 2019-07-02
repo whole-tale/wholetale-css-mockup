@@ -20,6 +20,7 @@
   <link rel="stylesheet" type="text/css" href="dist/components/image.css">
   <link rel="stylesheet" type="text/css" href="dist/components/menu.css">
 
+  <link rel="stylesheet" type="text/css" href="dist/components/dimmer.css">
   <link rel="stylesheet" type="text/css" href="dist/components/divider.css">
   <link rel="stylesheet" type="text/css" href="dist/components/dropdown.css">
   <link rel="stylesheet" type="text/css" href="dist/components/segment.css">
@@ -28,19 +29,34 @@
   <link rel="stylesheet" type="text/css" href="dist/components/icon.css">
   <link rel="stylesheet" type="text/css" href="dist/components/sidebar.css">
   <link rel="stylesheet" type="text/css" href="dist/components/transition.css">
+  <link rel="stylesheet" type="text/css" href="dist/components/accordion.css">
 
   <link rel="stylesheet" type="text/css" href="css/wholetale-dashboard.css">
 
     <!-- Font Awesome -->
     <link href="css/fontawesome-all.min.css" rel="stylesheet">
 
-  <script src="js/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-slim.min.js"><\/script>')</script>
-  <script src="dist/components/dropdown.js"></script>
+
+  <script src="dist/components/dimmer.js"></script>
   <script src="dist/components/visibility.js"></script>
   <script src="dist/components/sidebar.js"></script>
   <script src="dist/components/transition.js"></script>
+  <script src="dist/components/detect.min.js"></script>
+  <script src="dist/components/clipboard.min.js"></script>
+  <script src="dist/components/cookie.min.js"></script>
+  <script src="dist/components/easing.min.js"></script>
+  <script src="dist/components/highlight.min.js"></script>
+  <script src="dist/components/history.min.js"></script>
+  <script src="dist/components/state.js"></script>
+  <script src="dist/components/tablesort.min.js"></script>
+  <script src="dist/components/underscore.min.js"></script>
+  <script src="dist/components/accordion.js"></script>
+
+  <script src="dist/semantic.min.js"></script>
+
+
 </head>
 <body>
 
@@ -48,8 +64,8 @@
 
   <div class="ui inverted menu wt-top">
     <a href="pseudo-home.html" class="header item wt-brand"><img src="images/wholetale_logo_sm.png" />Whole<span>Tale</span></a>
-    <div class="active item">Tale Dashboard</div>
-    <a class="item" href="browse-catalog.html">Data Catalog</a>
+    <a class="item" href="browse.html">Tale Dashboard</a>
+    <a class="active item" href="browse-catalog.html">Data Catalog</a>
     <a class="item" href="browse-env.html">Compute Environments</a>
     <div class="right menu">
       <a class="item"><i class="info circle white icon"></i></a>
@@ -69,90 +85,51 @@
 
 <!-- Page Contents -->
 
-  <div class="ui stretched stackable grid">
-    <div class="row panel-container" style="padding-top:20px">
+  <div class="ui grid container">
+    <div class="row">
+      <div class="sixteen wide column">
+        <div class="ui secondary pointing menu">
+          <a href="browse-catalog.html" class="item">
+            WholeTale Data Catalog
+          </a>
+          <a href="" class="active item">
+            My External Data
+          </a>
+  <div class="right menu">
+    <div class="item">
+      <div class="ui primary right labeled icon button" id="test">
+        Add Data
+        <i class="plus icon"></i>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="ui stackable grid container">
+    <div class="row">
       <div class="sixteen wide column">
 
-<div class="ui breadcrumb">
-  <a href="browse-mytales.html" class="section"><i class="left angle icon"></i> Return to Dashboard</a>
-</div>
+       <p>You have not currently registered any external data in WholeTale.<p>
+       <p>If you know the URL or DOI of the data object you'd like to register from an online repository, use the Add Data button. Or browse data already registered in WholeTale using the WholeTale Data Catalog tab. Choosing "Save to My External Data" from the ellipsis dropdown will list it here for easy access.</p>
+       <p>For more information about registering data, see the WholeTale User guide. <a href="https://wholetale.readthedocs.io/en/stable/development/mockups/data-registration/index.html?highlight=external%20data" target="_blank"><i class="info circle icon"></i></a></p>
 
-        <div class="wt-panel">
-          <div class="wt-panel-header">
-          <div class="tale-info">
-            <div class="ui stackable grid">
-              <div class="ten wide column">
-                  <div class="title-info">
-                    <img src="images/tale-img-2.png" />
-                    <img src="images/logo-jupyter.png" class="env" />
-                    <div>
-                      <p>Accelerated discovery of metallic glasses through iteration of machine learning and high-throughput experiments </p>
-                    </div>
-                    <p class="qualifier">Logan Ward</p>
-                  </div>
-              </div>
-              <div class="six wide column" style="text-align: right">
-                <a href="run-meta-pre-run.html" class="ui button primary">
-                  <i class="stop icon"></i> Stop
-                </a>
-                <a href="browse-mytales.html" class="ui button" style="margin-right: 10px">
-                  Close
-                </a>
-                <div class="ui dropdown">
-                  <i class="fas fa-ellipsis-v"></i>
-                  <div class="menu transition hidden">
-                      <div class="item">Duplicate Tale</div>
-                      <div class="item">Delete Tale</div>
-                      <div class="item">Rebuild Tale</div>
-                      <div class="item">Publish Tale...</div>
-                      <div class="item">View Fullscreen</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          </div>
-          <div class="ui secondary pointing menu" style="margin: 0">
-            <a class="item" href="run.html">
-              Interact
-            </a>
-            <a class="active item" href="run-files.html">
-              Files
-            </a>
-            <a class="item" href="run-meta.html">
-              Metadata
-            </a>
-            <div class="right menu">
-              <a class="ui item">
-              </a>
-            </div>
-          </div>
+      </div>
+    </div>
+  </div>
 
-          <div class="main-row" style="padding:10px 20px 12px;">
-            <div class="ui grid">
-              <div class="four wide column"></div>
-              <div class="twelve wide column">
-                <div style="float:right; margin-top:2px;">
-                  <i class="fas fa-plus-circle" id="test" style="font-size: 1.5rem;color:#2185d0"></i>
                   <div class="ui modal test">
                     <i class="close icon"></i>
                     <div class="header">
-                      Select Data
+                      Add Data to WholeTale Catalog
                     </div>
           <div class="content-row">
             <div class="ui grid">
-              <div class="four wide column">
-                <div class="ui vertical menu fluid dta">
-                  <a class="active item">
-                    Web<br/><span>DOI or URL</span>
-                  </a>
-                  <a class="item">
-                    WT Catalog<br/><span>Already registered in WT</span>
-                  </a>
-                </div>
-              </div>
-              <div class="twelve wide column">
-                <div style="min-height: 300px; padding: 20px 20px 40px 0">
+              <div class="sixteen wide column">
+                <div style="min-height: 300px; padding: 20px 20px 40px">
                   <form class="ui form">
                     <div class="inline field">
                       <label>
@@ -183,55 +160,9 @@
               </div>
             </div>
           </div>
-                    <div class="actions">
-                      <div class="ui button">
-                        Cancel
-                      </div>
-                      <div class="ui primary right labeled icon button">
-                        Select
-                        <i class="checkmark icon"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="ui large breadcrumb directory-label">
-                  <span>External Data</span> <span>Linked, external data for use as Tale input (read-only)</span>  
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="fake-row" style="background:#ddd; height:1px"></div>
-          <div class="content-row">
-            <div class="ui grid">
-              <div class="four wide column">
-                <div class="ui vertical menu fluid dta">
-                  <a href="run-files-home.html" class="item">
-                    home
-                  </a>
-                  <a href="run-files-data.html"  class="active item">
-                    external_data
-                  </a>
-                  <a href="run-files.html" class="item">
-                    tale_workspace
-                  </a>
-                </div>
-              </div>
-              <div class="twelve wide column">
-                <div style="min-height: 700px; padding: 20px 20px 40px 0">
-                  <p class="notice">There is currently no external data associated with this Tale. To select data from an online repository or from another Tale workspace, click the <i class="fas fa-plus-circle"></i> to access the Select Data dialog.
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
 
 
 </div>
-
 
     <script src="js/jquery.min.js"></script>
     <script src="dist/components/dropdown.js"></script>
@@ -239,6 +170,11 @@
       $('.ui.dropdown')
         .dropdown()
       ;
+    </script>
+    <script language='javascript'>
+      $(document).ready(function(){
+         $('.ui.accordion').accordion();
+      });
     </script>
     <script>
       $(function(){

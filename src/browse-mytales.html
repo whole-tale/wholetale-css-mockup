@@ -36,21 +36,21 @@
     <link href="css/fontawesome-all.min.css" rel="stylesheet">
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="http://www.crc.nd.edu/~kfurse/wholetale-css-mock-up-sui_s2019_orig/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script>window.jQuery || document.write('<script src="http://www.crc.nd.edu/~kfurse/wholetale-css-mock-up-sui_s2019_alt/js/vendor/jquery-slim.min.js"><\/script>')</script>
 
   <script src="dist/components/dimmer.js"></script>
   <script src="dist/components/visibility.js"></script>
   <script src="dist/components/sidebar.js"></script>
   <script src="dist/components/transition.js"></script>
-  <script src="http://www.crc.nd.edu/~kfurse/wholetale-css-mock-up-sui_s2019_orig/dist/components/detect.min.js"></script>
-  <script src="http://www.crc.nd.edu/~kfurse/wholetale-css-mock-up-sui_s2019_orig/dist/components/clipboard.min.js"></script>
-  <script src="http://www.crc.nd.edu/~kfurse/wholetale-css-mock-up-sui_s2019_orig/dist/components/cookie.min.js"></script>
-  <script src="http://www.crc.nd.edu/~kfurse/wholetale-css-mock-up-sui_s2019_orig/dist/components/easing.min.js"></script>
-  <script src="http://www.crc.nd.edu/~kfurse/wholetale-css-mock-up-sui_s2019_orig/dist/components/highlight.min.js"></script>
-  <script src="http://www.crc.nd.edu/~kfurse/wholetale-css-mock-up-sui_s2019_orig/dist/components/history.min.js"></script>
+  <script src="http://www.crc.nd.edu/~kfurse/wholetale-css-mock-up-sui_s2019_alt/dist/components/detect.min.js"></script>
+  <script src="http://www.crc.nd.edu/~kfurse/wholetale-css-mock-up-sui_s2019_alt/dist/components/clipboard.min.js"></script>
+  <script src="http://www.crc.nd.edu/~kfurse/wholetale-css-mock-up-sui_s2019_alt/dist/components/cookie.min.js"></script>
+  <script src="http://www.crc.nd.edu/~kfurse/wholetale-css-mock-up-sui_s2019_alt/dist/components/easing.min.js"></script>
+  <script src="http://www.crc.nd.edu/~kfurse/wholetale-css-mock-up-sui_s2019_alt/dist/components/highlight.min.js"></script>
+  <script src="http://www.crc.nd.edu/~kfurse/wholetale-css-mock-up-sui_s2019_alt/dist/components/history.min.js"></script>
   <script src="dist/components/state.js"></script>
-  <script src="http://www.crc.nd.edu/~kfurse/wholetale-css-mock-up-sui_s2019_orig/dist/components/tablesort.min.js"></script>
-  <script src="http://www.crc.nd.edu/~kfurse/wholetale-css-mock-up-sui_s2019_orig/dist/components/underscore.min.js"></script>
+  <script src="http://www.crc.nd.edu/~kfurse/wholetale-css-mock-up-sui_s2019_alt/dist/components/tablesort.min.js"></script>
+  <script src="http://www.crc.nd.edu/~kfurse/wholetale-css-mock-up-sui_s2019_alt/dist/components/underscore.min.js"></script>
 
   <script src="dist/semantic.min.js"></script>
 
@@ -61,107 +61,70 @@
 <!-- Top Menu -->
 
   <div class="ui inverted menu wt-top">
-    <a href="pseudo-home.html" class="header item wt-brand"><img src="images/wholetale_logo_sm.png" />Whole<span>Tale</span></a>
-    <div class="active item">Dashboard</div>
-    <a class="item">About</a>
-    <a class="item">Team</a>
-    <a class="item">Participate</a>
-    <a class="item">Working Groups</a>
+    <a href="http://www.crc.nd.edu/~kfurse/wholetale-css-mock-up-sui_s2019_alt/pseudo-home.html" class="header item wt-brand"><img src="images/wholetale_logo_sm.png" />Whole<span>Tale</span></a>
+    <div class="active item">Tale Dashboard</div>
+    <a class="item" href="browse-catalog.html">Data Catalog</a>
+    <a class="item" href="browse-env.html">Compute Environments</a>
     <div class="right menu">
-      <a class="item">Kristina Davis</a>
-      <a class="item"><i class="fas fa-sign-out-alt"></i></a>
+      <a class="item"><i class="info circle white icon"></i></a>
+      <a class="item"><i class="tasks white icon"></i></a>
+      <a class="ui right dropdown item">
+        <i class="user circle white icon"></i>
+        <div class="menu">
+          <div class="item"><img class="gravatar" src="https://girder.stage.wholetale.org/api/v1/user/5a97190233b3fc0001161cbc/gravatar?size=64">Kristina Davis</div>
+          <div class="divider"></div>
+          <div class="item">Account</div>
+          <div class="item">Logout</div>
+        </div>
+      </a>
     </div>
   </div>
 
 
 <!-- Page Contents -->
 
-  <div class="wt-dash">
-
-      <div class="ui dropdown right labeled icon button primary" style="float:right">
-        Create New...
-        <i class="plus icon"></i>
-        <div class="menu">
-            <a class="item">Create New Tale</a>
-            <a class="item">Add Dataset</a>
-            <a class="item">Create New Environment</a>
-        </div>
-      </div>
-
-
-    <div class="header item wt-brand">WHOLE<span>TALE</span> <span> Dashboard</span></div>
-    <div id="id-short">
-      <a class="show_all" data-long-id="id-long">
-        New to WholeTale? Learn more about using the Dashboard...
-      </a>
-    </div>
-  </div>
-
-  <div class="ui stretched stackable grid">
-    <div class="row panel-container">
+  <div class="ui grid container">
+    <div class="row">
       <div class="sixteen wide column">
-        <div class="dash-intro">
-
-          <div id="id-long" style="display:none">
-            <p class="first-para">Welcome to the WholeTale Dashboard! Here you can browse Tales published by other WholeTale users, as well as publically available datasets and environments (the buidling blocks of Tales). <i>Click on</i> a Tale to learn more about it. <i>Run</i> the Tale to interact with it. You will be running a private copy, so feel free to modify and remix the Tale (use your own data, edit the code, or change the compute environment).</p>
-            <p>On each tab, you can view public tales, data, or environments, or filter to just see your own. Click <i>My Tales</i> to just see Public Tales you've copied, as well as any new Tales you create or that are shared with you by collaborators. Click the button at the top right of each tab to create a Tale, contribute a dataset or configure a custom environment. You may choose to keep these private, or publish them to make them available to other WholeTale users.</p>
-            <p>For more information, visit the <a href="https://wholetale.readthedocs.io/users_guide/browse.html"><i class="fas fa-info-circle"></i> WholeTale User Guide</a>. You can quickly access relevant sections of the User Guide throughout WholeTale wherever you see this icon <i class="fas fa-info-circle"></i>.</p>
-              <a class="show_less" data-short-id="id-short">
-                Hide introduction
-              </a>
-          </div>
-        </div>
-
-          <div class="wt-panel-header tabs2">
-<div class="ui three item tabular menu">
-  <a href="browse.html" class="active item">
-    <img src="images/wholetale_logo_sm.png" style="height:1.4rem;width:auto;padding: 0 .3em" /> Tales
-  </a>
-  <a href="browse-catalog.html" class="item">
-    <i class="server icon"></i> Data Catalog
-  </a>
-  <a href="browse-env.html" class="item">
-    <i class="desktop icon"></i> Compute Environments
-  </a>
-</div>
-          </div>
-        <div class="wt-panel bg-grey special">
-          <div class="wt-panel-body">
-
-<div class="ui secondary menu public-private">
-  <a href="browse.html" class="item">
-    Public Tales
-  </a>
-  <a href="browse-mytales.html" class="active item">
-    My Tales
-  </a>
+        <div class="ui secondary pointing menu">
+          <a href="browse.html" class="item">
+            Public Tales
+          </a>
+          <a href="browse-mytales.html" class="active item">
+            My Tales
+          </a>
   <div class="right menu">
-    <div class="item">
-      <div class="ui icon input">
-        <input type="text" placeholder="Search Tales...">
-        <i class="search link icon"></i>
-      </div>
-    </div>
-    <div class="item">
+    <div class="item no-phone">
       <div class="ui primary right labeled icon button" id="test">
         Create New Tale
         <i class="plus icon"></i>
       </div>
     </div>
   </div>
-</div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-              <div class="ui three doubling selectable cards">
-                <div class="card">
+  <div class="ui stackable grid container">
+    <div class="row panel-container">
+      <div class="sixteen wide column">
+
+            <div class="ui message" style="margin: 1em 0 2em;">
+
+             <p style="margin:0 0 15px;"><b>Currently running:</b> <i>3 Tales (out of 3 maximum)</i></p> 
+
+              <div class="ui three stackable doubling selectable special cards">
+                <div class="ui card">
                   <div class="blurring dimmable fluid image">
                     <div class="ui dimmer transition hidden">
                       <div class="content">
                         <div class="center">
-                          <a class="ui inverted button">View</a>
+                          <a href="run.html" class="ui inverted button">View</a>
                         </div>
                       </div>
                     </div>
-                   <img class="pic" src="https://use.yt/upload/e922a8ac" alt"Research Image">
+                   <img class="pic" src="http://advances.sciencemag.org/content/advances/4/4/eaaq1566/F1.large.jpg?width=800&height=600&carousel=1" alt"Research Image">
                   </div>
                   <div class="content">
                     <div style="text-transform: uppercase; color: #ba975e;font-weight: 700;">
@@ -186,7 +149,7 @@
                     </span>
                   </div>
                 </div>
-                <div class="card">
+                <div class="ui card">
                   <div class="blurring dimmable fluid image">
                     <div class="ui dimmer transition hidden">
                       <div class="content">
@@ -220,13 +183,7 @@
                     </span>
                   </div>
                 </div>
-              </div>
-
-             <p style="font-size: 1.1rem; margin-top:20px">Currently running: <i>2 Tales (out of 3 maximum)</i></p> 
-             <hr style="margin: 20px 0 20px;border-top:1px solid #ccc;border-left:1px solid #ccc">
-
-              <div class="ui three doubling selectable cards">
-                <div class="card">
+                <div class="ui card">
                   <div class="blurring dimmable fluid image">
                     <div class="ui dimmer transition hidden">
                       <div class="content">
@@ -235,7 +192,46 @@
                         </div>
                       </div>
                     </div>
-                   <img class="pic" src="https://girder.prod.wholetale.org/api/v1/item/5b72f9bc41453200015fdc66/download?contentDisposition=inline" alt"Research Image">
+                   <img class="pic" src="images/tale-img-4.png" alt"Research Image">
+                  </div>
+                  <div class="content">
+                    <div style="text-transform: uppercase; color: #ba975e;font-weight: 700;">
+                      science
+                    </div>
+                    <div class="t-title">
+                      <h3>
+                        <a>My First Published Tale</a>
+                      </h3>
+                    </div>
+                    <div>
+                      by <span style="color:#67c096">Kristina Davis</span>
+                    </div>
+                  </div>
+                  <div class="extra content">
+                    <span style="text-transform:uppercase">
+                      public
+                    </span>
+                    <span class="right floated" style="color:#2185d0">
+                      <i class="stop icon"></i>
+                      Stop Tale
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+    </div>
+
+              <div class="ui four stackable doubling selectable special cards">
+                <div class="ui card">
+                  <div class="blurring dimmable fluid image">
+                    <div class="ui dimmer transition hidden">
+                      <div class="content">
+                        <div class="center">
+                          <a class="ui inverted button">View</a>
+                        </div>
+                      </div>
+                    </div>
+                   <img class="pic" src="https://raw.githubusercontent.com/whole-tale/dashboard/master/public/images/demo-graph2.jpg" alt"Research Image">
                   </div>
                   <div class="content">
                     <div style="text-transform: uppercase; color: #ba975e;font-weight: 700;">
@@ -260,7 +256,7 @@
                     </span>
                   </div>
                 </div>
-                <div class="card">
+                <div class="ui card">
                   <div class="blurring dimmable fluid image">
                     <div class="ui dimmer transition hidden">
                       <div class="content">
@@ -294,44 +290,8 @@
                     </span>
                   </div>
                 </div>
-                <div class="card">
-                  <div class="blurring dimmable fluid image">
-                    <div class="ui dimmer transition hidden">
-                      <div class="content">
-                        <div class="center">
-                          <a class="ui inverted button">View</a>
-                        </div>
-                      </div>
-                    </div>
-                   <img class="pic" src="images/tale-img-4.png" alt"Research Image">
-                  </div>
-                  <div class="content">
-                    <div style="text-transform: uppercase; color: #ba975e;font-weight: 700;">
-                      science
-                    </div>
-                    <div class="t-title">
-                      <h3>
-                        <a>My First Published Tale</a>
-                      </h3>
-                    </div>
-                    <div>
-                      by <span style="color:#67c096">Kristina Davis</span>
-                    </div>
-                  </div>
-                  <div class="extra content">
-                    <span style="text-transform:uppercase">
-                      public
-                    </span>
-                    <span class="right floated" style="color:#2185d0">
-                      <i class="play icon"></i>
-                      Run Tale
-                    </span>
-                  </div>
-                </div>
               </div>
 
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -389,7 +349,7 @@
                       </div>
                     </div>
                     <div class="actions">
-                      <a href="browse.html" class="ui button">
+                      <a href="browse-mytales.html" class="ui button">
                         Cancel
                       </a>
                       <a href="run.html" class="ui primary right labeled icon button">
@@ -409,6 +369,13 @@
       $('.ui.dropdown')
         .dropdown()
       ;
+    </script>
+    <script>
+      $(function(){
+        $('.special.cards .image').dimmer({
+          on: 'hover'
+        });
+      });
     </script>
     <script>
       $(function(){
