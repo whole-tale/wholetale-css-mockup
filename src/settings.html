@@ -65,7 +65,7 @@
   <div class="ui inverted menu wt-top">
     <a href="pseudo-home.html" class="header item wt-brand"><img src="images/wholetale_logo_sm.png" />Whole<span>Tale</span></a>
     <a class="item" href="browse.html">Tale Dashboard</a>
-    <a class="active item" href="browse-catalog.html">Data Catalog</a>
+    <a class="item" href="browse-catalog.html">Data Catalog</a>
     <a class="item" href="browse-env.html">Compute Environments</a>
     <div class="right menu">
       <a class="item"><i class="info circle white icon"></i></a>
@@ -85,78 +85,105 @@
 
 <!-- Page Contents -->
 
-  <div class="ui grid container">
-    <div class="row">
-      <div class="sixteen wide column">
-        <div class="ui secondary pointing menu">
-          <a href="browse-catalog.html" class="item">
-            Data Catalog
-          </a>
-          <a href="browse-mycatalog.html" class="active item">
-            My External Data
-          </a>
-  <div class="right menu">
-    <div class="item">
-      <div class="ui primary right labeled icon button" id="test">
-        Add Data
-        <i class="plus icon"></i>
-      </div>
-    </div>
-  </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
 
   <div class="ui stackable grid container">
-    <div class="row">
-      <div class="sixteen wide column">
+    <div class="row" style="margin-top:2rem">
 
-       <p>You have not currently registered any external data in WholeTale.<p>
-       <p>If you know the URL or DOI of the data object you'd like to register from an online repository, use the Add Data button. Or browse data already registered in WholeTale using the WholeTale Data Catalog tab and choose "Save to My Registered Data" from the ellipsis dropdown.</p>
-       <p>For more information about registering data, see the WholeTale User guide. <a href="https://wholetale.readthedocs.io/en/stable/development/mockups/data-registration/index.html?highlight=external%20data" target="_blank"><i class="info circle icon"></i></a></p>
-
+      <div class="four wide column">
+        <div class="ui secondary vertical pointing menu fluid" id="settings-menu">
+          <a class="item">
+            <i class="user address card outline icon"></i> Profile information
+          </a>
+          <a class="item">
+            <i class="user toggle on icon"></i> Account settings
+          </a>
+          <a class="active item">
+            <i class="user plus icon"></i> Additional accounts
+          </a>
+        </div>
       </div>
+      <div class="eleven wide right floated column" id="add-acct">
+        <h2>Configure Additional Accounts</h2>
+        <p class="explanation">Connect WholeTale to your other accounts for seamless publishing</p>
+        <div class="ui segments">
+          <div class="ui segment">
+            <button style="float:right" class="ui primary basic button">Connect Account</button>
+            <p><img class="ui avatar image" src="images/cyverse.png"> Cyverse</p>
+            <div class="connected">
+              <div class="ui basic segment">
+                <a style="float:right;color:#e5501c">Disconnect</a>
+                <p>Authorized by <i>craig-willis</i></p>
+              </div>
+            </div>
+          </div>
+          <div class="ui segment">
+            <button style="float:right" class="ui primary basic button" id="test">Connect Account</button>
+            <p><img class="ui avatar image" src="images/dataverse.jpg"> Dataverse</p>
+            <div class="connected">
+              <div class="ui basic segment">
+                <a style="float:right;color:#e5501c">Disconnect</a>
+                <p>Authorized on <a>demo.dataverse.org</a> by <i>craig-willis</i></p>
+              </div>
+              <div class="ui basic segment">
+                <a style="float:right;color:#e5501c">Disconnect</a>
+                <p>Authorized on <a>dataverse.harvard.edu</a> by <i>craig-willis</i></p>
+              </div>
+            </div>
+          </div>
+          <div class="ui segment">
+            <button style="float:right" class="ui primary basic button">Connect Account</button>
+            <p><img class="ui avatar image" src="images/designsafe.png"> DesignSafe</p>
+          </div>
+          <div class="ui segment">
+            <button style="float:right" class="ui primary basic button">Connect Account</button>
+            <p><img class="ui avatar image" src="images/orcid.png"> ORCID</p>
+          </div>
+          <div class="ui segment">
+            <button style="float:right" class="ui primary basic button">Connect Account</button>
+            <p><img class="ui avatar image" src="images/zenodo.png"> Zenodo</p>
+          </div>
+        </div>
+      </div>
+
+
     </div>
   </div>
 
                   <div class="ui modal test">
                     <i class="close icon"></i>
                     <div class="header">
-                      Add Data to WholeTale Catalog
+                      <img class="ui avatar image" src="images/dataverse.jpg"> Connect a Dataverse Account
                     </div>
-          <div class="content-row">
-            <div class="ui grid">
-              <div class="sixteen wide column">
-                <div style="min-height: 300px; padding: 20px 20px 40px">
+          <div class="content">
+
                   <form class="ui form">
-                    <div class="inline field">
-                      <label>
-                        Reference URI
-                        <i class="info circle grey icon"></i>
-                      </label>
-                      <input id="searchbox" type="text">
-                      <div class="ui inline button">Search</div>
-                    </div>
-                    <div class="info-block">
-                      <p style="padding: 8px; font-style:italic">
-                        The URL or DOI of the data object. Data packages can be imported into WholeTale from <a>DataONE</a> and select <a>Globus</a> repositories. For a full list of DataONE member nodes and supported Globus repositories, visit the <a>data registration guide</a>.
-                      </p>
-                    </div>
-                    <div class="ui tertiary segment" style="background-color: white">
-                      <p style="padding: 8px; font-style:italic"></p>
-                      <div class="inline field">
-                        <label>Folder Name</label>
-                        <input type="text">
-                      </div>
-                      <p>DOI:</p>
-                      <p>DataID:</p>
-                      <p>Repository:</p>
-                      <p>Size:</p>
-                    </div>
+  <div class="two fields">
+    <div class="field">
+      <label>Dataverse Repository</label>
+      <select class="ui fluid dropdown">
+        <option value="">Chose repository</option>
+        <option value="hv">dataverse.harvard.edu</option>
+        <option value="dm">demo.dataverse.org</option>
+        <option value="um">dataverse.lib.umanitoba.ca</option>
+      </select>
+    </div>
+    <div class="field">
+    <label>API Token</label>
+      <input type="text" name="shipping[first-name]" placeholder="">
+    </div>
+  </div>
                   </form>
+
                 </div>
+                    <div class="actions">
+                      <a href="settings.html" class="ui button">
+                        Cancel
+                      </a>
+                      <a href="settings.html" class="ui primary right button">
+                        Connect
+                      </a>
+                    </div>
+
               </div>
             </div>
           </div>

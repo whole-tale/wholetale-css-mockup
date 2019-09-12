@@ -8,7 +8,7 @@ html, body {
 }
 
 body {
-  background: #e0e9ee; /* #e0e9ee; #d6e1e8; */
+  background: #f5f7f8; /* #e0e9ee; #d6e1e8; */
 }
 
 hr.env-separator {
@@ -34,7 +34,7 @@ hr.env-separator {
 }
 
 .ui.wt-input.input > input {
-  background: #ced8df;
+/*  background:  #ced8df; */
 }
 
 .ui.wt-input.input > input::placeholder {
@@ -720,6 +720,57 @@ a.show_less {
 .ui.secondary.text.menu.view-toggle .item i {
   padding: 0;
   margin: 0;
+}
+
+
+/* Settings */
+
+#settings-menu {
+  font-size: 1.2rem;
+  margin-top: .75rem;
+}
+
+#add-acct {
+}
+
+#add-acct .segments {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+#add-acct h2 {
+  margin-bottom: 0;
+}
+
+p.explanation {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+#add-acct .segment p {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+#add-acct .segment button {
+  float:right;
+}
+
+#add-acct .connected{
+  padding: 0 2rem 1.5rem;
+}
+
+#add-acct .basic {
+  margin: 0;
+}
+
+#add-acct .segments .basic p {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+#add-acct .segments .basic a {
+  padding: 0;
 }
 
 
