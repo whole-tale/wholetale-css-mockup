@@ -99,11 +99,15 @@
                 <div class="ui floating dropdown theme">
                   <i class="fas fa-ellipsis-v"></i>
                   <div class="menu transition hidden">
-                      <div class="item">Duplicate Tale</div>
-                      <div class="item">Delete Tale</div>
                       <div class="item">Rebuild Tale</div>
-                      <div class="item">Publish Tale...</div>
+                      <div class="item">Restart Tale</div>
+                      <div class="item" id="test">Publish Tale...</div>
+                      <div class="divider"></div>
+                      <div class="item">Export as BagIt</div>
+                      <div class="item">Export as Zip</div>
+                      <div class="divider"></div>
                       <div class="item">View Fullscreen</div>
+                      <div class="item">Read the docs</div>
                   </div>
                 </div>
               </div>
@@ -238,6 +242,27 @@
     </div>
   </div>
 
+                  <div class="ui modal test">
+                    <i class="close icon"></i>
+                    <div class="header">
+                      Publish Tale
+                    </div>
+                    <div class="content">
+                      <p>You have not yet authorized WholeTale to publish on your behalf to any repositories. Add repositories by connecting additional accounts on the <a href="settings.html">Settings</a> page.</p>
+                      <p>For more information on how to publish and cite your Tale, please consult the <a href="https://wholetale.readthedocs.io/en/stable/users_guide/publishing.html">Publishing Guide</a>.</p>
+                    </div>
+                    <div class="actions">
+                      <a href="" class="ui button">
+                        Cancel
+                      </a>
+                      <a href="settings.html" class="ui primary right labeled icon button">
+                        Go to Settings
+                        <i class="angle right icon"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
 
 </div>
 
@@ -247,6 +272,16 @@
       $('.ui.dropdown')
         .dropdown()
       ;
+    </script>
+    <script>
+      $(function(){
+            $("#test").click(function(){
+      		$(".test").modal('show');
+      	});
+      	$(".test").modal({
+      		closable: true
+      	});
+      });
     </script>
     <script src="dist/semantic.min.js"></script>
     <script src="js/moreless.js"></script>
