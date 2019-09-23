@@ -8,7 +8,7 @@ html, body {
 }
 
 body {
-  background: #f5f7f8; /* #e0e9ee; #d6e1e8; */
+  background: #f8f9fa; /* #f5f7f8 #e0e9ee; #d6e1e8; */
 }
 
 hr.env-separator {
@@ -772,6 +772,22 @@ p.explanation {
 #add-acct .segments .basic a {
   padding: 0;
 }
+
+#add-acct .segment p i.icon {
+  font-size: 0.8rem;
+  padding-left: .5rem;
+  color: #ccc;
+}
+
+#add-acct .footnote {
+  font-size: 0.9rem;
+  padding-left: 1rem;
+  color: #999;
+}
+#add-acct .footnote span {
+  margin: 0 1rem;
+}
+
 
 
 

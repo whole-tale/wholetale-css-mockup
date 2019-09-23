@@ -91,58 +91,45 @@
 
       <div class="four wide column">
         <div class="ui secondary vertical pointing menu fluid" id="settings-menu">
-          <a class="item">
-            <i class="user address card outline icon"></i> Profile information
-          </a>
-          <a class="item">
-            <i class="user toggle on icon"></i> Account settings
-          </a>
           <a class="active item">
             <i class="user plus icon"></i> Additional accounts
           </a>
         </div>
       </div>
       <div class="eleven wide right floated column" id="add-acct">
-        <h2>Configure Additional Accounts</h2>
-        <p class="explanation">Connect WholeTale to your other accounts for seamless publishing</p>
+        <h2>Connect Additional Accounts</h2>
+        <p class="explanation">Authorize WholeTale to access and/or publish data on your behalf</p>
         <div class="ui segments">
           <div class="ui segment">
-            <button style="float:right" class="ui primary basic button">Connect Account</button>
-            <p><img class="ui avatar image" src="images/cyverse.png"> Cyverse</p>
+            <button style="float:right" class="ui disabled basic button">Connect Account</button>
+            <p><img class="ui avatar image" src="images/orcid.png"> ORCID <i class="database icon"></i><i class="share icon"></i> </p>
             <div class="connected">
               <div class="ui basic segment">
-                <a style="float:right;color:#e5501c">Disconnect</a>
+                <a href="" style="float:right;color:#e5501c">Disconnect</a>
                 <p>Authorized by <i>k-davis</i></p>
               </div>
             </div>
           </div>
           <div class="ui segment">
             <button style="float:right" class="ui primary basic button" id="test">Connect Account</button>
-            <p><img class="ui avatar image" src="images/dataverse.png"> Dataverse</p>
+            <p><img class="ui avatar image" src="images/zenodo.png"> Zenodo <i class="share icon"></i></p>
             <div class="connected">
               <div class="ui basic segment">
-                <a style="float:right;color:#e5501c">Disconnect</a>
-                <p>Authorized on <a>demo.dataverse.org</a> by <i>k-davis</i></p>
+                <a href="" style="float:right;color:#e5501c">Disconnect</a>
+                <p>Authorized on <a>zenodo.org</a> by <i>k-davis</i></p>
               </div>
               <div class="ui basic segment">
-                <a style="float:right;color:#e5501c">Disconnect</a>
-                <p>Authorized on <a>dataverse.harvard.edu</a> by <i>k-davis</i></p>
+                <a href="" style="float:right;color:#e5501c">Disconnect</a>
+                <p>Authorized on <a>sandbox.zenodo.org</a> by <i>k-davis</i></p>
               </div>
             </div>
           </div>
           <div class="ui segment">
             <button style="float:right" class="ui primary basic button">Connect Account</button>
-            <p><img class="ui avatar image" src="images/designsafe.png"> DesignSafe</p>
-          </div>
-          <div class="ui segment">
-            <button style="float:right" class="ui primary basic button">Connect Account</button>
-            <p><img class="ui avatar image" src="images/orcid.png"> ORCID</p>
-          </div>
-          <div class="ui segment">
-            <button style="float:right" class="ui primary basic button">Connect Account</button>
-            <p><img class="ui avatar image" src="images/zenodo.png"> Zenodo</p>
+            <p><img class="ui avatar image" src="images/designsafe.png"> DesignSafe <i class="database icon"></i></p>
           </div>
         </div>
+        <p class="footnote"><i class="database icon"></i> Access data <span>|</span> <i class="share icon"></i> Publish</p>
       </div>
 
 
@@ -152,24 +139,23 @@
                   <div class="ui modal test">
                     <i class="close icon"></i>
                     <div class="header">
-                      <img class="ui avatar image" src="images/dataverse.png"> Connect a Dataverse Account
+                      <img class="ui avatar image" src="images/zenodo.png"> Connect a Zenodo Account
                     </div>
           <div class="content">
 
                   <form class="ui form">
   <div class="two fields">
     <div class="field">
-      <label>Dataverse Repository</label>
+      <label>Zenodo Repository</label>
       <select class="ui fluid dropdown">
         <option value="">Chose repository</option>
-        <option value="hv">dataverse.harvard.edu</option>
-        <option value="dm">demo.dataverse.org</option>
-        <option value="um">dataverse.lib.umanitoba.ca</option>
+        <option value="hv">other.zenodo.org</option>
+        <option value="dm">another.zenodo.org</option>
       </select>
     </div>
     <div class="field">
-    <label>API Token</label>
-      <input type="text" name="shipping[first-name]" placeholder="">
+    <label>API Token <a href="" style="float:right; font-weight:normal">Get from Zenodo <i class="external square alternate icon"></i></a></label>
+      <input type="text" name="API Token" placeholder="">
     </div>
   </div>
                   </form>
