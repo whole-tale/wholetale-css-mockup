@@ -101,15 +101,15 @@
                 <div class="ui dropdown">
                   <i class="fas fa-ellipsis-v"></i>
                   <div class="menu transition hidden">
-                      <div class="item">Rebuild Tale</div>
-                      <div class="item">Restart Tale</div>
-                      <div class="item">Publish Tale...</div>
+                      <div class="item"><i class="fas fa-redo-alt"></i> Rebuild Tale</div>
+                      <div class="item"><i class="fas fa-sync-alt"></i> Restart Tale</div>
+                      <div  id="test" class="item"><i class="fas fa-newspaper"></i> Publish Tale...</div>
                       <div class="divider"></div>
-                      <div class="item">Export as BagIt</div>
-                      <div class="item">Export as Zip</div>
+                      <div class="item"><i class="fas fa-archive"></i> Export as BagIt</div>
+                      <div class="item"><i class="fas fa-file-archive"></i> Export as Zip</div>
                       <div class="divider"></div>
-                      <div class="item">View Fullscreen</div>
-                      <div class="item">Read the docs</div>
+                      <div class="item"><i class="fas fa-expand"></i> View Fullscreen</div>
+                      <div class="item"><i class="info circle icon"></i> Read the docs</div>
                   </div>
                 </div>
               </div>
@@ -126,10 +126,17 @@
             <a class="item" href="run-meta.html">
               Metadata
             </a>
-            <div class="right menu">
-              <a class="ui item">
-              </a>
-            </div>
+            <a class="item" href="run-share.html">
+              Share <span class="counter">5</span>
+            </a>
+            <div id="tale-tags" class="right menu">
+              <div class="ui item">
+                PRIVATE
+              </div>
+              <div class="ui item">
+                COPY
+              </div>
+           </div>
           </div>
 
           <div class="main-row" style="padding:10px 20px 12px;">

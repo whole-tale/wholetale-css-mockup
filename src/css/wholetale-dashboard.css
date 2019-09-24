@@ -8,7 +8,7 @@ html, body {
 }
 
 body {
-  background: #eff1f2; /* #f8f9fa #f5f7f8 #eff1f2 #e0e9ee; #d6e1e8; */
+  background: #f8f9fa; /* #f8f9fa #f5f7f8 #eff1f2 #e0e9ee; #d6e1e8; */
 }
 
 hr.env-separator {
@@ -26,6 +26,25 @@ hr.env-separator {
   color: #666;
   font-style: italic;
 }
+
+.counter {
+  background: #999;
+  color: #fff;
+  font-size: .65rem;
+  font-weight: 700;
+  height: 1rem;
+  width: 1rem;
+  border-radius: .5rem;
+  text-align: center;
+  padding: .15rem;
+  margin-left: .5rem;
+}
+
+#collab-list .ui.selection.dropdown {
+  min-width: 8em;
+  text-align:center;
+}
+
 
 .card h3 a {
   color: #333;
@@ -343,7 +362,6 @@ hr.env-separator {
   font-weight: 600;
 }
 
-
 .placeholder-message {
   text-align: center; 
   padding: 40% 0 40%;
@@ -416,6 +434,11 @@ hr.env-separator {
 }
 
 .wt-panel .actions {
+}
+
+.wt-panel #tale-tags .ui.item {
+  font-size: 0.9rem;
+  color: #999;
 }
 
 
@@ -648,6 +671,18 @@ a.show_less {
 }
 .wt-panel-header.tabs2 .ui.tabular.menu .item.active {
   background: #f9fafb;
+}
+
+#active-tales {
+  background: #eaf0f3;
+  padding: 1rem 0 3rem;
+  margin: 2rem 0 3rem;
+  border-top: 1px solid #d6e1e8;
+  border-bottom: 1px solid #d6e1e8;
+}
+#active-tales .run-quota {
+  margin: 0 0 1rem;
+  color: #666;
 }
 
 
