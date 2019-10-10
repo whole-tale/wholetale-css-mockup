@@ -85,8 +85,8 @@
                   <div class="title-info">
                     <img src="images/tale-img-2.png" />
                     <img src="images/logo-jupyter.png" class="env" />
-                    <p> Accelerated discovery of metallic glasses through iteration of machine learning and high-throughput experiments</p>
-                    <p class="qualifier">Logan Ward</p>
+                    <p><span class="ui horizontal label"><i class="fas fa-lock" title="Private"></i>COPY</span> Accelerated discovery of metallic glasses through iteration of machine learning and high-throughput experiments</p>
+                    <p class="qualifier">Author: Logan Ward</p>
                   </div>
               </div>
               <div class="six wide column" style="text-align: right">
@@ -101,7 +101,9 @@
                   <div class="menu transition hidden">
                       <div class="item"><i class="fas fa-redo-alt"></i> Rebuild Tale</div>
                       <div class="item"><i class="fas fa-sync-alt"></i> Restart Tale</div>
-                      <div  id="test" class="item"><i class="fas fa-newspaper"></i> Publish Tale...</div>
+                      <div id="test" class="item"><i class="fas fa-newspaper"></i> Publish Tale...</div>
+                      <div class="divider"></div>
+                      <div id="test2" class="item"><i class="fab fa-git"></i> Connect to Git Repository...</div>
                       <div class="divider"></div>
                       <div class="item"><i class="fas fa-archive"></i> Export as BagIt</div>
                       <div class="item"><i class="fas fa-file-archive"></i> Export as Zip</div>
@@ -129,13 +131,13 @@
             </a>
             <div id="tale-tags" class="right menu">
               <div class="ui item">
-                PRIVATE
+                <i class="fas fa-lock"></i>PRIVATE
               </div>
               <div class="ui item">
-                COPY
+                <i class="far fa-copy"></i>COPIED
               </div>
-              <div class="ui item" style="font-size:1.2rem; padding-top: .5em; padding-bottom:.55em">
-                <i class="fab fa-github"></i>
+              <div class="ui item" style="font-size:1.2rem; padding: .5em .55em">
+                <i class="fab fa-git"></i>
               </div>
            </div>
           </div>
@@ -154,7 +156,7 @@
                       Publish Tale
                     </div>
                     <div class="content">
-                      <p>Publishing creates an immutable copy of your Tale with a DOI. For more information on how to publish and cite your Tale, please consult the <a href="https://wholetale.readthedocs.io/en/stable/users_guide/publishing.html">Publishing Guide</a>.</p>
+                      <p>Publishing creates an immutable copy of your Tale with a DOI. For more information on publishing and citing your Tale, please consult the <a href="https://wholetale.readthedocs.io/en/stable/users_guide/publishing.html">Publishing Guide</a>.</p>
                       <div class="ui form">
                         <div class="field">
                           <label>Select target repository:</label>
@@ -166,58 +168,36 @@
                         </div>
                       </div>
                       <p style="margin: .5rem 0 1rem .5rem"><i>Don't see what you're looking for? Add repositories by connecting additional accounts on the <a href="settings.html">Settings</a> page.</i></p>
-
-<div class="ui accordion">
-  <div class="title">
-    <i class="dropdown icon"></i>
-    More details
-  </div>
-  <div class="content">
-    <p class="transition hidden">Your published Tale will include everything that has been uploaded to its associated workspace. In addition, the following files will be generated and included in the published Tale. This process allows another user to easily rerun your published analysis using the WholeTale platform.</p>
-<table class="ui celled striped table">
-  <tbody>
-    <tr>
-      <td class="collapsing td-bold">
-        <i class="folder icon"></i> manifest.json
-      </td>
-      <td>This file holds metadata about the tale, such as script execution order and file structure.</td>
-    </tr>
-    <tr>
-      <td class="td-bold">
-        <i class="folder icon"></i>&nbsp;environment.json
-      </td>
-      <td>This environment file holds the information needed to re-create the tale's base virtual machine.</td>
-    </tr>
-    <tr>
-      <td class="td-bold">
-        <i class="folder icon"></i> LICENSE
-      </td>
-      <td>The Tale's license is included in the package. This can be selected from the Tale's metadata view.</td>
-    </tr>
-    <tr>
-      <td class="td-bold">
-        <i class="folder icon"></i> README.md
-      </td>
-      <td>The Tale's README is included in the package. The README includes instructions for how to use and run the published analysis encapsulated by your Tale.</td>
-    </tr>
-    <tr>
-      <td class="td-bold">
-        <i class="folder icon"></i> metadata.xml
-      </td>
-      <td>The contents of each package are described using the Ecological Metadata Language (EML). To learn more about EML, visit the <a href="https://esajournals.onlinelibrary.wiley.com/doi/abs/10.1890/0012-9623%282005%2986%5B158%3AMTVOED%5D2.0.CO%3B2" target="_blank">EML primer</a>.</td>
-    </tr>
-  </tbody>
-</table>
-
-  </div>
-</div>
-                    </div>
+                   </div>
                     <div class="actions">
                       <a href="" class="ui button">
                         Cancel
                       </a>
                       <a href="run.html" class="ui primary right labeled icon button">
                         Publish
+                        <i class="check icon"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                  <div class="ui modal test2">
+                    <i class="close icon"></i>
+                    <div class="header">
+                      Connect to Git Repository
+                    </div>
+                    <div class="content">
+                      <p>Connect Tale workspace to an existing Git repository.</p>
+<div class="ui fluid input">
+  <input type="text" placeholder="URL of a public Git repository">
+</div>
+                   </div>
+                    <div class="actions">
+                      <a href="" class="ui button">
+                        Cancel
+                      </a>
+                      <a href="run.html" class="ui primary right labeled icon button">
+                        Import
                         <i class="check icon"></i>
                       </a>
                     </div>
@@ -237,10 +217,18 @@
     </script>
     <script>
       $(function(){
-            $("#test").click(function(){
-      		$(".test").modal('show');
+        $("#test").click(function(){
+        	$(".test").modal('show');
       	});
       	$(".test").modal({
+      		closable: true
+      	});
+      });
+      $(function(){
+        $("#test2").click(function(){
+        	$(".test2").modal('show');
+      	});
+      	$(".test2").modal({
       		closable: true
       	});
       });

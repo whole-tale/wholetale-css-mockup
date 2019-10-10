@@ -8,7 +8,7 @@ html, body {
 }
 
 body {
-  background: #f8f9fa; /* #ebecf0 #f8f9fa #f5f7f8 #eff1f2 #e0e9ee; #d6e1e8; */
+  background: #f8f9fa; /* #ebecf0 #f8f9fa #f5f7f8 #eff1f2 #e0e9ee; #d6e1e8; #e9ecef; */
 }
 
 hr.env-separator {
@@ -290,7 +290,7 @@ hr.env-separator {
   float:left;
 }
 
-.wt-panel .wt-panel-header span {
+.wt-panel .wt-panel-header span.italic {
   font-size: 1.3rem;
   color: rgba(0,0,0,0.75);
   font-weight: 300;
@@ -543,15 +543,15 @@ p.status span {
   padding-left: 5px;
 }
 
-.directory-label span {
+.directory-label span.title {
   font-weight: 600;
   font-size: 1.4rem;
 }
-.directory-label span:nth-child(2) {
+.directory-label span.qualifier {
   font-weight: 300;
   font-style: italic;
-  font-size: 1.2rem;
-  color: #666;
+  font-size: 1.1rem;
+  color: #999;
   padding-left: 5px;
 }
 
@@ -675,11 +675,11 @@ a.show_less {
 }
 
 #active-tales {
-  background: #eaf0f3; /* #eaf0f3; #d9dbe2 */
+  background: #eaf0f3; /* #f8f9fa #eaf0f3; #d9dbe2 #dee2e6; */
   padding: 1rem 0 3rem;
   margin: 2rem 0 3rem;
-  border-top: 1px solid #d6e1e8; /* #d6e1e8; #c7cad3*/
-  border-bottom: 1px solid #d6e1e8;
+  border-top: 1px solid #ced4da; /* #d6e1e8; #c7cad3*/
+  border-bottom: 1px solid #ced4da;
 }
 #active-tales .run-quota {
   margin: 0 0 1rem;
@@ -761,6 +761,9 @@ a.show_less {
   margin: 0;
 }
 
+.ui.secondary.pointing.menu .right.menu .menu .active.item {
+  border:none;
+}
 
 /* Settings */
 

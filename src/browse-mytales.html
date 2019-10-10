@@ -95,9 +95,13 @@
           </a>
   <div class="right menu">
     <div class="item no-phone">
-      <div class="ui primary right labeled icon button" id="test">
-        Create New Tale
+      <div class="ui primary right labeled icon dropdown button">
         <i class="plus icon"></i>
+        Create New Tale
+        <div class="menu">
+            <a class="item" id="test">Create New Tale</a>
+            <a class="item" id="test2">Create Tale from Git Repository</a>
+        </div>
       </div>
     </div>
   </div>
@@ -398,6 +402,29 @@
                   </div>
                 </div>
 
+                  <div class="ui modal test2">
+                    <i class="close icon"></i>
+                    <div class="header">
+                      Create Tale from Git Repository
+                    </div>
+                    <div class="content">
+                      <p>Create a new Tale from an existing Git repository.</p>
+<div class="ui fluid input">
+  <input type="text" placeholder="URL of a public Git repository">
+</div>
+                   </div>
+                    <div class="actions">
+                      <a href="browse.html" class="ui button">
+                        Cancel
+                      </a>
+                      <a href="run.html" class="ui primary right labeled icon button">
+                        Create New Tale
+                        <i class="play icon"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
 
 </div>
 
@@ -421,6 +448,14 @@
       		$(".test").modal('show');
       	});
       	$(".test").modal({
+      		closable: true
+      	});
+      });
+      $(function(){
+            $("#test2").click(function(){
+      		$(".test2").modal('show');
+      	});
+      	$(".test2").modal({
       		closable: true
       	});
       });
