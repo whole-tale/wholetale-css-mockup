@@ -101,6 +101,8 @@
         <div class="menu">
             <a class="item" id="test">Create New Tale</a>
             <a class="item" id="test2">Create Tale from Git Repository</a>
+            <a class="item" id="test3"><i>Simulate Analyze in WT for Tale</i></a>
+            <a class="item" id="test4"><i>Simulate Analyze in WT for Tale-like</i></a>
         </div>
       </div>
     </div>
@@ -363,19 +365,9 @@
                               <i class="dropdown icon"></i>
                               <div class="default text">Compute Environment</div>
                               <div class="menu">
-                                <div class="header">
-                                  Official environments
-                                </div>
                                 <div class="item" data-value="0">Jupyter</div>
                                 <div class="item" data-value="1">RStudio</div>
                                 <div class="item" data-value="2">OpenRefine</div>
-                                <div class="divider"></div>
-                                <div class="header">
-                                  Other environments
-                                </div>
-                                <div class="item" data-value="3">Jupyter with customizations</div>
-                                <div class="item" data-value="4">Jane's RStudio</div>
-                                <div class="item" data-value="4">Something I Made</div>
                               </div>
                             </div>
                           </div>
@@ -394,10 +386,16 @@
                       <a href="browse.html" class="ui button">
                         Cancel
                       </a>
-                      <a href="run.html" class="ui primary right labeled icon button">
-                        Create New Tale
-                        <i class="play icon"></i>
-                      </a>
+                      <div class="ui buttons">
+                        <a href="" class="ui primary button">
+                          Create New Tale
+                        </a>
+                        <div class="or"></div>
+                        <a href="run.html" class="ui primary right labeled icon button">
+                          Create & Run New Tale
+                          <i class="play icon"></i>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -408,23 +406,201 @@
                       Create Tale from Git Repository
                     </div>
                     <div class="content">
-                      <p>Create a new Tale from an existing Git repository.</p>
-<div class="ui fluid input">
-  <input type="text" placeholder="URL of a public Git repository">
-</div>
+                      <div class="ui grid form">
+                        <div class="row panel container">
+                          <div class="four wide column field">
+                            <label class="input-label">Git repository URL:</label>
+                          </div>
+                          <div class="twelve wide column field">
+                            <input placeholder="URL of a public Git repository" type="text">
+                          </div>
+                        </div>
+                        <div class="row panel container">
+                          <div class="four wide column field">
+                            <label class="input-label">Tale name:</label>
+                          </div>
+                          <div class="twelve wide column field">
+                            <input placeholder="Tale name" type="text">
+                          </div>
+                        </div>
+                        <div class="row panel container">
+                          <div class="four wide column field">
+                            <label class="input-label">Compute environment:</label>
+                          </div>
+                          <div class="twelve wide column field">
+                            <div class="ui selection dropdown">
+                              <input type="hidden" name="gender">
+                              <i class="dropdown icon"></i>
+                              <div class="default text">Compute Environment</div>
+                              <div class="menu">
+                                <div class="item" data-value="0">Jupyter</div>
+                                <div class="item" data-value="1">RStudio</div>
+                                <div class="item" data-value="2">OpenRefine</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row panel container">
+                          <div class="four wide column field">
+                            <label class="input-label">Input data:</label>
+                          </div>
+                          <div class="twelve wide column field">
+                            <span class="notice">Add data after Tale creation using your chosen compute environment, or the Files tab of your running Tale.</span>
+                          </div>
+                        </div>
+                      </div>
                    </div>
                     <div class="actions">
                       <a href="browse.html" class="ui button">
                         Cancel
                       </a>
-                      <a href="run.html" class="ui primary right labeled icon button">
-                        Create New Tale
-                        <i class="play icon"></i>
-                      </a>
+                      <div class="ui buttons">
+                        <a href="" class="ui primary button">
+                          Create New Tale
+                        </a>
+                        <div class="or"></div>
+                        <a href="run.html" class="ui primary right labeled icon button">
+                          Create & Run New Tale
+                          <i class="play icon"></i>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
 
+                  <div class="ui modal test3">
+                    <i class="close icon"></i>
+                    <div class="header">
+                      Analyze in WholeTale
+                    </div>
+                    <div class="content">
+                      <div class="ui grid form">
+                        <div class="row panel container">
+                          <div class="four wide column field">
+                            <label class="input-label">Tale name:</label>
+                          </div>
+                          <div class="twelve wide column field">
+                            <input value="NEON Single aspirated air temperature at KONZ, Domain 06, 2017-02-28 to 2017-04-01" type="text">
+                          </div>
+                        </div>
+                        <div class="row panel container">
+                          <div class="four wide column field">
+                            <label class="input-label">Compute environment:</label>
+                          </div>
+                          <div class="twelve wide column field">
+                            <div class="ui selection dropdown">
+                              <input type="hidden" name="compute" value="0">
+                              <i class="dropdown icon"></i>
+                              <div class="default text">Compute Environment</div>
+                              <div class="menu">
+                                <div class="item" data-value="0" selected>Jupyter</div>
+                                <div class="item" data-value="1">RStudio</div>
+                                <div class="item" data-value="2">OpenRefine</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row panel container">
+                          <div class="four wide column field">
+                            <label class="input-label">Input data:</label>
+                          </div>
+                          <div class="twelve wide column field">
+                            <p>Data Source: NEON.D06.KONZ.DP1.00002.2017.03.2017.10.12.12.31.26</p>
+                          </div>
+                        </div>
+                      </div>
+                   </div>
+                    <div class="actions">
+                      <a href="browse.html" class="ui button">
+                        Cancel
+                      </a>
+                      <div class="ui buttons">
+                        <a href="" class="ui primary button">
+                          Create New Tale
+                        </a>
+                        <div class="or"></div>
+                        <a href="run.html" class="ui primary right labeled icon button">
+                          Create & Run New Tale
+                          <i class="play icon"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                  <div class="ui modal test4">
+                    <i class="close icon"></i>
+                    <div class="header">
+                      Analyze in WholeTale
+                    </div>
+                    <div class="content">
+                      <div class="ui grid form">
+                        <div class="row panel container">
+                          <div class="four wide column field">
+                            <label class="input-label">Tale name:</label>
+                          </div>
+                          <div class="twelve wide column field">
+                            <input value="Cause of Death Data" type="text">
+                          </div>
+                        </div>
+                        <div class="row panel container">
+                          <div class="four wide column field">
+                            <label class="input-label">Compute environment:</label>
+                          </div>
+                          <div class="twelve wide column field">
+                            <div class="ui selection dropdown">
+                              <input type="hidden" name="compute">
+                              <i class="dropdown icon"></i>
+                              <div class="default text">Compute Environment</div>
+                              <div class="menu">
+                                <div class="item" data-value="0" selected>Jupyter</div>
+                                <div class="item" data-value="1">RStudio</div>
+                                <div class="item" data-value="2">OpenRefine</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row panel container">
+                          <div class="four wide column field">
+                            <label class="input-label">Input data:</label>
+                          </div>
+                          <div class="twelve wide column field">
+                            <p>Data Source: https://dev2.dataverse.org/dataset.xhtml?persistentId=doi:10.5072/FK2/F0IH1N</p>
+  <div class="grouped fields">
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input type="radio" name="access" checked="" tabindex="0" class="hidden">
+        <label><b>READ ONLY</b> <i>recommended</i> &mdash; Treat as source dataset for analysis <a href="" style="margin-left: .75rem;font-style:italic">Why would I do this?</a></label>
+      </div>
+    </div>
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input type="radio" name="access" tabindex="0" class="hidden">
+        <label style="color:#999"><b>READ/WRITE</b> &mdash; Enable data editing</label>
+      </div>
+    </div>
+  </div>
+                          </div>
+                        </div>
+                      </div>
+                   </div>
+                    <div class="actions">
+                      <a href="browse.html" class="ui button">
+                        Cancel
+                      </a>
+                      <div class="ui buttons">
+                        <a href="" class="ui primary button">
+                          Create New Tale
+                        </a>
+                        <div class="or"></div>
+                        <a href="run.html" class="ui primary right labeled icon button">
+                          Create & Run New Tale
+                          <i class="play icon"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
 
 </div>
@@ -457,6 +633,22 @@
       		$(".test2").modal('show');
       	});
       	$(".test2").modal({
+      		closable: true
+      	});
+      });
+      $(function(){
+            $("#test3").click(function(){
+      		$(".test3").modal('show');
+      	});
+      	$(".test3").modal({
+      		closable: true
+      	});
+      });
+      $(function(){
+            $("#test4").click(function(){
+      		$(".test4").modal('show');
+      	});
+      	$(".test4").modal({
       		closable: true
       	});
       });

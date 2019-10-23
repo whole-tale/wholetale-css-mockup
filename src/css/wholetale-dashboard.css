@@ -22,8 +22,8 @@ hr.env-separator {
 }
 
 .notice {
-  font-size: 1.2rem;
-  color: #666;
+  font-size: 1.1rem;
+  color: #757575;
   font-style: italic;
 }
 
@@ -43,6 +43,10 @@ hr.env-separator {
 #collab-list .ui.selection.dropdown {
   min-width: 8em;
   text-align:center;
+}
+
+.ui.breadcrumb a {
+  color: #333;
 }
 
 
@@ -557,6 +561,16 @@ p.status span {
 
 /* Browse Tales */
 
+.ui.card,
+.ui.cards > .card {
+  box-shadow: 0 1px 3px 0 #ddd, 0 0 0 1px #d4d4d5;
+}
+
+.ui.card .extra.content,
+.ui.cards > .card .extra.content {
+  background: ;
+}
+
 .ui.card > .image,
 .ui.cards > .card > .image {
   height: 140px;
@@ -830,6 +844,12 @@ p.explanation {
   margin: 0 1rem;
 }
 
+
+/* Modals */
+
+.ui.modal .actions > .button {
+  margin-left: 0;
+}
 
 
 

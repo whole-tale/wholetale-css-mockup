@@ -394,10 +394,16 @@
                       <a href="browse-mytales.html" class="ui button">
                         Cancel
                       </a>
-                      <a href="run.html" class="ui primary right labeled icon button">
-                        Create New Tale
-                        <i class="play icon"></i>
-                      </a>
+                      <div class="ui buttons">
+                        <a href="" class="ui primary button">
+                          Create New Tale
+                        </a>
+                        <div class="or"></div>
+                        <a href="run.html" class="ui primary right labeled icon button">
+                          Create & Run New Tale
+                          <i class="play icon"></i>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -408,22 +414,68 @@
                       Create Tale from Git Repository
                     </div>
                     <div class="content">
-                      <p>Create a new Tale from an existing Git repository.</p>
-<div class="ui fluid input">
-  <input type="text" placeholder="URL of a public Git repository">
-</div>
+                      <div class="ui grid form">
+                        <div class="row panel container">
+                          <div class="four wide column field">
+                            <label class="input-label">Git repository URL:</label>
+                          </div>
+                          <div class="twelve wide column field">
+                            <input placeholder="URL of a public Git repository" type="text">
+                          </div>
+                        </div>
+                        <div class="row panel container">
+                          <div class="four wide column field">
+                            <label class="input-label">Tale name:</label>
+                          </div>
+                          <div class="twelve wide column field">
+                            <input placeholder="Tale name" type="text">
+                          </div>
+                        </div>
+                        <div class="row panel container">
+                          <div class="four wide column field">
+                            <label class="input-label">Compute environment:</label>
+                          </div>
+                          <div class="twelve wide column field">
+                            <div class="ui selection dropdown">
+                              <input type="hidden" name="gender">
+                              <i class="dropdown icon"></i>
+                              <div class="default text">Compute Environment</div>
+                              <div class="menu">
+                                <div class="item" data-value="0">Jupyter</div>
+                                <div class="item" data-value="1">RStudio</div>
+                                <div class="item" data-value="2">OpenRefine</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row panel container">
+                          <div class="four wide column field">
+                            <label class="input-label">Input data:</label>
+                          </div>
+                          <div class="twelve wide column field">
+                            <span class="notice">Add data after Tale creation using your chosen compute environment, or the Files tab of your running Tale.</span>
+                          </div>
+                        </div>
+                      </div>
                    </div>
                     <div class="actions">
-                      <a href="browse.html" class="ui button">
+                      <a href="browse-mytales.html" class="ui button">
                         Cancel
                       </a>
-                      <a href="run.html" class="ui primary right labeled icon button">
-                        Create New Tale
-                        <i class="play icon"></i>
-                      </a>
+                      <div class="ui buttons">
+                        <a href="" class="ui primary button">
+                          Create New Tale
+                        </a>
+                        <div class="or"></div>
+                        <a href="run.html" class="ui primary right labeled icon button">
+                          Create & Run New Tale
+                          <i class="play icon"></i>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
+
 
 
 </div>
