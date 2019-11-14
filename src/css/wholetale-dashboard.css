@@ -779,6 +779,17 @@ a.show_less {
   border:none;
 }
 
+.ui.secondary.pointing.menu .right.menu .ui.selection.dropdown,
+.ui.secondary.pointing.menu .right.menu .ui.selection.dropdown:hover,
+.ui.secondary.pointing.menu .right.menu .ui.active.selection.dropdown,
+.ui.secondary.pointing.menu .right.menu .ui.active.selection.dropdown:hover {
+  border:none;
+  box-shadow: none;
+}
+.ui.secondary.pointing.menu .right.menu .ui.selection.active.dropdown .menu {
+  border: #ddd;
+}
+
 /* Settings */
 
 #settings-menu {
@@ -849,6 +860,25 @@ p.explanation {
 
 .ui.modal .actions > .button {
   margin-left: 0;
+}
+
+/* Timeline */
+
+#timeline .item {
+  padding: 1rem 0;
+}
+#timeline .item .header {
+  margin: .5rem 0 .25rem;
+}
+#timeline .item .date {
+  color: #999;
+  font-size: 0.9rem;
+}
+#timeline .item div.link-title {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 
