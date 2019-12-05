@@ -77,19 +77,22 @@
   <a href="browse-mytales.html" class="section"><i class="left angle icon"></i> Return to Dashboard</a>
 </div>
 
-        <div class="wt-panel">
+        <div class="wt-panel" style="padding-top:0">
           <div class="wt-panel-header">
           <div class="tale-info">
             <div class="ui stackable grid">
               <div class="ten wide column">
-                  <div class="title-info">
-                    <img src="images/tale-img-2.png" />
-                    <img src="images/logo-jupyter.png" class="env" />
-                    <div>
-                    <p><span class="ui horizontal label"><i class="fas fa-lock" title="Private"></i>PRIVATE</span> Accelerated discovery of metallic glasses through iteration of machine learning and high-throughput experiments</p>
-                    </div>
-                    <p class="qualifier">Logan Ward</p>
-                  </div>
+<div class="title-info">
+    <div class="img-holder"><img src="images/tale-img-2.png" /></div>
+    <img src="images/logo-jupyter.png" class="env" />
+    <div class="title">Accelerated discovery of metallic glasses through iteration of machine learning and high-throughput experiments</div>
+    <div class="author">Logan Ward</div>
+    <div class="title-tags">
+      <span class="ui horizontal label wt-green">COPY</span>
+      <span class="ui horizontal label wt-green">PRIVATE</span>
+    </div>
+</div>
+
               </div>
               <div class="six wide column" style="text-align: right">
                 <a href="run-meta-pre-run.html" class="ui button primary">
@@ -103,6 +106,10 @@
                   <div class="menu transition hidden">
                       <div class="item"><i class="fas fa-redo-alt"></i> Rebuild Tale</div>
                       <div class="item"><i class="fas fa-sync-alt"></i> Restart Tale</div>
+                      <div class="divider"></div>
+                      <div class="item"><i class="fas fa-save"></i> Save Tale Version</div>
+                      <div class="item"><i class="fas fa-check-circle"></i> Recorded Run</div>
+                      <div class="divider"></div>
                       <div class="item"><i class="fas fa-newspaper"></i> Publish Tale...</div>
                       <div class="divider"></div>
                       <div id="test2" class="item"><i class="fab fa-git"></i> Connect to Git Repository...</div>
@@ -131,31 +138,15 @@
             <a class="item" href="run-share.html">
               Share <span class="counter">5</span>
             </a>
-            <div id="tale-tags" class="right menu">
-<div class="ui selection dropdown">
-  <input type="hidden" name="Version">
-  <i class="dropdown icon"></i>
-  <div class="default text">Working Version</div>
-  <div class="menu">
-    <div class="item" data-value="2">Working Version</div>
-    <div class="item" data-value="1">Aug 30, 2019 11:59AM</div>
-    <div class="item" data-value="0">June 17, 2019 3:45PM</div>
-    <div class="divider"></div>
-    <div style="margin: .75rem .75rem .35rem">
-      <button class="ui button fluid">
-        Save Version
-      </button>
-    </div>
-    <div style="margin: 0 .75rem .75rem">
-      <button class="ui button fluid primary">
-        Reproducible Run
-      </button>
-    </div>
-  </div>
-</div>
-           </div>
+            <div class="right menu">
+              <a class="item" id="show-history">
+                <i class="fas fa-history lighter"></i>
+              </a>
+            </div>
           </div>
 
+            <div class="ui grid">
+              <div class="column" style="flex:1" id="main-columns">
           <div class="main-row" style="padding:10px 20px 12px;">
             <div class="ui grid">
               <div class="four wide column"></div>
@@ -172,7 +163,7 @@
                   </div>
                 </div>
                 <div class="ui large breadcrumb directory-label">
-                   <i class="fab fa-git" style="color: #666; margin-right:.25rem"></i> <span class="title">Tale Workspace</span> <span class="qualifier">All files associated with this Tale, except external data and global files in Home</span>  
+                  <a href="" class="section">Tale workspace</a>
                 </div>
               </div>
             </div>
@@ -180,20 +171,30 @@
           <div class="fake-row" style="background:#ddd; height:1px"></div>
           <div class="content-row">
             <div class="ui grid">
-              <div class="four wide column">
-                <div class="ui vertical menu fluid dta">
-                  <a href="run-files-home.html" class="item">
-                    home
-                  </a>
+              <div class="four wide column" id="directory-list">
+                <div class="ui secondary vertical pointing menu fluid wt-blue" id="files-menu">
+                  <div class="header item">CURRENT</div>
                   <a href="run-files-data.html" class="item">
-                    external_data
+                    <i class="fas fa-database icon"></i> External data
                   </a>
-                  <a href="run-files.html"   class="active item">
-                    tale_workspace
+                  <a href="run-files-home.html" class="item">
+                    <i class="fas fa-home icon"></i> Home directory
+                  </a>
+                  <a href="run-files.html" class="active item">
+                    <i class="fas fa-tv icon"></i> Tale workspace
+                  </a>
+                </div>
+                <div class="ui secondary vertical pointing menu fluid wt-blue" id="versions-menu">
+                  <div class="header item">ARCHIVED</div>
+                  <a href="run-files-saved.html" class="item">
+                    <i class="fas fa-save icon"></i> Saved versions
+                  </a>
+                  <a href="run-files-recorded.html" class="item">
+                    <i class="fas fa-check-circle icon"></i> Recorded runs
                   </a>
                 </div>
               </div>
-              <div class="twelve wide column">
+              <div class="twelve wide column" id="file-list">
                 <div style="padding: 20px 20px 40px 0">
 <table class="ui very basic striped table">
   <tbody>
@@ -201,134 +202,387 @@
       <td>
         <i class="folder icon"></i> .circleci
       </td>
-      <td>circleci</td>
+      <td>2.54 MB</td>
       <td class="right aligned collapsing">10 hours ago</td>
     </tr>
     <tr>
       <td>
         <i class="folder icon"></i> .tale
       </td>
-      <td>dockerfile used to create image</td>
+      <td>16.86 MB</td>
       <td class="right aligned">10 hours ago</td>
     </tr>
     <tr>
       <td>
         <i class="folder icon"></i> R
       </td>
-      <td>Updated readme</td>
+      <td>3.67 MB</td>
       <td class="right aligned">10 hours ago</td>
     </tr>
     <tr>
       <td>
         <i class="folder icon"></i> inst
       </td>
-      <td>updated documentation</td>
+      <td>5.67 MB</td>
       <td class="right aligned">10 hours ago</td>
     </tr>
     <tr>
       <td>
         <i class="folder icon"></i> man
       </td>
-      <td>Updated readme</td>
+      <td>7.68 KB</td>
       <td class="right aligned">10 hours ago</td>
     </tr>
     <tr>
       <td>
         <i class="folder icon"></i> vignettes
       </td>
-      <td>Calculate percent of sites with niche probabilities above 0.75</td>
+      <td>1.34 MB</td>
       <td class="right aligned">10 hours ago</td>
     </tr>
     <tr>
       <td>
         <i class="file outline icon"></i> .Rbuildignore
       </td>
-      <td>Updated readme</td>
+      <td>76 B</td>
       <td class="right aligned">10 hours ago</td>
     </tr>
     <tr>
       <td>
         <i class="file outline icon"></i> .dockerignore
       </td>
-      <td>Updated readme</td>
+      <td>84 B</td>
       <td class="right aligned">10 hours ago</td>
     </tr>
     <tr>
       <td>
         <i class="file outline icon"></i> .gitignore
       </td>
-      <td>circleci</td>
+      <td>53 B</td>
       <td class="right aligned">10 hours ago</td>
     </tr>
     <tr>
       <td>
         <i class="file outline icon"></i> DESCRIPTION
       </td>
-      <td>cleaning up code and adding dependencies</td>
+      <td>24 B</td>
       <td class="right aligned">10 hours ago</td>
     </tr>
     <tr>
       <td>
         <i class="file outline icon"></i> Dockerfile
       </td>
-      <td>binder</td>
+      <td>4.56 MB</td>
       <td class="right aligned">10 hours ago</td>
     </tr>
     <tr>
       <td>
         <i class="file outline icon"></i> GuidesBocinsky2018.Rproj
       </td>
-      <td>Updated readme with more helpful tips</td>
+      <td>3.89 KB</td>
       <td class="right aligned">10 hours ago</td>
     </tr>
     <tr>
       <td>
         <i class="file outline icon"></i> LICENSE
       </td>
-      <td>getting package testing up and running</td>
+      <td>34 B</td>
       <td class="right aligned">10 hours ago</td>
     </tr>
     <tr>
       <td>
         <i class="file outline icon"></i> LICENSE.md
       </td>
-      <td>added functions to package</td>
+      <td>2.34 KB</td>
       <td class="right aligned">10 hours ago</td>
     </tr>
     <tr>
       <td>
         <i class="file outline icon"></i> NAMESPACE
       </td>
-      <td>Nearly final version</td>
+      <td>45 B</td>
       <td class="right aligned">10 hours ago</td>
     </tr>
     <tr>
       <td>
         <i class="file outline icon"></i> README.Rmd
       </td>
-      <td>added mac build to circle</td>
+      <td>4.56 KB</td>
       <td class="right aligned">10 hours ago</td>
     </tr>
     <tr>
       <td>
         <i class="file outline icon"></i> README.md
       </td>
-      <td>updated documentation</td>
+      <td>2.38 KB</td>
       <td class="right aligned">10 hours ago</td>
     </tr>
     <tr>
       <td>
         <i class="file outline icon"></i> runtime.txt
       </td>
-      <td>added a runtime.txt for binder</td>
+      <td>90 B</td>
       <td class="right aligned">10 hours ago</td>
     </tr>
   </tbody>
 </table>
                 </div>
-              </div>
-            </div>
-          </div>
+              </div> <!-- close file table column -->
+
+            </div> <!-- close grid -->
+          </div> <!-- close content-row -->
+
+            </div> <!-- close main part -->
+
+              <div class="column" id="history-column">
+                <div id="timeline-column">
+
+<div class="ui vertical segment">
+    <div style="margin-bottom: 1rem">
+      <button class="ui button fluid">
+        <i class="fas fa-save icon"></i>Save Tale Version
+      </button>
+    </div>
+<div class="ui fluid selection dropdown">
+  <input type="hidden" name="Configuration">
+  <i class="dropdown icon"></i>
+  <div class="default text">Select recorded run configuration...</div>
+  <div class="menu">
+    <div class="item" data-value="1">Default</div>
+    <div class="item" data-value="0">My Custom Config</div>
+    <div class="divider"></div>
+    <div style="margin: .75rem">
+      <button class="ui button fluid" id="rr-test">
+        Edit run configurations
+      </button>
+    </div>
+  </div>
+</div>
+    <div style="margin-top: .25rem">
+      <button class="ui button fluid primary">
+        <i class="fas fa-check-circle icon"></i>Recorded Run
+      </button>
+    </div>
+</div>
+
+                <h3>Tale History</h3>
+<div id="timeline" class="ui middle aligned divided list">
+  <div class="item">
+    <div class="right floated content">
+                <div class="ui floating dropdown theme">
+                  <i class="fas fa-ellipsis-v"></i>
+                  <div class="menu transition hidden">
+                      <div class="item">View Info</div>
+                      <div class="item">Restore</div>
+                      <div class="item">Compare</div>
+                      <div class="item">Rename</div>
+                      <div class="item">Delete</div>
+                  </div>
+                </div>
+    </div>
+    <div class="content">
+      <div class="date">Sept 1, 2019</div>
+      <div class="header"><i class="fas fa-save"></i>Version saved:</div>
+      Sept 5, 2019 10:29AM
+    </div>
+  </div>
+  <div class="item">
+    <div class="right floated content">
+                <div class="ui floating dropdown theme">
+                  <i class="fas fa-ellipsis-v"></i>
+                  <div class="menu transition hidden">
+                      <div class="item">View Info</div>
+                      <div class="item">Rename</div>
+                      <div class="item">Delete</div>
+                  </div>
+                </div>
+    </div>
+    <div class="content">
+      <div class="date">Sept 1, 2019</div>
+      <div class="header"><i class="fas fa-check-circle"></i>Recorded run:</div>
+      Sept 4, 2019 3:40PM
+      <div class="run-version-note">Based on version: Sept 4, 2019 3:31PM</div>
+    </div>
+  </div>
+  <div class="item">
+    <div class="right floated content">
+                <div class="ui floating dropdown theme">
+                  <i class="fas fa-ellipsis-v"></i>
+                  <div class="menu transition hidden">
+                      <div class="item">View Info</div>
+                      <div class="item">Restore</div>
+                      <div class="item">Compare</div>
+                      <div class="item">Rename</div>
+                      <div class="item">Delete</div>
+                  </div>
+                </div>
+    </div>
+    <div class="content">
+      <div class="date">Sept 1, 2019</div>
+      <div class="header"><i class="fas fa-save"></i>Version saved:</div>
+      Sept 4, 2019 3:31PM
+    </div>
+  </div>
+  <div class="item">
+    <div class="right floated content">
+                <div class="ui floating dropdown theme">
+                  <i class="fas fa-ellipsis-v"></i>
+                  <div class="menu transition hidden">
+                      <div class="item">View Info</div>
+                      <div class="item">Restore</div>
+                      <div class="item">Compare</div>
+                      <div class="item">Rename</div>
+                      <div class="item">Delete</div>
+                  </div>
+                </div>
+    </div>
+    <div class="content">
+      <div class="date">Sept 1, 2019</div>
+      <div class="header"><i class="fas fa-save"></i>Version saved:</div>
+      Sept 4, 2019 3:31PM
+    </div>
+  </div>
+  <div class="item">
+    <div class="right floated content">
+                <div class="ui floating dropdown theme">
+                  <i class="fas fa-ellipsis-v"></i>
+                  <div class="menu transition hidden">
+                      <div class="item">View Info</div>
+                      <div class="item">Rename</div>
+                      <div class="item">Delete</div>
+                  </div>
+                </div>
+    </div>
+    <div class="content">
+      <div class="date">Sept 1, 2019</div>
+      <div class="header"><i class="fas fa-check-circle"></i>Recorded run:</div>
+      Golden Run
+    </div>
+  </div>
+  <div class="item">
+    <div class="right floated content">
+                <div class="ui floating dropdown theme">
+                  <i class="fas fa-ellipsis-v"></i>
+                  <div class="menu transition hidden">
+                      <div class="item">View Info</div>
+                      <div class="item">Restore</div>
+                      <div class="item">Compare</div>
+                      <div class="item">Rename</div>
+                      <div class="item">Delete</div>
+                  </div>
+                </div>
+    </div>
+    <div class="content">
+      <div class="date">Sept 1, 2019</div>
+      <div class="header"><i class="fas fa-save"></i>Version saved:</div>
+      Version 1.0
+    </div>
+  </div>
+  <div class="item">
+    <div class="right floated content">
+                <div class="ui floating dropdown theme">
+                  <i class="fas fa-ellipsis-v"></i>
+                  <div class="menu transition hidden">
+                      <div class="item">View Info</div>
+                      <div class="item">Restore</div>
+                      <div class="item">Compare</div>
+                      <div class="item">Rename</div>
+                      <div class="item">Delete</div>
+                  </div>
+                </div>
+    </div>
+    <div class="content">
+      <div class="date">Sept 1, 2019</div>
+      <div class="header"><i class="fas fa-save"></i>Version saved:</div>
+      Sept 1, 2019 9:24AM
+    </div>
+  </div>
+  <div class="item">
+    <div class="right floated content">
+                <div class="ui floating dropdown theme">
+                  <i class="fas fa-ellipsis-v"></i>
+                  <div class="menu transition hidden">
+                      <div class="item">View Info</div>
+                      <div class="item">Restore</div>
+                      <div class="item">Compare</div>
+                      <div class="item">Rename</div>
+                      <div class="item">Delete</div>
+                  </div>
+                </div>
+    </div>
+    <div class="content">
+      <div class="date">Sept 1, 2019</div>
+      <div class="header"><i class="fas fa-save"></i>Version saved:</div>
+      Sept 1, 2019 9:21AM
+    </div>
+  </div>
+  <div class="item">
+    <div class="right floated content">
+                <div class="ui floating dropdown theme">
+                  <i class="fas fa-ellipsis-v"></i>
+                  <div class="menu transition hidden">
+                      <div class="item">View Info</div>
+                      <div class="item">Rename</div>
+                      <div class="item">Delete</div>
+                  </div>
+                </div>
+    </div>
+    <div class="content">
+      <div class="date">Aug 30, 2019</div>
+      <div class="header"><i class="fas fa-check-circle"></i>Recorded run:</div>
+      Aug 30, 2019 12:01PM
+    </div>
+  </div>
+  <div class="item">
+    <div class="right floated content">
+                <div class="ui floating dropdown theme">
+                  <i class="fas fa-ellipsis-v"></i>
+                  <div class="menu transition hidden">
+                      <div class="item">View Info</div>
+                      <div class="item">Restore</div>
+                      <div class="item">Compare</div>
+                      <div class="item">Rename</div>
+                      <div class="item">Delete</div>
+                  </div>
+                </div>
+    </div>
+    <div class="content">
+      <div class="date">Aug 30, 2019</div>
+      <div class="header"><i class="fas fa-save"></i>Version saved:</div>
+      Aug 30, 2019 11:59AM
+    </div>
+  </div>
+  <div class="item">
+    <div class="right floated content">
+                <div class="ui floating dropdown theme">
+                  <i class="fas fa-ellipsis-v"></i>
+                  <div class="menu transition hidden">
+                      <div class="item">View Info</div>
+                      <div class="item">Restore</div>
+                      <div class="item">Compare</div>
+                      <div class="item">Rename</div>
+                      <div class="item">Delete</div>
+                  </div>
+                </div>
+    </div>
+    <div class="content">
+      <div class="date">June 17, 2019</div>
+      <div class="header"><i class="fas fa-save"></i>Version saved:</div>
+      June 17, 2019 3:45PM
+    </div>
+  </div>
+  <div class="item">
+    <div class="content">
+      <div class="date">June 10, 2019</div>
+      <div class="header">Tale copied from:</div>
+      <div class="link-title"><a href="run-meta-pre-run.html">Accelerated discovery of metallic glasses through iteration</a></div>
+    </div>
+  </div>
+</div>
+                </div> <!-- close history padding -->
+              </div> <!-- close history column -->
+
+          </div> <!-- close grid -->
 
         </div>
       </div>
@@ -390,6 +644,80 @@
                   </div>
                 </div>
 
+                  <div class="ui modal rr-test">
+                    <i class="close icon"></i>
+                    <div class="header">
+                      Run Configurations
+                    </div>
+          <div class="content-row">
+            <div class="ui grid">
+              <div class="four wide column">
+                <div class="ui secondary pointing vertical fluid menu wt-blue">
+                  <a class="active item">
+                    Default
+                  </a>
+                  <a class="item">
+                    My Custom Config
+                  </a>
+                </div>
+                <div style="margin: 2rem 1rem 1rem">
+                  <a style="cursor:pointer"><i class="plus icon"></i> New configuration</a>
+                </div>
+              </div>
+              <div class="twelve wide column">
+<div class="ui form" style="margin: 2rem 2rem 4rem 0">
+  <div class="field">
+    <label>Name</label>
+    <input placeholder="Run configuration name" type="text">
+  </div>
+  <div class="field">
+    <label>Type</label>
+    <div class="ui selection dropdown">
+      <div class="default text">Select type</div>
+      <i class="dropdown icon"></i>
+      <input type="hidden" name="space">
+      <div class="menu">
+        <div class="item" data-value="local">Local</div>
+        <div class="item" data-value="contained">Container (reproducible)</div>
+        <div class="item" data-value="tapis">Tapis (remote, reproducible)</div>
+      </div>
+    </div>
+  </div>
+  <div class="field">
+    <label>Run script</label>
+    <input placeholder="/Workspace/*.sh" type="text">
+  </div>
+  <div class="divider">optional</div>
+  <div class="inline field">
+    <div class="ui checkbox">
+      <input type="checkbox" tabindex="0" class="hidden">
+      <label>Tests enabled</label>
+    </div>
+  </div>
+  <div class="field">
+    <label>Test script</label>
+    <input placeholder="/Workspace/*.sh" type="text">
+  </div>
+</div>
+              </div>
+            </div>
+          </div>
+                    <div class="actions">
+                      <div class="ui button">
+                        Cancel
+                      </div>
+                      <div class="ui button">
+                        Save
+                      </div>
+                      <div class="ui primary right labeled icon button">
+                        Apply
+                        <i class="checkmark icon"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
 
 
 </div>
@@ -410,10 +738,24 @@
       		closable: true
       	});
       });
+      $(function(){
+            $("#rr-test").click(function(){
+      		$(".rr-test").modal('show');
+      	});
+      	$(".rr-test").modal({
+      		closable: true
+      	});
+      });
     </script>
     <script src="dist/semantic.min.js"></script>
     <script src="js/moreless.js"></script>
-
+    <script>
+      $(document).ready(function(){
+        $('#show-history').on("click", function(){
+          $('#history-column').toggle();
+        });
+      });
+    </script>
 </body>
 
 </html>

@@ -82,12 +82,16 @@
           <div class="tale-info">
             <div class="ui stackable grid">
               <div class="ten wide column">
-                  <div class="title-info">
-                    <img src="images/tale-img-2.png" />
-                    <img src="images/logo-jupyter.png" class="env" />
-                    <p><span class="ui horizontal label"><i class="fas fa-lock" title="Private"></i>PRIVATE</span> Accelerated discovery of metallic glasses through iteration of machine learning and high-throughput experiments</p>
-                    <p class="qualifier">Logan Ward</p>
-                  </div>
+<div class="title-info">
+    <div class="img-holder"><img src="images/tale-img-2.png" /></div>
+    <img src="images/logo-jupyter.png" class="env" />
+    <div class="title">Accelerated discovery of metallic glasses through iteration of machine learning and high-throughput experiments</div>
+    <div class="author">Logan Ward</div>
+    <div class="title-tags">
+      <span class="ui horizontal label wt-green">COPY</span>
+      <span class="ui horizontal label wt-green">PRIVATE</span>
+    </div>
+</div>
               </div>
               <div class="six wide column" style="text-align: right">
                 <a href="run-meta-pre-run.html" class="ui button primary">
@@ -101,7 +105,11 @@
                   <div class="menu transition hidden">
                       <div class="item"><i class="fas fa-redo-alt"></i> Rebuild Tale</div>
                       <div class="item"><i class="fas fa-sync-alt"></i> Restart Tale</div>
-                      <div  id="test" class="item"><i class="fas fa-newspaper"></i> Publish Tale...</div>
+                      <div class="divider"></div>
+                      <div class="item"><i class="fas fa-save"></i> Save Tale Version</div>
+                      <div class="item"><i class="fas fa-check-circle"></i> Recorded Run</div>
+                      <div class="divider"></div>
+                      <div class="item"><i class="fas fa-newspaper"></i> Publish Tale...</div>
                       <div class="divider"></div>
                       <div id="test2" class="item"><i class="fab fa-git"></i> Connect to Git Repository...</div>
                       <div class="divider"></div>
@@ -130,31 +138,15 @@
               Share <span class="counter">5</span>
             </a>
             <div id="tale-tags" class="right menu">
-<div class="ui selection dropdown">
-  <input type="hidden" name="Version">
-  <i class="dropdown icon"></i>
-  <div class="default text">Working Version</div>
-  <div class="menu">
-    <div class="item" data-value="2">Working Version</div>
-    <div class="item" data-value="1">Aug 30, 2019 11:59AM</div>
-    <div class="item" data-value="0">June 17, 2019 3:45PM</div>
-    <div class="divider"></div>
-    <div style="margin: .75rem .75rem .35rem">
-      <button class="ui button fluid">
-        Save Version
-      </button>
-    </div>
-    <div style="margin: 0 .75rem .75rem">
-      <button class="ui button fluid primary">
-        Reproducible Run
-      </button>
-    </div>
-  </div>
-</div>
+              <a class="item" id="show-history">
+                <i class="fas fa-history lighter"></i>
+              </a>
            </div>
           </div>
-          <div class="wt-panel-body" style="padding-bottom:1000px">
+          <div class="wt-panel-body" style="padding-bottom:200px">
 
+            <div class="ui grid">
+              <div class="column" style="flex:1" id="main-columns">
 <div class="ui stackable grid">
   <div class="two wide column"></div>
   <div class="twelve wide column">
@@ -268,6 +260,258 @@
   </div>
 </div>
 
+  </div>
+              <div class="column" id="history-column" style="margin-top:-35px; display:none; margin-right:-28px">
+                <div id="timeline-column">
+
+<div class="ui vertical segment">
+    <div style="margin-bottom: 1rem">
+      <button class="ui button fluid">
+        <i class="fas fa-save icon"></i>Save Tale Version
+      </button>
+    </div>
+<div class="ui fluid selection dropdown">
+  <input type="hidden" name="Configuration">
+  <i class="dropdown icon"></i>
+  <div class="default text">Select recorded run configuration...</div>
+  <div class="menu">
+    <div class="item" data-value="1">Default</div>
+    <div class="item" data-value="0">My Custom Config</div>
+    <div class="divider"></div>
+    <div style="margin: .75rem .75rem .35rem">
+      <button class="ui button fluid">
+        Edit run configurations
+      </button>
+    </div>
+  </div>
+</div>
+    <div style="margin-top: .25rem">
+      <button class="ui button fluid primary">
+        <i class="fas fa-check-circle icon"></i>Recorded Run
+      </button>
+    </div>
+</div>
+
+                <h3>Tale History</h3>
+<div id="timeline" class="ui middle aligned divided list">
+  <div class="item">
+    <div class="right floated content">
+                <div class="ui floating dropdown theme">
+                  <i class="fas fa-ellipsis-v"></i>
+                  <div class="menu transition hidden">
+                      <div class="item">View Info</div>
+                      <div class="item">Restore</div>
+                      <div class="item">Compare</div>
+                      <div class="item">Rename</div>
+                      <div class="item">Delete</div>
+                  </div>
+                </div>
+    </div>
+    <div class="content">
+      <div class="date">Sept 1, 2019</div>
+      <div class="header"><i class="fas fa-save"></i>Version saved:</div>
+      Sept 5, 2019 10:29AM
+    </div>
+  </div>
+  <div class="item">
+    <div class="right floated content">
+                <div class="ui floating dropdown theme">
+                  <i class="fas fa-ellipsis-v"></i>
+                  <div class="menu transition hidden">
+                      <div class="item">View Info</div>
+                      <div class="item">Rename</div>
+                      <div class="item">Delete</div>
+                  </div>
+                </div>
+    </div>
+    <div class="content">
+      <div class="date">Sept 1, 2019</div>
+      <div class="header"><i class="fas fa-check-circle"></i>Recorded run:</div>
+      Sept 4, 2019 3:40PM
+      <div class="run-version-note">Based on version: Sept 4, 2019 3:31PM</div>
+    </div>
+  </div>
+  <div class="item">
+    <div class="right floated content">
+                <div class="ui floating dropdown theme">
+                  <i class="fas fa-ellipsis-v"></i>
+                  <div class="menu transition hidden">
+                      <div class="item">View Info</div>
+                      <div class="item">Restore</div>
+                      <div class="item">Compare</div>
+                      <div class="item">Rename</div>
+                      <div class="item">Delete</div>
+                  </div>
+                </div>
+    </div>
+    <div class="content">
+      <div class="date">Sept 1, 2019</div>
+      <div class="header"><i class="fas fa-save"></i>Version saved:</div>
+      Sept 4, 2019 3:31PM
+    </div>
+  </div>
+  <div class="item">
+    <div class="right floated content">
+                <div class="ui floating dropdown theme">
+                  <i class="fas fa-ellipsis-v"></i>
+                  <div class="menu transition hidden">
+                      <div class="item">View Info</div>
+                      <div class="item">Restore</div>
+                      <div class="item">Compare</div>
+                      <div class="item">Rename</div>
+                      <div class="item">Delete</div>
+                  </div>
+                </div>
+    </div>
+    <div class="content">
+      <div class="date">Sept 1, 2019</div>
+      <div class="header"><i class="fas fa-save"></i>Version saved:</div>
+      Sept 4, 2019 3:31PM
+    </div>
+  </div>
+  <div class="item">
+    <div class="right floated content">
+                <div class="ui floating dropdown theme">
+                  <i class="fas fa-ellipsis-v"></i>
+                  <div class="menu transition hidden">
+                      <div class="item">View Info</div>
+                      <div class="item">Rename</div>
+                      <div class="item">Delete</div>
+                  </div>
+                </div>
+    </div>
+    <div class="content">
+      <div class="date">Sept 1, 2019</div>
+      <div class="header"><i class="fas fa-check-circle"></i>Recorded run:</div>
+      Golden Run
+    </div>
+  </div>
+  <div class="item">
+    <div class="right floated content">
+                <div class="ui floating dropdown theme">
+                  <i class="fas fa-ellipsis-v"></i>
+                  <div class="menu transition hidden">
+                      <div class="item">View Info</div>
+                      <div class="item">Restore</div>
+                      <div class="item">Compare</div>
+                      <div class="item">Rename</div>
+                      <div class="item">Delete</div>
+                  </div>
+                </div>
+    </div>
+    <div class="content">
+      <div class="date">Sept 1, 2019</div>
+      <div class="header"><i class="fas fa-save"></i>Version saved:</div>
+      Version 1.0
+    </div>
+  </div>
+  <div class="item">
+    <div class="right floated content">
+                <div class="ui floating dropdown theme">
+                  <i class="fas fa-ellipsis-v"></i>
+                  <div class="menu transition hidden">
+                      <div class="item">View Info</div>
+                      <div class="item">Restore</div>
+                      <div class="item">Compare</div>
+                      <div class="item">Rename</div>
+                      <div class="item">Delete</div>
+                  </div>
+                </div>
+    </div>
+    <div class="content">
+      <div class="date">Sept 1, 2019</div>
+      <div class="header"><i class="fas fa-save"></i>Version saved:</div>
+      Sept 1, 2019 9:24AM
+    </div>
+  </div>
+  <div class="item">
+    <div class="right floated content">
+                <div class="ui floating dropdown theme">
+                  <i class="fas fa-ellipsis-v"></i>
+                  <div class="menu transition hidden">
+                      <div class="item">View Info</div>
+                      <div class="item">Restore</div>
+                      <div class="item">Compare</div>
+                      <div class="item">Rename</div>
+                      <div class="item">Delete</div>
+                  </div>
+                </div>
+    </div>
+    <div class="content">
+      <div class="date">Sept 1, 2019</div>
+      <div class="header"><i class="fas fa-save"></i>Version saved:</div>
+      Sept 1, 2019 9:21AM
+    </div>
+  </div>
+  <div class="item">
+    <div class="right floated content">
+                <div class="ui floating dropdown theme">
+                  <i class="fas fa-ellipsis-v"></i>
+                  <div class="menu transition hidden">
+                      <div class="item">View Info</div>
+                      <div class="item">Rename</div>
+                      <div class="item">Delete</div>
+                  </div>
+                </div>
+    </div>
+    <div class="content">
+      <div class="date">Aug 30, 2019</div>
+      <div class="header"><i class="fas fa-check-circle"></i>Recorded run:</div>
+      Aug 30, 2019 12:01PM
+    </div>
+  </div>
+  <div class="item">
+    <div class="right floated content">
+                <div class="ui floating dropdown theme">
+                  <i class="fas fa-ellipsis-v"></i>
+                  <div class="menu transition hidden">
+                      <div class="item">View Info</div>
+                      <div class="item">Restore</div>
+                      <div class="item">Compare</div>
+                      <div class="item">Rename</div>
+                      <div class="item">Delete</div>
+                  </div>
+                </div>
+    </div>
+    <div class="content">
+      <div class="date">Aug 30, 2019</div>
+      <div class="header"><i class="fas fa-save"></i>Version saved:</div>
+      Aug 30, 2019 11:59AM
+    </div>
+  </div>
+  <div class="item">
+    <div class="right floated content">
+                <div class="ui floating dropdown theme">
+                  <i class="fas fa-ellipsis-v"></i>
+                  <div class="menu transition hidden">
+                      <div class="item">View Info</div>
+                      <div class="item">Restore</div>
+                      <div class="item">Compare</div>
+                      <div class="item">Rename</div>
+                      <div class="item">Delete</div>
+                  </div>
+                </div>
+    </div>
+    <div class="content">
+      <div class="date">June 17, 2019</div>
+      <div class="header"><i class="fas fa-save"></i>Version saved:</div>
+      June 17, 2019 3:45PM
+    </div>
+  </div>
+  <div class="item">
+    <div class="content">
+      <div class="date">June 10, 2019</div>
+      <div class="header">Tale copied from:</div>
+      <div class="link-title"><a href="">Accelerated discovery of metallic glasses through iteration</a></div>
+    </div>
+  </div>
+</div>
+                </div> <!-- close history padding -->
+              </div> <!-- close history column -->
+
+</div>
+
+
           </div>
         </div>
       </div>
@@ -334,7 +578,13 @@
     </script>
     <script src="dist/semantic.min.js"></script>
     <script src="js/moreless.js"></script>
-
+    <script>
+      $(document).ready(function(){
+        $('#show-history').on("click", function(){
+          $('#history-column').toggle();
+        });
+      });
+    </script>
 </body>
 
 </html>

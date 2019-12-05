@@ -77,19 +77,20 @@
   <a href="browse.html" class="section"><i class="left angle icon"></i> Return to Dashboard</a>
 </div>
 
-        <div class="wt-panel">
+        <div class="wt-panel" style="padding-top:0">
           <div class="wt-panel-header">
           <div class="tale-info">
             <div class="ui stackable grid">
               <div class="ten wide column">
-                  <div class="title-info">
-                    <img src="images/tale-img-2.png" />
-                    <img src="images/logo-jupyter.png" class="env" />
-                    <div>
-                      <p>Accelerated discovery of metallic glasses through iteration of machine learning and high-throughput experiments </p>
-                    </div>
-                    <p class="qualifier">Logan Ward</p>
-                  </div>
+<div class="title-info">
+    <div class="img-holder"><img src="images/tale-img-2.png" /></div>
+    <img src="images/logo-jupyter.png" class="env" />
+    <div class="title">Accelerated discovery of metallic glasses through iteration of machine learning and high-throughput experiments</div>
+    <div class="author">Logan Ward</div>
+    <div class="title-tags">
+      <span class="ui horizontal label wt-green">PUBLIC</span>
+    </div>
+</div>
               </div>
               <div class="six wide column" style="text-align: right">
                 <a  id="test" class="ui button primary">
@@ -113,9 +114,6 @@
               Metadata
             </a>
             <div id="tale-tags" class="right menu">
-              <div class="ui item">
-                PUBLIC
-              </div>
             </div>
           </div>
 
@@ -134,7 +132,7 @@
                   </div>
                 </div>
                 <div class="ui large breadcrumb directory-label">
-                  <span>External Data</span> <span>Linked, external data for use as Tale input (read-only)</span>  
+                  <a href="" class="section">External data</a>
                 </div>
               </div>
             </div>
@@ -143,18 +141,18 @@
           <div class="content-row">
             <div class="ui grid">
               <div class="four wide column">
-                <div class="ui vertical menu fluid dta">
-                  <a href="run-files-data-pre-run.html"  class="active item">
-                    external_data
+                <div class="ui secondary vertical pointing menu fluid wt-blue" id="files-menu">
+                  <a href="run-files-data-pre-run.html" class="active item">
+                    <i class="fas fa-database icon"></i> External data
                   </a>
                   <a href="run-files-pre-run.html" class="item">
-                    tale_workspace
+                    <i class="fas fa-tv icon"></i> Tale workspace
                   </a>
                 </div>
               </div>
               <div class="twelve wide column">
                 <div style="min-height: 700px; padding: 20px 20px 40px 0">
-                  <p class="notice">There is no external data associated with this Tale.</p>
+                  <p class="notice">There is no external data for use as Tale input (read-only) aassociated with this Tale.</p>
                 </div>
               </div>
             </div>
