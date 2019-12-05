@@ -910,7 +910,7 @@ p.explanation {
 /* Timeline */
 
 .column#history-column {
-  width: 350px;
+  width: 300px;
   display:none;
 }
 
