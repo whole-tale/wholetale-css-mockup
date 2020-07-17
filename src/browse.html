@@ -355,23 +355,60 @@
                             <input placeholder="Tale name" type="text">
                           </div>
                         </div>
+
                         <div class="row panel container">
                           <div class="four wide column field">
                             <label class="input-label">Compute environment:</label>
                           </div>
                           <div class="twelve wide column field">
                             <div class="ui selection dropdown">
-                              <input type="hidden" name="gender">
+                              <input type="hidden" name="buildpack" id="buildpack">
                               <i class="dropdown icon"></i>
                               <div class="default text">Compute Environment</div>
                               <div class="menu">
                                 <div class="item" data-value="0">Jupyter</div>
                                 <div class="item" data-value="1">RStudio</div>
-                                <div class="item" data-value="2">OpenRefine</div>
+                                <div class="item" data-value="2">Matlab</div>
+                                <div class="item" data-value="3">OpenRefine</div>
                               </div>
                             </div>
                           </div>
                         </div>
+
+                        <div class="row panel container">
+                          <div class="four wide column field">
+                            <label class="input-label"></label>
+                          </div>
+                          <div class="two wide column field">
+                            <label class="input-label">Base OS</label>
+                          </div>
+                          <div class="four wide column field">
+                            <div class="ui selection dropdown">
+                              <input type="hidden" name="gender">
+                              <i class="dropdown icon"></i>
+                              <div class="default text">Ubuntu 18.04</div>
+                              <div class="menu">
+                                <div class="item" data-value="0">Ubuntu 18.04</div>
+                                <div class="item" data-value="1">Ubuntu 20.04</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="two wide column field">
+                            <label class="input-label">Version</label>
+                          </div>
+                          <div class="four wide column field">
+                            <div class="ui selection dropdown">
+                              <input type="hidden" name="gender">
+                              <i class="dropdown icon"></i>
+                              <div class="default text">latest</div>
+                                <div class="menu" id="versions">
+                                  <div class="item" data-value="0">latest</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
                         <div class="row panel container">
                           <div class="four wide column field">
                             <label class="input-label">Input data:</label>
@@ -622,35 +659,67 @@
     <script>
       $(function(){
             $("#test").click(function(){
-      		$(".test").modal('show');
-      	});
-      	$(".test").modal({
-      		closable: true
-      	});
+          $(".test").modal('show');
+        });
+        $(".test").modal({
+          closable: true
+        });
       });
       $(function(){
             $("#test2").click(function(){
-      		$(".test2").modal('show');
-      	});
-      	$(".test2").modal({
-      		closable: true
-      	});
+          $(".test2").modal('show');
+        });
+        $(".test2").modal({
+          closable: true
+        });
       });
       $(function(){
             $("#test3").click(function(){
-      		$(".test3").modal('show');
-      	});
-      	$(".test3").modal({
-      		closable: true
-      	});
+          $(".test3").modal('show');
+        });
+        $(".test3").modal({
+          closable: true
+        });
       });
       $(function(){
             $("#test4").click(function(){
-      		$(".test4").modal('show');
-      	});
-      	$(".test4").modal({
-      		closable: true
-      	});
+          $(".test4").modal('show');
+        });
+        $(".test4").modal({
+          closable: true
+        });
+      });
+    </script>
+    <script>
+      $(function () {
+          $('#buildpack').change(function () {
+              $("#versions").empty()
+              var selection =  $(this).val();
+              switch($(this).val()) {
+                case "0":
+                  $("#versions").append('<div class="item" data-value="0">latest</div>');
+                  $("#versions").append('<div class="item" data-value="1">5.0.1</div>');
+                  break;
+                case "1":
+                  $("#versions").append('<div class="item" data-value="0">latest</div>');
+                  $("#versions").append('<div class="item" data-value="1">3.5.0</div>');
+                  $("#versions").append('<div class="item" data-value="1">3.4.2</div>');
+                  // code block
+                  break;
+                case "2":
+                  $("#versions").append('<div class="item" data-value="0">latest</div>');
+                  $("#versions").append('<div class="item" data-value="1">9.5</div>');
+                  $("#versions").append('<div class="item" data-value="1">8.1</div>');
+                  break;
+                case "3":
+                  $("#versions").append('<div class="item" data-value="0">latest</div>');
+                  $("#versions").append('<div class="item" data-value="1">3.3</div>');
+                  $("#versions").append('<div class="item" data-value="1">3.1</div>');
+                  break;
+                default:
+                  $("#versions").append('<div class="item" data-value="0">latest</div>');
+              }
+          });
       });
     </script>
     <script src="dist/semantic.min.js"></script>
